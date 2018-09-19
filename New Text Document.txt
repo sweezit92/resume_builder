@@ -1,3 +1,0 @@
-Clone = https://www.cvowl.com/
-Design = https://novoresume.com
-Content = http://www.superyachtresume.com
