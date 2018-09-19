@@ -1,0 +1,348 @@
+
+@font-face {
+  font-family: 'Roboto300';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(../fonts/Hgo13k-tfSpn0qi1SFdUfVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+
+/* latin */
+@font-face {
+  font-family: 'Roboto400';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(../fonts/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Roboto500';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(../fonts/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Roboto700';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(../fonts/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Roboto900';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Roboto Black'), local('Roboto-Black'), url(../fonts/mnpfi9pxYH-Go5UiibESIltXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+#myresume {
+    max-width: 795px;
+    min-width: 795px;
+    margin: 0px auto;
+    font-weight: Roboto300;
+}
+
+#myresume table {
+    border-collapse: collapse;
+    font-family: Roboto;
+}
+#myresume tr {
+    width:100%;
+}
+
+#myresume #name {
+    font-size: 41px;
+    color: #101010;
+    font-family: Roboto500;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+}
+
+#myresume #job_title {
+    color: #000000;
+    letter-spacing: 0.15em;
+    font-family: Roboto500;
+}
+
+
+#myresume #email {
+    font-size: 12px;
+    color: #000000;
+    letter-spacing: 0.07em;
+    font-family: Roboto500;
+}
+
+#myresume #phone {
+    font-size: 12px;
+    color: #000000;
+    font-family: Roboto500;
+}
+
+#myresume #phone_alternate {
+    font-size: 12px;
+    color: #000000;
+    font-family: Roboto500;
+}
+
+
+#myresume tr#header td.intro {
+    border-bottom: 1px solid #000000;
+    padding: 55px 0px 25px 40px;
+}
+
+#myresume tr#header td.introdesc {
+    border-bottom: 1px solid #000000;
+    padding: 0px 40px 25px 0px;
+    font-size: 12px;
+    font-weight: Roboto500;
+    color: #000000;
+}
+
+#myresume td.section-heading{
+    font-family: Roboto700;
+    letter-spacing: 0.1em;
+    padding: 20px 0px;
+    font-size: 15px;
+    color: #000000;
+}
+#myresume td.section-heading-right{
+    font-family: Roboto700;
+    letter-spacing: 0.1em;
+    font-size: 15px;
+    color: #000000;
+    padding: 0px 0px 10px;
+    text-align: center;
+}
+
+#myresume td.Heading{
+    font-family: Roboto700;
+    letter-spacing: 0.1em;
+    padding: 3px 0px;
+    font-size: 11px;
+    color: #000000;
+}
+
+#myresume div p{
+    margin:0px 0px 2px;
+}
+
+#myresume td.SubHeading-right{
+    font-family: Roboto300;
+    padding: 5px 0px;
+    Text-align:justify;
+    font-size: 11px;
+    line-height: 1.4em;
+    color: #000000;
+}
+#myresume td.Heading-right{
+    font-family: Roboto400;
+    padding: 5px 0px;
+    font-size: 12px;
+    color: #000000;
+}
+
+#myresume td.SubHeading{
+    font-family: Roboto500;
+    padding: 2px 0px;
+    font-size: 11px;
+    color: #000000;
+}
+
+#myresume .Description{
+    font-family: Roboto300;
+    padding: 10px 0px 20px;
+    font-size: 11px;
+    line-height:1.4em;
+    color: #000000;
+    text-align:left;
+
+}
+
+#myresume .right td.Description {
+    font-family: Roboto300;
+    padding: 2px 0px 15px;
+    font-size: 11px;
+    color: #000000;
+    text-align: left;
+}
+
+#myresume .Description ul{
+    text-align: left;
+    font-family: Roboto300; 
+    padding: 10px 0px 0px; 
+    font-size: 11px;
+    line-height: 1.4em; 
+    color: #000000;
+    margin-top:5px;
+    margin-bottom: 15px;
+    padding-left:40px;
+}
+
+
+#myresume .section-break {
+    padding: 10px 0px;
+    border-bottom: 1px solid #000000;
+} 
+
+#myresume .progress_table {
+    padding: 10px 0px;
+    
+}
+
+#myresume .right td.misc_title {
+    color: #000000;
+    font-family: Roboto500;
+    font-size: 11px !important;
+    letter-spacing: 0.0625em;
+    margin-bottom: 5px;
+}
+/*
+#mycoverletter {
+    max-width: 795px;
+    min-width: 795px;
+    margin: 0px auto;
+    font-weight: Roboto300;
+}
+
+#mycoverletter #name {
+    font-size: 41px;
+    color: #101010;
+    font-family: Roboto500;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+}
+
+#mycoverletter #job_title {
+    color: #000000;
+    letter-spacing: 0.15em;
+    font-family: Roboto500;
+}
+
+#mycoverletter #phone, #mycoverletter #address, #mycoverletter #email, #mycoverletter #phone_alternate {
+    font-size: 12px;
+    color: #000000;
+    font-family: Roboto500;
+    margin: 2px;
+}
+
+#mycoverletter .section-break {
+    margin: 20px 0px;
+    border-bottom: 1px solid #000000;
+}
+
+#mycoverletter .header {
+    color: #000000;
+    text-align: left;
+    font-size: 14px;
+    line-height:1.4em;
+    font-family: Roboto400;
+    margin: 0px 6%;
+}
+
+#mycoverletter .salutation {
+    color: #000000;
+    text-align: left;
+    font-size: 14px;
+    line-height:1.4em;
+    font-family: Roboto400;
+    margin: 15px 6%;
+}
+
+#mycoverletter .body {
+    color: #000000;
+    text-align: left;
+    font-size: 14px;
+    line-height:1.4em;
+    font-family: Roboto300;
+    margin: 15px 6%;
+}*/
+
+#mycoverletter {
+    max-width: 795px;
+    min-width: 795px;
+    margin: 0px auto;
+    font-weight: Roboto300;
+}
+
+#mycoverletter table {
+    border-collapse: collapse;
+    font-family: Roboto;
+}
+#mycoverletter tr {
+    width:100%;
+}
+
+#mycoverletter #name {
+    font-size: 41px;
+    color: #101010;
+    font-family: Roboto500;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+}
+
+#mycoverletter #job_title {
+    color: #000000;
+    letter-spacing: 0.15em;
+    font-family: Roboto500;
+}
+
+
+#mycoverletter #email {
+    font-size: 12px;
+    color: #000000;
+    letter-spacing: 0.07em;
+    font-family: Roboto500;
+}
+
+#mycoverletter #phone {
+    font-size: 12px;
+    color: #000000;
+    font-family: Roboto500;
+}
+
+#mycoverletter #phone_alternate {
+    font-size: 12px;
+    color: #000000;
+    font-family: Roboto500;
+}
+
+
+#mycoverletter tr#header td.intro {
+    border-bottom: 1px solid #000000;
+    padding: 55px 0px 25px 40px;
+}
+
+#mycoverletter tr#header td.introdesc {
+    border-bottom: 1px solid #000000;
+    padding: 0px 40px 25px 0px;
+    font-size: 12px;
+    font-weight: Roboto500;
+    color: #000000;
+}
+
+#mycoverletter .header {
+    color: #000000;
+    text-align: left;
+    font-size: 14px;
+    line-height:1.4em;
+    font-family: Roboto300;
+    margin: 20px 5%;
+}
+
+#mycoverletter .body {
+    color: #000000;
+    text-align: justify;
+    font-size: 14px;
+    line-height:1.4em;
+    font-family: Roboto300;
+    margin: 20px 5%;
+}

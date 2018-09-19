@@ -1,0 +1,737 @@
+
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-86201110-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-86201110-1');
+    </script>
+
+    <meta name="google-site-verification" content="k4xe9OhSgLDZfAVXiuPA6wC5UDTbC09Ee2x6eWt3RFc" />
+
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png">
+    <meta property="og:image" content="img/favicon.png"/>
+    
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>CV Maker, Free Resume Builder, Resume Writing Services | CV Owl</title>
+
+<?php
+include("metalinks.php");
+?>
+
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org/",
+          "@type": "Product",
+          "name": "CV Owl",
+          "description": "Resume Builder from CV Owl. Create Your Resume Online. CV Maker. CV Builder. Free Resume Maker. Cover Letter Builder.  Resume templates. Resume Writing Services.",
+          "brand": {
+            "@type": "Product",
+            "name": "CV Owl"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "20"
+          }
+        }
+    </script>
+    
+</head>
+
+<style type="text/css">
+    
+    .version2 a.header-link{
+        color: black !important; 
+        cursor: pointer !important;
+    }
+
+    #mobile-nav .header-link{
+        color: white !important; 
+        cursor: pointer !important;
+        text-align: left;
+    }
+
+
+    .blog-post{
+        color: #212121;
+    }
+
+    .blog-heading{
+        font-size: 34px;
+        line-height: 50px;
+        color: white !important;
+        text-decoration: capitalise;
+    }
+    
+
+    @media (max-width: 768px) {
+        .onlymobile {
+            display: none;
+        }
+    }
+
+</style>
+
+
+<body class="version2">
+
+<?php
+include("header.php");
+?>
+
+    <style type="text/css">
+    
+    @media (max-width: 768px) {
+        .hero-img2 {
+            margin-top: 0px !important;
+            display: none;
+        }
+    }
+
+</style>
+
+<!-- Start hero-section -->
+<section class="hero-section relative">
+    <div class="container">
+        <div class="row fullscreen align-items-center relative">
+            <div class="col-lg-6 col-md-6">
+                <h1 style="font-size: 40px;">Create Recruiter Preferred <br>Resume in 15 Minutes
+                </h1>
+                <p class="pt-20 pb-20 mw-510" style="font-size: 16px;">
+                    Create, edit and share your professional resume and cover letter in minutes using our free resume builder. Get expert advice &amp; tips for Resume Writing for free. 
+                </p>
+                <div class="d-flex flex-row newsletter-form" id="mc_embed_signup">
+                    <form class="navbar-form" action="" method="get" id="heroSignup">
+                        <div class="d-flex form-wrap">
+                            <input type="hidden" name="action" value="signup">
+                            <input class="form-control" name="email" placeholder="Your email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'" required="" type="email" style="min-width: 200px;">
+                            <button class="genric-btn2" style="width: 100%;">START NOW</button>
+                        </div>
+                        <div class="info mt-20"></div>
+                    </form>
+                </div>
+                <div class="footer-area" style="background: none;">
+                    <div class="single-footer-widget">
+                        <ul class="social-icons" style="font-size: 20px;">  
+
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-facebook" style="color:#3B5998;"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-google" style="color:#DB4437;"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-linkedin" style="color:#0077B5;"></i>
+                                </a>
+                            </li>
+                        </ul> 
+                    </div>
+                </div>
+                <div class="mt-20" style="color: grey;font-size: 12px;">Free Signup. No Credit Card Required</div>
+            </div>
+            <div class="col-lg-6 col-md-6 text-center">
+                <img class="img-fluid hero-img2 mt-100" style="width: 90%;" src="img/hero-img2.png" alt="">
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- End hero-section -->
+
+<!-- <script type="text/javascript">
+
+    $.post('https://geoip-db.com/json/', {}, function(data){
+        var obj = $.parseJSON(data);
+        var str = '';
+        if(obj){
+
+            if(obj.city){
+                str = 'IN '+ obj.city.toUpperCase();
+            }else if(obj.country_name){
+                str = 'IN '+ obj.country_name.toUpperCase();
+            }
+        }
+
+        $('#city').html(str);
+    });
+</script> -->
+<!-- Start unique-feature Area -->
+<section class="unique-feature-area section-gap">
+    <div class="container">
+        <div class="row justify-content-center section-title-wrap">
+            <div class="col-lg-12">
+                <h2>Free CV Maker and Professional Resume Writing Services</h2>
+                <p style="max-width: 100%">
+                    Resumes or CV's created using CV Owl's powerful free CV Maker helps you stand out in the job market as the <a href="#">professional resume templates</a> offered here are well researched. We have thousands of pre-defined content templates that suits your Industry & Job Skills. Moreover, get your resume developed by professional resume writers to showcase your skills, experience and achievements. Your Resume is formatted and designed as per latest industry specific layout and keywords. Avail online resume writing services for experienced professionals and job seekers. Get expert advice & tips for Resume Writing at CV Owl. We have thousands of pre-defined content templates that suits your Industry & Job Skills
+                </p>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="feature-list d-flex flex-row">
+                    <div class="icon">
+                        <img class="img-fluid" src="img/builder.png" alt="">
+                    </div>
+                    <div class="desc ml-40">
+                        <a>
+                            <h4 class="mb-20">Mobile Compatible CV Maker</h4>
+                        </a>
+                        <p>
+                            CV Owl's online CV Maker enables you to easily access and create your resume on mobile while you are travelling. View or edit your resume content for the specific job opportunity, and then send your resume instantly to the prospective employer!
+                        </p>
+                    </div>
+                </div>
+                <div class="feature-list d-flex flex-row">
+                    <div class="icon">
+                        <img class="img-fluid" src="img/skill.png" alt="">
+                    </div>
+                    <div class="desc ml-40">
+                        <a>
+                            <h4 class="mb-20">Fully Customizable CV Maker</h4>
+                        </a>
+                        <p>
+                            Our customizable resume templates available in A4 and US Letter formats and easy-to-use design interface will help you customize your resume template depending upon the unique requirements.
+                        </p>
+                    </div>
+                </div>
+                <div class="feature-list d-flex flex-row">
+                    <div class="icon">
+                        <img class="img-fluid" src="img/step.png" alt="">
+                    </div>
+                    <div class="desc ml-40">
+                        <a>
+                            <h4 class="mb-20">Edit, Download, Share Your Resume</h4>
+                        </a>
+                        <p>
+                            Create attention-grabbing resume with CV Owl's online CV Maker where you can edit, format, download, print and share your resume from one place- It is really that simple to build your resume and share it with your potential employers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="_active-feature-carusel">
+                    <img class="img-fluid" src="img/c4.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!--<div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="_active-feature-carusel">
+                    <img class="img-fluid" src="img/c5.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-list d-flex flex-row">
+                    <div class="icon">
+                        <img class="img-fluid" src="img/builder.png" alt="">
+                    </div>
+                    <div class="desc ml-40">
+                        <a href="#">
+                            <h4 class="mb-20">Totally FREE CV Maker</h4>
+                        </a>
+                        <p>
+                            CV OWL is the best free CV Maker online. Not only is it free, but it’s easy to sign up. Moreover, once you have posted a resume to our site, you can access it from anywhere! 
+                        </p>
+                    </div>
+                </div>
+                <div class="feature-list d-flex flex-row">
+                    <div class="icon">
+                        <img class="img-fluid" src="img/skill.png" alt="">
+                    </div>
+                    <div class="desc ml-40">
+                        <a href="#">
+                            <h4 class="mb-20">Real-time Resume Preview</h4>
+                        </a>
+                        <p>
+                            Leverage our free powerful resume maker that empowers you to get a real-time view of your resume enabling you to make on-spot changes to your resume as per the job profile requirements. Check out on <a href="#" target="_blank">youtube</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="feature-list d-flex flex-row">
+                    <div class="icon">
+                        <img class="img-fluid" src="img/step.png" alt="">
+                    </div>
+                    <div class="desc ml-40">
+                        <a href="#">
+                            <h4 class="mb-20">Resume Skills Suggestor</h4>
+                        </a>
+                        <p>
+                            Our Free CV Maker interface has an inbuilt skill suggestor which automatically suggests skills based on your experience, job role and designation thus, eliminating the hustle of creating a perfect skill set.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </div>
+</section>
+<!-- End unique-feature Area --><style type="text/css">
+    
+    @media (max-width: 700px) {
+        .execution-video {
+            width: 100% !important;
+        }
+    }
+
+    .desc{
+        text-align: justify;
+    }
+
+</style>
+
+<!-- Start execution-secation -->
+<section class="execution-secation section-gap aquablue-bg">
+    <div class="container">
+        <div class="row justify-content-center section-title-wrap">
+            <div class="col-lg-12">
+                <h2>Advanced CV Maker - Create Your Professional Resume online for free</h2>
+                <p style="max-width: 100%">
+                    Choose from multiple custom-built <a href="#" target="_blank">professional resume templates</a> that have helped thousands of people to get the jobs they ever dreamt of. CV Owl's CV Maker makes it fast and easy to create the powerful, professional <a target="_blank" href="#">resume</a> HR managers are looking for. Use CV Owl's professional resume templates and resume samples to improve your chances of getting called for a job interview as these resume templates and resume samples have been approved by recruiters and employers.
+                </p>
+            </div>
+        </div>
+        <!-- <div class="row justify-content-center pb-80">
+            <div class="col-lg-8">
+                <div class="active-execution-c_arusel">
+                    <iframe class="execution-video" width="699px" height="393px" 
+                        src="https://www.youtube.com/embed/lc9P_HXGS28?autoplay=0&rel=0" 
+                        frameborder="0" allow="autoplay; encrypted-media" 
+                        allowfullscreen>
+                        
+                    </iframe>
+                    
+                    
+                </div>
+            </div>
+        </div> -->
+        <div class="row ex-porcess-wrap">
+            <div class="col-lg-4">
+                <div class="single-ex-process d-flex flex-row">
+                    <div class="icon">
+                        <img src="img/s5.png" alt="">
+                    </div>
+                    <div class="desc ml-20">
+                        <h4>Pre-Written Resume Content</h4>
+                        <p class="mt-20 mb-0">
+                            Use dozens of industry-endorsed professional resume templates that come ready with thousands of perfectly written bullet points for you to choose from, covering all industries. Just point and click.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="single-ex-process d-flex flex-row">
+                    <div class="icon">
+                        <img src="img/s3.png" alt="">
+                    </div>
+                    <div class="desc ml-20">
+                        <h4>Step-by-Step CV Making Help</h4>
+                        <p class="mt-20 mb-0">
+                            Build your resume online with super simple interface that provides easy to use 'step by step' detailed <a href="#" target="_blank">guided walkthrough</a> to build a stand-out resume section by section with professional tips and advice.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="single-ex-process d-flex flex-row">
+                    <div class="icon">
+                        <img src="img/s2.png" alt="">
+                    </div>
+                    <div class="desc ml-20">
+                        <h4>Get CV by Experts</h4>
+                        <p class="mt-20 mb-0">
+                            Use our "Ask an Expert" service, featuring a real time 1-on-1 Certified Professional Resume review by CV Owl Resume Experts. Our online Certified Resume Expert will review your resume for accuracy and clarity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End execution-secation -->
+<!-- Start unique-feature Area -->
+<section class="unique-feature-area section-gap">
+    <div class="container">
+        <div class="row justify-content-center section-title-wrap" style="text-align: left;">
+            <div class="col-lg-6" style="text-align: justify;">
+                <h2>Why Use CV Owl's Online CV Maker</h2>
+                <p>
+                    Do you aspire to land your dream job with the perfect resume employers are looking for?
+                    <br><br>
+                    CV Owl's Free Resume Builder now makes it easy and fun for you to build professional out-of-the-box resumes, instantly generated by the most advanced resume builder technology available. 
+                    <br><br>Simply fill in your details and generate beautiful Ms Word and PDF resumes! Choose from several custom resume templates to build your perfect resume.
+                    <br><br>
+                    So what are you waiting for? Start using the most advanced online CV Maker now and Get a brand new Professional Resume for your next job.
+                </p>
+            </div>
+
+            <div class="col-lg-6 mt-40 onlymobile" style="text-align: center;">
+                <img src="img/F6.jpg" width="80%">
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<!-- End unique-feature Area -->
+<!-- Start cta-section -->
+<section class="cta-section section-gap gradient-bg2">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="text-white">AVAIL RESUME WRITING SERVICES BY CV OWL'S RESUME WRITING EXPERTS!</h2>
+            </div>
+            <div class="col-lg-6">
+                <div class="d-flex flex-row justify-content-end cta-btn">
+                    <a class="ct-btn active" id="submitResumeBTN" style="font-size: 20px;text-align: center;cursor: pointer;">UPLOAD RESUME TO AVAIL FREE CV REVIEW</a>
+                    <!-- <a href="#" class="ct-btn active signupBTN">Signup</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End cta-section --><!-- Start about section -->
+<section class="about-section section-gap">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-lg-6 about-left">
+                <h2>
+                CV Owl - Free CV Maker & Resume writing services <br>
+                </h2>
+                <p class="pt-20 pb-20 " style="text-align: justify;">
+                    Building a professional resume is the first important step towards getting a good job. CV Owl's free resume builder enables you achieve this goal faster.<br><br>
+                    Check out our professional resume examples, resume samples, and resume templates will help you build the perfect resume for your next interview - that too in 5 minutes.<br><br>
+                    Furthermore, CV Owl's in-house team of resume writing experts with 15+ years of experience will craft a highly professional, relevant and recruiter friendly resume format. <br><br>
+                    Our resume writing experts will hold telephonic discussion with you personally to grasp your career goals and past achievements. There will be multiple iterations until you get a perfect resume that does justice to your career aspirations. 
+                </p>
+                <a href="#" class="genric-btn2 signupBTN" style="font-size: 24px;">FREE CV MAKER</a>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img class="img-fluid" src="img/about-img.png" alt="" width="85%">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End about section -->
+<!-- Start contact section -->
+<section class="contact-section section-gap_" style="margin-bottom: 30px;">
+    <div class="container">
+        <div class="row justify-content-center section-title-wrap">
+            <div class="col-lg-12">
+                <h2>Hire An Expert Resume Writing Service Provider</h2>
+                <p>
+                    Get in touch with CV Owl's expert resume writers to help you prepare a professional resume that works best for you. Feel free to talk to us regarding any query you may have about CV Owl's online resume maker and cover letter builder.
+                </p>
+            </div>
+        </div>
+        <div class="row justify-content-between align-items-end">
+            <div class="col-lg-6 col-md-6 contact-left">
+                <img class="img-fluid" src="img/contact-img.png" alt="">
+            </div>
+            <div class="col-lg-5 col-md-6 contact-right">
+                <form class="form-area contact-form text-right" id="contactform">
+                    
+                    <input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
+
+                    <input name="mobile" placeholder="Enter your mobile" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
+
+                    <input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
+
+                    <!-- <input name="subject" placeholder="Enter subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter subject'" class="common-input mb-20 form-control" required="" type="text"> -->
+
+                    <textarea class="common-textarea form-control" cols="30" rows="7" name="message" placeholder="Enter Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Messege'" required=""></textarea>
+
+                    <div class="d-flex flex-column">
+                        <button type="submit" class="genric-btn2 d-block mt-30 mr-0 ml-auto">Send Message</button>
+                        <div class="alert-msg"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End contact section -->
+
+<script type="text/javascript">
+    
+    $('#contactform').submit(function(e){
+
+        e.preventDefault();
+        var self = $(this);
+        $.post('/home/contact', self.serializeArray(), function(data){
+
+            self.trigger('reset');
+
+            var obj = $.parseJSON(data);
+
+            self.find('alert-msg').html(obj.data);
+        });
+    });
+
+</script>
+
+<?php
+include("footer.php");
+?>
+
+
+
+    <!-- Submit Your Resume --->
+
+
+    
+    <script type="text/javascript">
+
+        // $('#resumeSubmitModal').modal('show');
+        
+        $('.signupBTN').click(function(e){
+            toggleSignup();
+            $('#LoginModal').modal('show');
+        });
+
+        $('.loginBTN').click(function(e){
+            $('.login-text').trigger('click');
+            $('#LoginModal').modal('show');
+        });
+
+        
+
+        function toggleSignup(){
+            $('#LoginModal .modal-title').html("Get Started");
+            $('#loginForm').hide();
+            $('#loginHelp').html('');
+            $('#loginEmail').val($('#forgotloginEmail').val());
+            $('#forgotPassForm').hide();
+            $('#signupForm').show();
+        }
+
+        $('.forgotpassword').click(function(e) {
+            $('#loginForm').hide();
+            $('#forgotloginEmail').val($('#loginEmail').val());
+            $('#loginHelp').html('');
+            $('#signupForm').hide();
+            $('#forgotPassForm').show();
+        });
+
+        $('.login-text').click(function(e) {
+            $('#LoginModal .modal-title').html("Login");
+            $('#loginForm').show();
+            $('#loginHelp').html('');
+            $('#loginEmail').val($('#forgotloginEmail').val());
+            $('#forgotPassForm').hide();
+            $('#signupForm').hide();
+        });
+
+        $('#loginForm').submit(function(e) {
+            e.preventDefault();
+            var email = $('#loginEmail').val();
+            var pass = $('#loginPassword').val();
+            var validated = 1;
+            if (email.length < 6 || email.indexOf("@") < 1) {
+                $('#loginHelp').html("Invalid Email");
+                validated = 0;
+                return false;
+            } else {
+                $('#loginHelp').html("");
+            }
+
+            if (pass.length < 6) {
+                $('#loginHelp').html("Invalid Password");
+                validated = 0;
+                return false;
+            } else {
+                $('#loginHelp').html("");
+            }
+
+            if (validated) {
+                $('#login_submit.btn-login').html('<i class="fa fa-spinner fa-pulse"></i>');
+                $.post('/home/signup_portal', {
+                    "email": email,
+                    "password": pass,
+                    "action": 'login'
+                }, function(res, err) {
+
+                    console.log(res);
+                    var obj = $.parseJSON(res);
+                    if (obj.resp == 1) {
+                        location.reload();
+                    } else {
+                        $('#login_submit.btn-login').html('Login');
+                        $('#loginHelp').html(obj.msg);
+                    }
+                });
+            }
+        });
+
+        $('#forgotPassForm').submit(function(e) {
+            e.preventDefault();
+            $('#loginHelp').html('');
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($('#forgotloginEmail').val())) {
+
+                $('#forgotpassbtn').html('<i class="fa fa-spinner fa-pulse"></i>');
+
+                $.post('/home/forgotpassword', {
+                    "email": $('#forgotloginEmail').val()
+                }, function(res) {
+
+                    $('#forgotpassbtn').html('Reset Password');
+
+                    var obj = $.parseJSON(res);
+                    if (obj.resp == 1) {
+                        $('#loginHelp').html(obj.msg);
+                        $('#forgotPassForm').hide();
+                        $('#loginForm').show();
+                    } else {
+                        $('#loginHelp').html(obj.msg);
+                    }
+                });
+            } else {
+                $('#loginHelp').html("Invalid Email");
+            }
+        });
+
+
+        $('#signupForm, #heroSignup').submit(function(e) {
+            
+            var validate = 1;
+            e.preventDefault();
+
+            if($(e.target).attr('id') == 'heroSignup'){
+
+                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($('#'+$(e.target).attr('id')+' input[name=email]').val()) == false) {
+                    validate = 0;
+                }
+
+            }else if($(e.target).attr('id') == 'signupForm'){
+
+                $('#loginHelp').html('');
+                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($('#signupForm input[name=email]').val()) == false) {
+                    $('#loginHelp').html("Invalid Email");
+                    validate = 0;
+                }
+            }
+
+            // if($('#signupForm input[name=name]').val().length < 1){
+            //     $('#loginHelp').html("Invalid Name");
+            //     validate = 0;
+            // }
+
+            // if($('#signupForm input[name=password]').val().length < 6){
+            //     $('#loginHelp').html("Password too short");
+            //     validate = 0;
+            // }
+
+            if(validate == 1){
+                $('#'+$(e.target).attr('id')+' button').html('<i class="fa fa-spinner fa-pulse"></i>');
+
+                $.post('/home/signup_portal', $('#'+$(e.target).attr('id')).serializeArray() , function(res) {
+
+                    var obj = $.parseJSON(res);
+                    if (obj.resp == 1) {
+                        location.reload();
+                    } else {
+                        $('#'+$(e.target).attr('id')+' button').html('Sign Up');
+                        $('#loginHelp').html(obj.msg);
+                    }
+                });
+            }
+        });
+
+
+        if(window.location.hash == '#login'){
+            $('#LoginModal').modal('show');
+        }
+
+        if(window.location.hash == '#review'){
+            $('#submitResumeBTN').trigger('click');
+        }
+
+        if(window.location.hash == '#signup'){
+            toggleSignup();
+            $('#LoginModal').modal('show');
+        }
+    </script>
+
+    <script type="text/javascript">
+
+        $is_shown = 0;
+        function addEvent(obj, evt, fn) {
+            if (obj.addEventListener) {
+                obj.addEventListener(evt, fn, false);
+            }
+            else if (obj.attachEvent) {
+                obj.attachEvent("on" + evt, fn);
+            }
+        }
+        addEvent(window,"load",function(e) {
+
+            addEvent(document, "mouseout", function(e) {
+                e = e ? e : window.event;
+                var from = e.relatedTarget || e.toElement;
+                if (!from || from.nodeName == "HTML") {
+                    // stop your drag event here
+                    // for now we can just use an alert
+                    if($is_shown == 0 && e.clientY < 0 ){
+                        $('#resumeSubmitModal').modal('show');
+                        $is_shown = 1;
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Chatra {literal} -->
+    <script>
+        (function(d, w, c) {
+            w.ChatraID = 'vN2qKNh5QmMqZbKh6';
+            var s = d.createElement('script');
+            w[c] = w[c] || function() {
+                (w[c].q = w[c].q || []).push(arguments);
+            };
+            s.async = true;
+            s.src = (d.location.protocol === 'https:' ? 'https:': 'http:')
+            + '//call.chatra.io/chatra.js';
+            if (d.head) d.head.appendChild(s);
+        })(document, window, 'Chatra');
+    </script>
+    <!-- /Chatra {/literal} -->
+
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '350899822110641');
+        fbq('track', 'PageView');
+    </script>
+    
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=350899822110641&ev=PageView&noscript=1"
+    /></noscript>
+    
+    <!-- End Facebook Pixel Code -->
+</body>
+
+</html>

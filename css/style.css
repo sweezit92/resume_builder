@@ -1,0 +1,79 @@
+.userinfo
+    {
+        background: white;
+        padding: 15px;
+    }
+    .user-details-section
+    {
+        padding: 15px;   
+    }
+    .username
+    {
+        font-size: 18px;
+        font-weight: 700;
+        text-align: left;
+        text-transform: capitalize;
+    }
+    .userid
+    {
+        font-size: 14px;
+        text-align: left;
+        text-transform: capitalize;
+    }
+    .input_handle
+    {
+        width: 100%;
+    }
+    .setting-buttons
+    {
+        margin-top: 10px;
+    }
+    .handle_button
+    {
+        padding-left: 0px;       
+    }
+    .custome-btn-default 
+    {
+        background-color: #f3f7f9;
+        border-color: #f1f4f6;
+    }
+    .padding-left-0px
+    {
+        padding-left: 0px;
+    }
+    .padding-right-0px
+    {
+        padding-right: 0px;
+    }
+    .user-status
+    {
+        border: 1px solid #dfe3e4;
+        padding: 8px;
+    }
+    .lblStatus
+    {
+        margin-right: 8px;
+    }
+    .lblActive
+    {
+        color: #82b73a;
+        font-weight: 400;
+    }
+    .fa-down-icon
+    {
+        margin-left: 8px;
+    }
+    .margin-left-10px
+    {
+        margin-left: 10px;
+    }
+    .btn-add-handle
+    {
+        background: #31486b;
+        border-color: #31486b;
+    }
+    .nav-tabs-line > li > a 
+    {
+        padding: 4px 10px;
+        border-bottom: 2px solid transparent;
+    }
