@@ -1,581 +1,716 @@
 
 <!DOCTYPE html>
+<html lang="zxx" class="no-js">
 
-<html class="no-js css-menubar" lang="en">
+<head>
+     
 
-    <head>
+    <meta name="google-site-verification" content="k4xe9OhSgLDZfAVXiuPA6wC5UDTbC09Ee2x6eWt3RFc" />
 
-
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="theme-color" content="#ce217e">
-        <link rel="icon" sizes="192x192" href="img/favicon.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-        <meta name="description" content="CV Owl is a free Resume and CV Builder that helps to create a highly professional and recruiter preferred resume and CV that represents you a good fit for an open position you applying for.">
-        <meta name="author" content="CVOwl">
-        <title>Resume Builder | Free CV Maker | Resume Maker | Resume Writing | CV Owl - CV Owl</title>
-        <link rel="apple-touch-icon" href="img/favicon.png">
-        <link rel="shortcut icon" href="img/favicon.png">
-        <!-- Stylesheets -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/bootstrap-extend.min.css">
-        <link rel="stylesheet" href="css/site.css">
-        <link rel="stylesheet" href="css/cv.css?v=1537356705">
-
-        <!-- Page -->
-        <link rel="stylesheet" href="css/animsition.css">
-        <link rel="stylesheet" href="css/asScrollable.css">
-        <link rel="stylesheet" href="css/slidePanel.css">
-        
-        <!-- <link rel="stylesheet" href="/static/classic/global/vendor/datatableResponsive/jquery.dataTables.min.css"> -->
-        <link rel="stylesheet" href="css/dataTables.bootstrap.min.css?v2.2.0">
-
-        <!-- Plugins For This Page -->
-        <!-- <link rel="stylesheet" href="/static/classic/global/vendor/cropper/cropper.min.css?v2.1.0"> -->
-        <link rel="stylesheet" href="css/summernote.min.css?v2.2.0">
-        <link rel="stylesheet" href="css/offline-language-english.css">
-        <link rel="stylesheet" href="css/offline-language-english-indicator.css">
-        <link rel="stylesheet" href="css/offline-theme-chrome.css">
-
-
-
-        <!-- Core  -->
-        <script src="js/jquery.js"></script>
-        <script src="js/jquery-1.11.4-ui.min.js"></script>
-
-
-        <!-- Fonts -->
-        <link rel="stylesheet" href="css/font-awesome.min1.css">
-        <link rel="stylesheet" href="css/web-icons.min.css">
-        
-        <link rel="stylesheet" href="css/SmartCV_v2.css?v=1537356705">        <!--[if lt IE 9]>
-        <script src="/static/classic/global/vendor/html5shiv/html5shiv.min.js"></script>
-        <![endif]-->
-        <!--[if lt IE 10]>
-        <script src="/static/classic/global/vendor/media-match/media.match.min.js"></script>
-        <script src="/static/classic/global/vendor/respond/respond.min.js"></script>
-        <![endif]-->
-        <!-- Scripts -->
-        <script src="js/modernizr.js"></script>
-        <script src="js/breakpoints.js"></script>
-        <script src="js/offline.min.js"></script>
-        <script>
-            Breakpoints();
-            String.prototype.capitalizeFirstLetter = function() {
-                return this.charAt(0).toUpperCase() + this.slice(1).toLowerCase();
-            }
-        </script>
-
-    </head>
-
-<body class="">
-<!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
-<!-- 
-<div id="datasaved" class="alert alert-success">
-    <strong>Saved!</strong>
-</div> -->
-
-<nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega" role="navigation">
-
-    <div class="navbar-header">
-
-        <button type="button" class="navbar-toggle collapsed" data-target="#site-navbar-collapse" data-toggle="menuPanel" data-url="/static/classic/topbar/tpl/MENU.tpl">
-            <i class="icon wb-more-horizontal" aria-hidden="true"></i>
-        </button>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="https://www.cvowl.com/static/homepage/assets/common/img/favicon.png">
     
-        <a class="navbar-brand navbar-brand-center" href="/">
-            <img class="navbar-brand-logo navbar-brand-logo-special" style="height:35px" src="img/logo.svg" alt="CV Owl"  title="CVowl">
-        </a>
-
-    </div>
-
-    <div class="navbar-container container-fluid">
-        <!-- Navbar Collapse -->
-        <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
-            <!-- Navbar Toolbar -->
-            <ul class="nav navbar-toolbar">
-                <li class="hidden-float">
-                    <a class="svsts"></a>
-                </li>
-            </ul>
-            <!-- Navbar Toolbar end -->
-
-            <!-- Navbar Toolbar Right -->
-            <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
-
-                <li>
-
-                    <a href="/cv/review" class="navbar-avatar headerItem">
-                        CV Review
-                    </a>
-
-                </li>
-
-                <li>
-
-                    <a  class="navbar-avatar headerItem active">
-                        Resume
-                    </a>
-
-                </li>
-
-                <li>
-
-                    <a href="/cv/builder/coverletter" class="navbar-avatar headerItem">
-                        Cover letter
-                    </a>
-
-                </li>
-
-
-                <li class="dropdown">
-
-                    <a class="navbar-avatar dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button">
-                        <span class="avatar avatar-online">
-                            <img src="img/5.jpg" alt="...">
-                        </span>
-                    </a>
-
-                    <ul class="dropdown-menu" role="menu">
-                        <li role="presentation">
-                            <a href="/logout" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> Logout</a>
-                        </li>
-                    </ul>
-
-                </li>
-
-            </ul>
-            <!-- End Navbar Toolbar Right -->
-        </div>
-
-    </div>
-</nav>
-
-<!-- Page -->
-
-<div class="page animsition"> 
+    <meta name="description" content='How to Write Resume in 2018. How to create the perfect resume. Write your professional title and resume summary. Use resume keywords and action verbs. Resume Writing Tips.'>
     
-    <div style="margin-top:85px;right:0; position: fixed;font-size: 12px;cursor: pointer;display: none"> 
+    <meta name="keywords" content="Resume Builder, CV Maker, Free Resume Maker, Resume Templates | CV Owl">
+    
+    <meta property="og:url" content="https://www.cvowl.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CV Owl" />
+    <meta property="og:description" content="World's Best and Free Online CV Builder - CV Owl" />
+    <meta property="og:image" content="/static/classic/topbar/assets/images/favicon.png"/>
+    
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>How to Write Resume in 2018 | Best Resume Writing Tips | CV Owl</title>
 
-        <div data-spy="affix" class="hidden-sm hidden-xs" count-layout="horizontal" style="position: relative;">
-            <a title="like on twitter" href="https://twitter.com/CV_Owl" target="_blank">
-                <span class="fa-stack fa-lg">
-                    <i class="fa fa-twitter" style="color:#55acee;"></i>
-                </span>
-            </a>
-        </div>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700,900" rel="stylesheet">
+    <!-- ===========================================
+        CSS
+    ============================================= -->
+  <?php
+	include("metalinks.php");
+	?>
+  
+    
+</head>
 
-        <div data-spy="affix" class="hidden-sm hidden-xs" count-layout="horizontal" style="position: relative;" id="likeFB">
-            <a title="Share on facebook" href="https://www.facebook.com/yourcvowl/" target="_blank">
-                <span class="fa-stack fa-lg">
-                    <i class="fa fa-facebook" style="color:#3b5999;"></i>
-                </span>
-            </a>
-        </div>
+<style type="text/css">
+    
+    .version2 a.header-link{
+        color: black !important; 
+        cursor: pointer !important;
+    }
 
-        <div data-spy="affix" class="hidden-sm hidden-xs" style="position: relative;">
-            <a title="Share on google" href="https://plus.google.com/" target="_blank">
-                <span class="fa-stack fa-lg">
-                    <i class="fa fa-google-plus" style="color:#dd4b39;"></i>
-                </span>
-            </a>
-        </div>
+    #mobile-nav .header-link{
+        color: white !important; 
+        cursor: pointer !important;
+        text-align: left;
+    }
 
-        <div data-spy="affix" class="hidden-sm hidden-xs" style="position: relative;">
-            <a title="Share on pinterest" href="https://in.pinterest.com/cvowl17/" target="_blank">
-                <span class="fa-stack fa-lg">
-                    <i class="fa fa-pinterest" style="color:#bd081c;"></i>
-                </span>
-            </a>
-        </div>
 
-        <div data-spy="affix" class="hidden hidden-sm hidden-xs" style="position: relative;">
-            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="box_count" data-action="like" data-size="small" data-show-faces="false" data-share="true">
+    .blog-post{
+        color: #212121;
+    }
+
+    .blog-heading{
+        font-size: 34px;
+        line-height: 50px;
+        color: white !important;
+        text-decoration: capitalise;
+    }
+    
+
+    @media (max-width: 768px) {
+        .onlymobile {
+            display: none;
+        }
+    }
+
+</style>
+
+
+<body class="version-blog">
+    <!-- start Header Area -->
+    <?php
+include("header.php");
+?>
+    <!-- End Header Area -->
+    <!-- Start hero-section -->
+<section class="hero-section-blog-details">
+    <div style="background: url('http://diversityhrsolutions.com/wp-content/uploads/2016/05/Great-Cover-Letter-Banner.jpg');">
+        <div class="text-center" style="margin:40px;">
+            <div class="col-md-12 pt-100">
+               <a class="blog-heading mt-50">How To Create Resume</a>
+            </div>
+            <div class="col-md-12 pt-30 pt-50 pb-30">
+               <a href="#" class="genric-btn signupBTN">Try free resume builder now</a>
             </div>
         </div>
-
-
-        <div data-spy="affix" class="pull-right hidden-sm hidden-xs" style="margin-top: 10px;right: 10px;font-weight: bold;color: black;text-align: center;background: #ffffff4d;padding-top: 10px;padding-bottom: 10px;cursor: pointer;line-height: 13px;width: 32px;font-size: 12px;" data-toggle="modal" data-target=".upgrade-modal">
-            <div class="pin-it-button" count-layout="horizontal">P</div>
-            <div class="pin-it-button" count-layout="horizontal">A</div>
-            <div class="pin-it-button" count-layout="horizontal">I</div>
-            <div class="pin-it-button" count-layout="horizontal">D</div>
-            <div class="pin-it-button" count-layout="horizontal">&nbsp;</div>
-            <div class="pin-it-button" count-layout="horizontal">S</div>
-            <div class="pin-it-button" count-layout="horizontal">E</div>
-            <div class="pin-it-button" count-layout="horizontal">R</div>
-            <div class="pin-it-button" count-layout="horizontal">V</div>
-            <div class="pin-it-button" count-layout="horizontal">I</div>
-            <div class="pin-it-button" count-layout="horizontal">C</div>
-            <div class="pin-it-button" count-layout="horizontal">E</div>
-            <div class="pin-it-button" count-layout="horizontal">S</div>
-        </div>
-
     </div>
-    <div class="page-content padding-30 container-fluid">
-    
-        <div class="row resume-holder"> 
-            <center> 
-                <div style="max-width:810px;">
-                    <div style="margin:10px 0px;">
+</section>
+<!-- End hero-section -->
 
-                        <div class="btn-group pull-left hidden-sm hidden-xs">
-                            <button type="button" class="btn btn-outline btn-default dropdown-toggle" id="exampleSizingDropdown2" data-toggle="dropdown" aria-expanded="false">
-                                SmartCV <span class="caret"></span>
-                            </button>
-                            <!--
-                             <ul id="changeResume" class="dropdown-menu" aria-labelledby="exampleSizingDropdown2" role="menu">
-                                <li role="presentation" data-framework="59986e8a332a6c0aad024cb2"><a role="menuitem"><strong>SmartCV - v1</strong></a></li><li role="presentation" data-framework="59a9ac3396d15d76784d16f1"><a role="menuitem"><strong>SmartCV - v2</strong></a></li>                            </ul> -->
-                            <ul class="dropdown-menu" aria-labelledby="exampleSizingDropdown2" role="menu">
-                                <li role="presentation">
-                                    <a role="menuitem">SmartCV</a>
-                                </li>
-                            </ul>
-                            <button class="btn btn-link changeResume" style="display: none">
-                                <span>
-                                    <i class="fa fa-spin fa-circle-o-notch"></i>
-                                </span>
-                            </button>
+<!-- Start main body contents -->
+<section class="blog-post section-gap">
+    <div class="details-body">
+        <div class="container">
+            <div class="row">
+                <!-- Start Blog Details -->
+                <div class="col-lg-8" style="font-size: 16px;">
+                    <h2 class="head">Wondering how to write a resume?</h2>
+                    <div>  
+                        <span style="text-align: center;"><strong>‘How to write a Resume?’ you may ask as you find it challenging.</strong></span><br><br>
+
+                        As a matter of fact, writing your resume is the first important step to get your dream job.<br><br>
+
+                        But writing a great resume is both an art as well as science.<br><br>
+
+                        After all, writing a resume can be a daunting task when one takes a look at all kind of information that must be used in a professional resume.<br><br>
+
+                        It’s your professionally written resume that would be your first impression for potential employers. Your resume will showcase your educational background, employment history, skill-sets, and qualifications.<br><br>
+
+                        Want to save time and have your resume ready in 5 minutes? Try our free resume builder. It's fast and easy to use. Plus, you'll get tips and right vs. wrong examples while writing your resume. <br><br>
+
+                        <div class="text-center mt-20">
+                            <button id="submitResumeBTN" type="submit" class="genric-btn">Submit Your Resume For Review For Free</button>
                         </div>
+                    </div>
 
-                        <div class="btn btn-pure btn-default hidden-xs">
-                            <form name="form_resume_type">                                
-                                <div class="radio-custom radio-default radio-inline" title="For Interns">
-                                    <input name="resume_type" type="radio" value="000">
-                                    <label for="000">Intern</label>
+                    <hr>
+
+                    <h3 class="sub-head">Question is what matters in Resume? How to get it attractive?</h3>
+                    <div>
+                        <p class="blog-para">
+                            what really matters is the way all this information is presented in your resume.<br><br>
+                        </p>
+                        <p>
+                            
+                            Whatever we say, at the end of the day, a resume’s main aim is to get you shortlisted for the job interview.<br>
+
+                            Hence, it’s important to understand how to present all this information at the right place and customize it specifically to the positions for which you're applying.<br>
+
+                            But it’s easier said than done.<br><br>
+
+                            Getting a job interview is not less than a race as hundreds of other candidates have also applied for your dream job.<br><br>
+
+                            There is only one way to beat them and get yourself shortlisted interview for that job.<br>
+                            That is – learn to create a professional resume.<br>
+                            For this, you need to follow a step-by-step resume building process.<br>
+                            By following a step-by-step resume writing process, you will find it much easier as that will break down each complex task in simple steps. <br>
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <h3 class="sub-head">Key Steps for How To Create Resume</h3>
+                    <div>
+                        <p class="blog-para">
+
+                            Here, we outline key steps on how to create a resume that will be professionally formatted and prove as an interview-winning resume.<br><br>
+                            First Gather the Resume Content<br>
+                            Start putting together all information that must go into your resume.<br>
+                            Look for the following aspects:<br><br>
+
+                            Contact Information<br>
+                            Professional Resume Summary<br>
+                            Professional Title<br>
+                            Work Experience<br>
+                            Skills<br>
+                            Education<br>
+                            Hobbies and interests<br>
+                            This information must also include, your past employment history with their addresses, web URLs, dates of employment, job profiles and other information.<br><br>
+
+                            You can also use online resume builder that can help you fill in these sections with just one click.<br><br>
+
+                            Using an advanced resume builder will also help you in choosing the right resume format, relevant content and would follow all industry best practices.<br><br>
+
+                            Moreover, it will ensure that you don’t need to re-invent the wheel – create your own resume layout or resume format.<br><br>
+
+                            So, it’s highly recommended that you go ahead with a professional resume maker and cover letter builder which can be customized as per your own unique resume needs.<br><br>
+
+                            Once you have collected all of the information, then ensure that you proofread it to avoid any grammatical error.<br><br>
+
+                            For professional help, you can use free resume builder.<br><br>
+
+
+                            <center></center><strong>Choose the Right Resume Format</strong></center><br><br>
+
+                            One of the most important aspect of a perfect resume is choosing the right resume template.<br>
+
+                            Right template can present your skills, achievements and job profile in the best possible manner.<br><br>
+
+                            In other words, right resume template can determine whether you will be selected for the interview session or not.<br><br>                             
+
+                            There are three types of resumes:<br>
+
+                            Chronological<br>
+
+                            Functional<br>
+
+                            Hybrid / Combination<br><br>
+
+                             
+
+                            You must choose the template based on the position you’re applying for.<br><br>
+
+                            <strong>Chronological:</strong><br><br>
+
+                            A chronological resume format is the most commonly used resume format.<br><br>
+
+                            As the name suggests, this resume format lists experiences according to the order in which they took place. Being a traditional resume format, this template usually appeals to older readers and may be best suited for a conservative field.<br><br>
+
+                            It lists your career history in reverse chronological order and helps recruiters and prospective employers see your career growth and emphasizes a steady history of employment.<br><br>
+
+                            <strong>Functional:</strong><br>
+
+                            Functional is a type of resume that elaborates on your experiences according to skill. If you lack the real/direct work experience and if you're trying to change the career track, then functional resume format works best.<br><br>
+
+                             
+
+                            Using this resume format, you focus on showcasing your skills prominently. Work experience is not highlighted that effectively.<br><br>
+                            
+                            <strong>Hybrid / Combination:</strong><br><br>
+
+                            A combination or hybrid, as the name suggests, this resume template combines all components of chronological and functional resume templates. The key goal to use the hybrid resume template is to showcase handy skills as well as a progressive work history.<br><br>
+
+                            But ensure that while using a combination resume template, don’t forget to tailor the profile information according to the position you apply for.<br><br>
+
+                            The ideal resume layout also depends on the industry and profile you are applying for.<br><br>
+
+                            For example, if you are applying for a marketing job with a cool new start-up, you will want to use a modern resume template. Looking for a job with an investment bank? A simple resume template will be your best bet.<br><br>
+
+                        </p>
+                    </div>
+
+                    <hr>
+                    <h3 class="sub-head"><strong>Format Your Resume Text in Professional Manner</strong><br></h3>
+                    <div  class="sub-para">
+                        <p>
+                            Resume formatting is very vital when it comes to presenting your resume in the most professional resume.<br><br>
+
+                            The biggest aspect of resume formatting is text. And text consists of font type, font style, font size and font color.<br><br>
+
+                            So, be extremely careful when you’re choosing fonts for your resume.<br><br>
+
+                            We advise you to stick to the simplest one.<br>
+
+                            In other words - Simpler the Better.<br>
+
+                            Stick to basic fonts like Calibri, Times New Roman, Arial or Verdana.<br>
+
+                            These fonts will help your resume to be read easily by hiring managers.<br>
+
+                            Don’t use to many fonts.<br>
+
+                            Be consistent.<br><br>
+
+                            "A reader may not arrive at the content if your font if too distracting," Samantha Howie, senior human resources recruiter at the New York-based Maximum Management Corp., told the Huffington Post. "The key is that we can read it with ease."<br>
+
+                            Stick to same font throughout your resume and cover letter.<br>
+
+                            However, you can play with the font size and type for specific sections.<br>
+
+                            You can use a larger font for your name and section headings.<br>
+
+                            Feel free to make the font bold and italics to highlight the details of your education and employment history.<br>
+
+                            Besides, use key points of your resume text in the form of bullets.<br>
+
+                            Bulleted text is easier to read for the HR managers.<br><br>
+
+                            <strong>Get Your Contact Information & Personal Details Right</strong><br><br>
+
+                            A true professional understands the value of information.<br>
+
+                            And a value of right information makes it priceless.<br>
+
+                            Likewise, your resume must have your contact information that is correct.<br>
+
+                            After all, even if you get your resume perfectly, still HR managers must be able to reach you via your contact details.<br><br>
+
+                            And outdated email address or non-functional phone numbers will ensure that all your efforts to get that dream job are wasted.<br><br>
+
+                            So, make sure that on a resume contact information section, you must include right contact information.<br>
+                            To start with, mention your name, phone number, email address, and the present-day address.<br>
+
+                            You can also add your social media profile links. Choose them carefully based on the job profile and the industry. Adding your LinkedIn profile is must.<br>
+
+                            Avoid using an unprofessional email address, like kingofrock@gmail.com.<br><br>
+
+                            Hence, it’s strongly recommended to go for a distinct professional email ID.<br>
+
+                            Don’t forget that you can’t make your resume too long so be highly choosy about what to retain and what to remove from your resume.<br><br>
+
+                            A keyword rich resume is your door to getting shortlisted for the interviews.<br>
+
+                            Therefore, stick with the main keywords that your HR manager might be looking for while searching for right resumes.<br>
+
+                            Remove the irrelevant keywords without blink.<br><br>
+
+                            Take out any past job experience that doesn’t do justice to the job you are applying for.<br>
+<br>
+                            Get rid of any sign that shouts ‘IRRELEVANT’ in your resume.<br><br>
+
+                            If you’re student or fresher, then focus on your education section properly.<br>
+                            Talk about different college projects, researches, crash courses or any internships you went through.<br><br>
+
+                            However, if you’re a professional with 15+ years’ work experience, then do the opposite.<br><br>
+
+                            Keep your education section brief as your work experience will demand more attention from the HR managers.<br><br> 
+                        </p>
+                    </div>
+
+                    <div class=" row col-md-12 mt-50 mb-50">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-12">
+                                    <h1>Feeling Lazy to create your resume? We will create one for you that too free..!!</h1>
                                 </div>
-                                <div class="radio-custom radio-default radio-inline" title="For Fresher or upto 2 year experience">
-                                    <input name="resume_type" type="radio" value="001">
-                                    <label for="001">Exp L1</label>
+                                <div class="col-lg-12">
+                                    <div class="text-center mt-20">
+                                        <button id="submitResumeBTN" type="submit" class="genric-btn">Submit Your Resume, We will get back to you</button>
+                                    </div>
                                 </div>
-                                <div class="radio-custom radio-default radio-inline" title="For 2-4 Year experience">
-                                    <input name="resume_type" type="radio" value="010">
-                                    <label for="010">Exp L2</label>
-                                </div>
-                                <div class="radio-custom radio-default radio-inline" title="For 2-4 Year experience">
-                                    <input name="resume_type" type="radio" value="011">
-                                    <label for="011">Exp L3</label>
-                                </div>
-                                <div class="radio-custom radio-default radio-inline" title="For 4+ Year experience">
-                                    <input name="resume_type" type="radio" value="100">
-                                    <label for="100">Exp L4</label>
-                                </div>
-                                <!-- <div class="radio-custom radio-default radio-inline">
-                                    <input name="resume_type" type="radio" value="11">
-                                    <label for="001">Exp (5+)</label>
-                                </div> -->
-                            </form>
+                            </div>
                         </div>
+                    </div>
+                    <hr>
 
-                        <div class="btn btn-pure pull-right hidden-sm hidden-xs">
-                            <span class="btn-download downloadA4"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;A4</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="btn-download downloadLetter"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Letter</span>
+                    <h3 class="sub-head"><strong>Give Your Resume a Professional Structure</strong></h3>
+                    <div>
+                        <p class="blog-para">
+                            A structure makes your resume easier to scan and understand faster.<br><br>
+                            The goal is to put entire resume content in such sequence that HR managers can easily find out what they are looking for in terms of their importance.<br><br>
+                            The standard resume structure follows this pattern:<br>
+                            Contact details<br>
+                            Opening statement <br>
+                            List of key skills <br>
+                            List of technical/software skills<br>
+                            Personal attributes/career overview<br>
+
+                            <br>Educational qualifications</br>
+
+                            Employment history/volunteering/work placements <br>
+
+                            References/referees<br>
+
+                            However, common sense says that one must stay flexible to use this structure to one’s advantage.<br><br>
+
+                            So, based on the industry or the specific job application, feel free to change the order of your resume.<br><br>
+
+                            The key thing one must know – get the best out of your resume content. 
+                        </p>
+                    </div>
+
+                    <h3 class="sub-head"><strong>Know What <span style="color: red">NOT</span> to Put on Your Resume</strong></h3>
+                    <div>
+                        <p class="blog-para">
+                            It’s important to know what to put in your resume.<br>
+                            However, it’s more important to know what not to put in your resume.<br><br>
+
+                            Many people fail to recognize this.<br>
+                            So, what is there to exclude from your resume?<br><br>
+
+                            <strong>It’s simple – ‘Private information’ is strictly no-no.</strong><br><br>
+
+                            Any private information that doesn’t help recruiters determine about your professional ability must be excluded.<br><br>
+                            Your resume doesn't have to include: <br>
+                            Your birthdate<br>
+                            Your gender<br>
+                            Your past addresses<br>
+                            Any ailments or disabilities<br>
+                            Your health status<br><br>
+
+
+                            Unless an employer has specifically asked for specific information like female is preferred for certain role then it’s advised to disclose the gender.<br><br>
+
+                            In a nutshell, do it as the situation demands.<br>
+
+                            Proofread. Proofread. Proofread.<br><br>
+
+                            Yes.<br>
+
+                            Proofreading your resume is MUST.<br>
+
+                            Because, silly errors in grammar, punctuation, spelling, or typography can make your professional resume look not only silly but ugly too.<br><br>
+
+                            As a matter of fact, a resume full of such errors can damage your professional reputation.<br><br>
+
+                            Don’t forget that you would never get a second chance to make a first impression.<br><br>
+
+                            With proper proofreading, you can ensure that your first impression is worth it.<br><br>
+
+                            To do this, first take a printed copy of your resume.<br><br>
+
+                            Don’t proofread it on computer screen.<br><br>
+
+                            Human mind can’t read the words on screen as properly as on a printed paper.<br><br>
+
+                            Use a coloured pen to mark out the errors on the paper.<br><br>
+
+                            Try to read out each word loudly from your resume slowly.<br>
+
+                            Yes.<br><br>
+
+                            Each and every word.<br>
+
+                            Loudly.<br><br>
+
+                            This will help in identifying the awkward phrases in your resume content.<br>
+
+                            Focus on little words such as ‘or’ ‘and’ ‘of’ ‘and’ ‘it’ etc.<br><br>
+
+                            <strong>Wrap Up on How To Write A resume</strong><br><br>
+
+                            If you follow all these steps explained in this page, then you will end up with a perfectly polished and professional resume.<br><br>
+
+                            Does all of this information sound too much to digest at once?<br><br>
+
+                            No worries.<br><br>
+
+                            Let our free resume builder tool do all of the hard work for you. Using CV Owl’s online resume builder, you can easily create, edit and share your professional resume and cover letter in minutes. <br><br>
+
+                            Moreover, you can choose from multiple custom-built professional resume templates that have helped thousands of people to get the jobs they ever dreamt of.<br><br>
+
+                            CV Owl’s Resume Builder makes it fast and easy to create the powerful, professional resume HR managers are looking for. <br><br>
+
+                            Besides, you can always take a help from CV Owl’s professional and experienced resume writers to help you get the perfect resume ready within hours. <br><br>
+                        </p>
+                    </div>
+                    
+                    <hr>
+
+                    <div class="post-links">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="prev-post d-flex align-items-center relative">
+                                <div class="mr-25 relative">
+                                    <img class="img-fluid" src="img/blog/prev-post.jpg" alt="">
+                                    <i class="fas fa-arrow-left"></i>
+                                    <div class="overlay posts"></div>
+                                </div>
+                                <div>
+                                    <p class="mb-0">Prev post</p>
+                                    <h4 class="text-capitalize">6 Secrets of Great Resume</h4>
+                                </div>
+                                <a class="overlay post-link" href="https://www.forbes.com/sites/jonyoushaei/2014/08/27/resumes/"></a>
+                            </div>
+                            <div class="next-post d-flex align-items-center relative">
+                                <div class="mr-25 relative">
+                                    <p class="mb-0">Next post</p>
+                                    <h4 class="text-capitalize">How to write a resume</h4>
+                                </div>
+                                <div class="relative">
+                                    <img class="img-fluid" src="img/blog/next-post.jpg" alt="">
+                                    <i class="fas fa-arrow-right"></i>
+                                    <div class="overlay posts"></div>
+                                </div>
+                                <a class="overlay post-link" href="/how-to-create-resume"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+
+                    <div class="post-comment mt-50">
+                        <div class="post-form">
+                            <div class="text-center mt-20">
+                                <button id="submitResumeBTN" type="submit" class="genric-btn">Submit Your Resume For Review For Free</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="resume-html">
-                    
-                    <div class="resume_html"></div>
-                    <div style="clear:both;"></div>
-                </div>
-            </center>
-            </div>      
-        </div>
-    </div>
-</div>
+                <!-- End Blog Details -->
 
-<div class="modal fade" id="addcustomsection" aria-hidden="false" aria-labelledby="addcustomsection" role="dialog" tabindex="-1">
-    <div class="modal-dialog modal-center">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-                <h4 class="modal-title">Add Custom Section</h4>
+                <!-- Start right sidebar -->
+                <!-- Start right sidebar -->
+<div class="col-lg-4">
+    <div class="side-bar">
+
+        <a href="https://www.facebook.com/yourcvowl" style="padding: 20px;font-size: 25px;color: #3B5998;" class="fab fa-facebook-f"></a>
+        <a href="https://twitter.com/cv_owl" style="padding: 20px;font-size: 25px;color: #55ACEE;" class="fab fa-twitter"></a>
+        <a href="https://plus.google.com/117564200247606950824" style="padding: 20px;font-size: 25px;color: #dd4b39;" class="fab fa-google"></a>
+        <a href="https://www.linkedin.com/company/cvowl" style="padding: 20px;font-size: 25px;color: #007bb5;" class="fab fa-linkedin"></a>
+
+        <div class="mt-40">
+            <h3 class="mb-30">CV Owl</h3>
+            <img class="width-100" src="/homepage/img/marketing/cvowl_banner.jpg" alt="">
+            <h3 class="mt-20">BEST RESUME BUILDER</h3>
+            <p class="fw-600"></p>
+            <p>Create, edit and share your professional resume and cover letter in minutes using our free resume builder. Build the perfect resume and get the job you deserve! <br><br></p>
+            <div class="text-center">
+                <a href="javascript:void(0);" class="genric-btn2 signupBTN">Try it for Free</a>
             </div>
-            <div class="modal-body padding-top-0">
-                <div class="slidePanel-desc-static">
-                    Showcase anything extra you want to include in your resume e.g. award, honour, affiliations, extra curricular activities, etc.
-                </div>
-                <div class="row margin-top-10">
-                    <form name="newSection">
-                        <div>
-                            <div class="btn font-weight-400">
-                                Choose section type :
-                            </div>
-                            <div class="btn btn-pure btn-default">
-                                <div class="radio-custom radio-default radio-inline">
-                                    <input name="type" type="radio" value="CUSTOMSECTIONSV1" selected>
-                                    <label for="cs_type1">EXPERIENCE TYPE</label>
+        </div>
+
+                <div class="recent-news mt-45">
+            <h3 class="mb-30">Our Best Articles</h3>
+
+                                <div class="news-box mb-20">
+                        <div class="row">
+                            <!-- <div class="col-lg-4">
+                                <img class="width-100" src="" alt="">
+                            </div> -->
+
+                            <div class="col-lg-12">
+                                <div class="news-info">
+                                    <a href="/resume/resume-writing-tips/">
+                                        <h4 class="news-head text-capitalize" style="color: #007bff;">Resume Writing Tips</h4>
+                                    </a>
+                                    <!-- <p class="mt-10 mb-0"></p> -->
                                 </div>
-                                <!-- <div class="radio-custom radio-default radio-inline">
-                                    <input name="type" type="radio" value="CUSTOMSECTIONSV2">
-                                    <label for="cs_type2">SKILL TYPE</label>
-                                </div> -->
                             </div>
                         </div>
-                        <div class="col-sm-8 col-xs-8">
-                            <div class="form-group form-material floating">
-                                <input type="text" class="form-control empty" name="section_name" />
-                                <label class="floating-label">Enter Section Name</label>
+                    </div>
+                                        <div class="news-box mb-20">
+                        <div class="row">
+                            <!-- <div class="col-lg-4">
+                                <img class="width-100" src="" alt="">
+                            </div> -->
+
+                            <div class="col-lg-12">
+                                <div class="news-info">
+                                    <a href="/interviews/different-type-of-resume-formats">
+                                        <h4 class="news-head text-capitalize" style="color: #007bff;">Best Resume Formats</h4>
+                                    </a>
+                                    <!-- <p class="mt-10 mb-0"></p> -->
+                                </div>
                             </div>
                         </div>
-                        <div class="col-sm-3 col-xs-3">
-                            <button class="btn btn-sm btn-primary btn-block margin-20">Add</button>
+                    </div>
+                                        <div class="news-box mb-20">
+                        <div class="row">
+                            <!-- <div class="col-lg-4">
+                                <img class="width-100" src="" alt="">
+                            </div> -->
+
+                            <div class="col-lg-12">
+                                <div class="news-info">
+                                    <a href="/resume/how-to-write-resume/">
+                                        <h4 class="news-head text-capitalize" style="color: #007bff;">How to Write a Resume</h4>
+                                    </a>
+                                    <!-- <p class="mt-10 mb-0"></p> -->
+                                </div>
+                            </div>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                                        <div class="news-box mb-20">
+                        <div class="row">
+                            <!-- <div class="col-lg-4">
+                                <img class="width-100" src="" alt="">
+                            </div> -->
+
+                            <div class="col-lg-12">
+                                <div class="news-info">
+                                    <a href="/resume-writing/resume-writing-services/">
+                                        <h4 class="news-head text-capitalize" style="color: #007bff;">Best Resume Writing Services</h4>
+                                    </a>
+                                    <!-- <p class="mt-10 mb-0"></p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="news-box mb-20">
+                        <div class="row">
+                            <!-- <div class="col-lg-4">
+                                <img class="width-100" src="" alt="">
+                            </div> -->
+
+                            <div class="col-lg-12">
+                                <div class="news-info">
+                                    <a href="/10-tips-to-write-professional-cover-letter">
+                                        <h4 class="news-head text-capitalize" style="color: #007bff;">Cover Letter Tips</h4>
+                                    </a>
+                                    <!-- <p class="mt-10 mb-0"></p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="news-box mb-20">
+                        <div class="row">
+                            <!-- <div class="col-lg-4">
+                                <img class="width-100" src="" alt="">
+                            </div> -->
+
+                            <div class="col-lg-12">
+                                <div class="news-info">
+                                    <a href="/interview-tips">
+                                        <h4 class="news-head text-capitalize" style="color: #007bff;">Tips for Job interview</h4>
+                                    </a>
+                                    <!-- <p class="mt-10 mb-0"></p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="news-box mb-20">
+                        <div class="row">
+                            <!-- <div class="col-lg-4">
+                                <img class="width-100" src="" alt="">
+                            </div> -->
+
+                            <div class="col-lg-12">
+                                <div class="news-info">
+                                    <a href="/interviews/things-to-say-in-a-job-interview">
+                                        <h4 class="news-head text-capitalize" style="color: #007bff;">Things to say in Job Interview</h4>
+                                    </a>
+                                    <!-- <p class="mt-10 mb-0"></p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="news-box mb-20">
+                        <div class="row">
+                            <!-- <div class="col-lg-4">
+                                <img class="width-100" src="" alt="">
+                            </div> -->
+
+                            <div class="col-lg-12">
+                                <div class="news-info">
+                                    <a href="/interviews/24-things-you-should-never-say-during-a-job-interview">
+                                        <h4 class="news-head text-capitalize" style="color: #007bff;">Things you should not say in Job Interview</h4>
+                                    </a>
+                                    <!-- <p class="mt-10 mb-0"></p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="news-box mb-20">
+                        <div class="row">
+                            <!-- <div class="col-lg-4">
+                                <img class="width-100" src="" alt="">
+                            </div> -->
+
+                            <div class="col-lg-12">
+                                <div class="news-info">
+                                    <a href="/55-mistakes-to-avoid-in-interview">
+                                        <h4 class="news-head text-capitalize" style="color: #007bff;">55 Mistakes you should avoid in a Job Interview</h4>
+                                    </a>
+                                    <!-- <p class="mt-10 mb-0"></p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="news-box mb-20">
+                        <div class="row">
+                            <!-- <div class="col-lg-4">
+                                <img class="width-100" src="" alt="">
+                            </div> -->
+
+                            <div class="col-lg-12">
+                                <div class="news-info">
+                                    <a href="/tell-me-about-yourself">
+                                        <h4 class="news-head text-capitalize" style="color: #007bff;">Tell Me About Yourself</h4>
+                                    </a>
+                                    <!-- <p class="mt-10 mb-0"></p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
+        <!-- End Recent News -->
+
+        <!-- Start Post Category -->
+        <div class="post-cat mt-45">
+            <h3 class="mb-30">Popular Resume Samples</h3>
+            <div class="cat-box">
+                <a class="cat-link" href="/resume-sample/software-engineer">Software Engineer Resume</a>
+            </div>
+            <div class="cat-box">
+                <a class="cat-link" href="/resume-sample/product-manager">Product Manager Resume</a>
+            </div>
+            <div class="cat-box">
+                <a class="cat-link" href="/resume-sample/business-analyst">Business Analyst Resume</a>
+            </div>
+            <div class="cat-box">
+                <a class="cat-link" href="/resume-sample/sales-executive">Sales Executive Resume</a>
+            </div>
+            <div class="cat-box">
+                <a class="cat-link" href="/resume-sample/accountant">Accountant Resume</a>
+            </div>
+            <div class="cat-box">
+                <a class="cat-link" href="/resume-sample/hr-executive">HR Executive Resume</a>
             </div>
         </div>
+        <!-- End Post Category -->
+
+        <!-- Start Post Category -->
+        <div class="post-cat mt-45">
+            <h3 class="mb-30">Popular Cover Letter</h3>
+            <div class="cat-box">
+                <a class="cat-link" href="/cover-letter-sample/software-engineer">Software Engineer Cover Letter</a>
+            </div>
+            <div class="cat-box">
+                <a class="cat-link" href="/cover-letter-sample/product-manager">Product Manager Cover Letter</a>
+            </div>
+            <div class="cat-box">
+                <a class="cat-link" href="/cover-letter-sample/business-analyst">Business Analyst Cover Letter</a>
+            </div>
+            <div class="cat-box">
+                <a class="cat-link" href="/cover-letter-sample/sales-executive">Sales Executive Cover Letter</a>
+            </div>
+            <div class="cat-box">
+                <a class="cat-link" href="/cover-letter-sample/business-development-manager">Business Development Cover Letter</a>
+            </div>
+        </div>
+        <!-- End Ad Box -->
+
     </div>
 </div>
-
- <div id="feedbackModal" class="modal fade" role="dialog">
-          <div class="modal-dialog">
-            <div class="modal-content">                      
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Feedback</h4>
-                  </div>
-                  
-                  <div class="modal-body">
-                    <div class="text-center errorMsg" style="display: none;">
-                        <label class="errorMsgText" style="color:red"></label>
-                    </div>    
-                     <div class="text-center sucessMsg" style="display: none;">
-                        <label class="sucessMsgText" style="color:green"></label>
-                    </div>    
-                    <div class="form-group">                            
-                        <textarea class="form-control" placeholder="Your Message.." id="feedback"></textarea>
-                    </div>                    
-                    <button class="btn btn-primary" type="button" id="btnSubmitfeedback">Submit</button>
-                    
-                    <button style="display: none;" class="btn btn-primary" type="button" id="btnfeedbackPreloder"><i class="fa fa-spinner"></i> Submit</button>
-                  </div>
-
-                  <!-- <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  </div> -->
-            </div>
-          </div>
-    </div>
-  
-<script src="js/summernote.js"></script>  
-<script>
-
-    $('#likeFB').click(function(){
-        $('.fb-like').trigger('click');
-    });
-
-    $("#btnSubmitfeedback").click(function(){
-        var val = $("#feedback").val();
-
-        $("#btnSubmitfeedback").hide();
-        $("#btnfeedbackPreloder").show();
-        if(val == "" || val == null)
-        {
-            $(".errorMsgText").text("Enter your message");
-            $(".errorMsg").show();
-            $(".sucessMsg").hide();
-            $("#btnSubmitfeedback").show();
-            $("#btnfeedbackPreloder").hide();  
-            return false;
-        }
-
-        $.ajax({
-            url:"https://www.cvowl.com/cv/getFeedback",
-            type:"POST",
-            data:{feedback:val},
-            success:function(argument) 
-            {
-                if(argument == "success")
-                {
-                    $(".sucessMsgText").text("Thank you for your feedback");
-                    $(".sucessMsg").show();
-                    $(".errorMsg").hide();
-                    $("#feedback").val("");
-
-                }
-                $("#btnSubmitfeedback").show();
-                $("#btnfeedbackPreloder").hide();  
-            }
-        })
-    });
-
-
-
-    $('.downloadA4').on('click', function() {
-        var download = $('.resume_html').html();
-        $.redirectPost('/cv/buildPDF', {
-            'html': encodeURIComponent(download),
-            'size':'A4'
-        });
-    });
-
-    $('.downloadLetter').on('click', function() {
-        var download = $('.resume_html').html();
-        $.redirectPost('/cv/buildPDF', {
-            'html': encodeURIComponent(download),
-            'size':'Letter'
-        });
-    });
-
-    $('form[name="newSection"]').submit(function(e){
-        e.preventDefault();
-        var data = $(this).serializeArray();
-        console.log(data);
-        if(data[0].value == '' || data[1].type == ''){
-            alert("Fields cannot be empty");
-            return;
-        }
-        var is_added = addNewCustomSection(data[0].value, data[1].value.capitalizeFirstLetter());
-        if(is_added){
-            $('form[name="newSection"]').trigger('reset');
-            $('#addcustomsection').modal('toggle');
-            var str = createSectionHTML(section_arr, 1);
-            $('.all_section').html(str);
-            initSectionjs();
-        }
-    });
-
-    var ls = Date.now();
-
-    var a = ({"Profile":{"firstName":"SUJIT","lastName":"JONES","email":"mary.jones@cvowl.com","phone":"555-322-7337","jobTitle":"DEVE","type":"000","birthDay":"28-Jul-1995","gender":"Female","maritalStatus":"Single","nationality":"American","picture":"\/photos\/original\/missing.png","summary":"You should use this section of your resume to summarize what makes you a good fit for an open position. It needs to be compelling and concise, approximately four to six lines. Summarize your skills and experience in order for a prospective employer to quickly get a sense of the value you could offer.","facebookHandle":"","linkedinHandle":"","currentLocation":"Anandapuri","location":{"address":"1 square street, New York, USA","postalCode":"","city":"","countryCode":"","region":"","state":"","country":""},"phone_alternate":"87878787878","coverletterDate":"10  July, 2017"},"Experience":[{"end_date":"Present","is_active":1,"more_info1":"erer efefef","order_prefs":999,"section_title1":"php developer","section_title2":"clickrstop pvt ltd","section_title3":"Kolkata","section_title4":"","section_type":"EXPERIENCE","start_date":"Aug 2014","created_dt":1537355442827}],"Education":[{"end_date":"Apr 2011","is_active":1,"more_info1":"List your education in reverse order if you have a master\u2019s and a bachelor\u2019s degree, make\n sure to first list the master\u2019s degree. You can also highlight any alternative education such as online learning or self directed training","order_prefs":999,"section_title1":"Institute Name","section_title2":"8.0 CGPA","section_title3":"Location","section_title4":"Course Name","section_type":"EDUCATION","start_date":"May 2012","created_dt":1506862395233}],"Skills":[{"end_date":"","is_active":1,"more_info1":"","order_prefs":999,"section_title1":"SKILL 1","section_title2":"Intermediate","section_title3":"","section_title4":"","section_type":"SKILLS","start_date":"","created_dt":1504035305365},{"end_date":"","is_active":1,"more_info1":"","order_prefs":999,"section_title1":"SKILL 2","section_title2":"Intermediate","section_title3":"","section_title4":"","section_type":"SKILLS","start_date":"","created_dt":1504035316110},{"end_date":"","is_active":1,"more_info1":"","order_prefs":999,"section_title1":"SKILL 3","section_title2":"Intermediate","section_title3":"","section_title4":"","section_type":"SKILLS","start_date":"","created_dt":1504035325785}],"Projects":[{"end_date":"Apr 2014","is_active":1,"more_info1":"Focus on a specific projects in which you successfully used your skills and abilities to\n create a beneficial outcome for a former employee and present projects as&nbsp;\u003Cdiv\u003Eaccomplishments\u003C\/div\u003E\u003Cul\u003E\u003Cli\u003EBriefly mention the background for the projects\u003C\/li\u003E\u003Cli\u003EQuantify the results of your projects\u003C\/li\u003E\u003Cli\u003EHighlight how your involvement led to the project exceeding its goals\u003C\/li\u003E\u003C\/ul\u003E","order_prefs":999,"section_title1":"PROJECT TITLE","section_title2":"Company Name","section_title3":"Location","section_title4":"","section_type":"PROJECTS","start_date":"Jun 2013","created_dt":1504035447972}],"Languages":[{"end_date":"","is_active":1,"more_info1":"","order_prefs":999,"section_title1":"english","section_title2":"Intermediate","section_title3":"","section_title4":"","section_type":"LANGUAGES","start_date":"","created_dt":1505826784846},{"end_date":"","is_active":1,"more_info1":"","order_prefs":999,"section_title1":"German","section_title2":"Advanced","section_title3":"","section_title4":"","section_type":"LANGUAGES","start_date":"","created_dt":1505826794941}],"Hobbies":[{"end_date":"","is_active":1,"more_info1":"","order_prefs":999,"section_title1":"Astrology","section_title2":"","section_title3":"","section_title4":"","section_type":"HOBBIES","start_date":"","created_dt":1504035355964},{"end_date":"","is_active":1,"more_info1":"","order_prefs":999,"section_title1":"Drawing","section_title2":"","section_title3":"","section_title4":"","section_type":"HOBBIES","start_date":"","created_dt":1504035363995},{"end_date":"","is_active":1,"more_info1":"","order_prefs":999,"section_title1":"Travelling","section_title2":"","section_title3":"","section_title4":"","section_type":"HOBBIES","start_date":"","created_dt":1505826576818}],"Achievement":[{"end_date":"Present","is_active":true,"more_info1":"","order_prefs":999,"section_title1":"COURSE NAME","section_title2":"Institute Name","section_title3":"8.0  CGPA","section_title4":"","section_type":"ACHIEVEMENT","start_date":"","created_dt":1503778733}],"Certifications":[],"Volunteering":[],"Recommendations":[],"Worklinks":[{"websiteURL":"","is_active":1},{"portfolioURL":"","is_active":1},{"blogURL":"","is_active":1},{"slideshareURL":"","is_active":1}],"customSections":[],"Coverletter":{"recruiterSal":"Ms. ","recruiterName":"ABC","companyName":"XYZ Inc.","address":"1 square street, New York, USA","description":"I read with interest your posting for [name of position] on the [name of the job board]. I believe I possess the necessary skills and experience you are seeking and would make a valuable addition to your company.As my resume indicates, I possess more than [number of years] years of progressive experience in the [job field] field. My professional history includes position such as [job title] at [company name] as well as [job title] at [company name].\u003Cbr\u003E\u003Cbr\u003EMost recently, my responsibilities as [job title] at [company name] match the qualifications you are seeking. As the [job title], my responsibilities included [two or three responsibilities which are similar to ones stated in job posting]. I assisted in the successful completion of [project which is similar to one that job posting stated you will work on]. My supervisor also relied on my ability to [skills such as proofreading and excellent communication skills].I have attached my resume for your review and I look forward to speaking with you further regarding your available position."},"New section":[]});
-    //if(localStorage.getItem("data") == null)
-    //{
-        localStorage.setItem("data",JSON.stringify(a));
-    //localStorage.setItem("modified_dt",Date.now());
-    //}else{
-    //    localStorage.setItem("modified_dt",Date.now());
-    //}
-
-    setInterval(function(){
-        if(ls < localStorage.getItem('modified_dt')){
-            $('.svsts').html('Saving changes...');
-            $.post('/cv/sync',{"data":localStorage.getItem("data")},function(res){
-
-                if(res == 'logout'){
-                    alert('Your session have been logged out. Please login and try again');
-                    location.reload();
-                }else{
-
-                    ls = Date.now();
-                    $('.svsts').show();
-                    $('.svsts').html('All changes saved');
-                    setTimeout(function(){
-                        $('.svsts').html('');
-                    }, 1200)
-                
-                }
-                
-            });
-        }
-    }, 3000);
-
-    $('#changeResume li').click(function(){
-        $.post('/cv/changetemplate', {'template_id':$(this).data('framework')}, function(data){
-            var obj = $.parseJSON(data);
-            if(obj.resp == 1){
-                location.reload();
-            }else{
-                // alert("You are already on the smae templte");
-            }
-        });  
-    });
-
-
-</script>
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/animsition.min.js"></script>
-    <script src="js/jquery-asScroll.min.js"></script>
-    <script src="js/jquery.mousewheel.js"></script>
-    <script src="js/jquery.asScrollable.all.min.js"></script>
-    <script src="js/jquery-asHoverScroll.js"></script>
-    <script src="js/jquery.dataTables.min.js"></script>
-
-    <!--plugin-->
-    <script src="js/jquery-slidePanel.min.js"></script>
-
-    <!-- Scripts -->
-    <script src="js/core.min.js"></script>
-    <script src="js/site.min.js"></script>
-    <script src="js/menu.min.js"></script>
-    <script src="js/menubar.min.js"></script>
-    <script src="js/sidebar.min.js"></script>
-    <script src="js/asscrollable.min.js"></script>
-    <script src="js/animsition.min.js"></script>
-    <script src="js/material.min.js"></script>
-    <script src="js/slidepanel.js"></script>
-
-    <script src="js/builder.js?v=1537356705"></script>
-    <script src="js/panel.js?v=1537356705"></script>
-
-    <script src="js/SmartCV_v1.js?v=1537356705"></script><script src="js/builder1.js?v=1537356705"></script><script src="js/panel1.js?v=1537356705"></script>
-            <div class="site-skintools" style="display:block;" data-section="sections" data-toggle="slidePanel" data-url="/static/classic/topbar/tpl/sections.tpl">
-            <div class="site-skintools-inner">
-                <div class="site-skintools-toggle" style="box-shadow: 1px 1px 3px #ccc;border-radius: 10px;height:2.35em;">&nbsp;<i class="icon wb-chevron-right primary-600"></i>&nbsp;
-                </div>
+<!-- End right sidebar -->                <!-- End right sidebar -->
             </div>
         </div>
+    </div>
+</section>
+<?php
+include("footer.php");
+?>
+
+
     
-    <script type="text/javascript">
-    
-        (function(document, window, $) {
-            'use strict';
-            var Site = window.Site;
-
-            $(document).ready(function($) {
-                Site.run();
-                
-                var notif_removed = 0;
-
-                $(".remove-notification").click(function(){
-                    $(".emailverify-backline").slideUp("slow");
-                    $(".emailverify-backline").css("display:none");
-                        notif_removed = 1;
-                });
-                if(notif_removed==1){
-                    $(".emailverify-backline").css("display:none");
-                }
-
-                                    setTimeout(function(){$('.site-skintools').trigger('click');}, 1000);
-                            });
-
-            $.extend({
-                redirectPost: function(location, args) {
-                var rpfd = '';
-                    $.each(args, function(k, v) {
-                        rpfd += '<input type="hidden" name="' + k + '" value="' + v + '">';
-                    });
-                    $('<form action="' + location + '" method="POST">' + rpfd + '</form>').appendTo($(document.body)).submit();
-                },
-                redirectGet: function(location, args) {
-                    var rgfd = '';
-                    $.each(args, function(k, v) {
-                        rgfd += '<input type="hidden" name="' + k + '" value="' + v + '">';
-                    });
-                    $('<form action="' + location + '" method="GET">' + rgfd + '</form>').appendTo($(document.body)).submit();
-                }
-            });
-        })(document, window, jQuery);
-
-    </script>
-
-
-    </body>
-
+</body>
 
 </html>
