@@ -20,15 +20,15 @@
                                 </ul>
                             </li>
  -->
- 						<li><a href="index.php">Home</a></li>
-						<li><a href="testimonial.php">Testimonials</a></li>						
-						<li><a href="overview.php">The overview</a></li>
-						<li><a href="contact.php">Contact</a></li>
+ 						<li><a href="#">Home</a></li>
+						<li><a href="#">Testimonials</a></li>						
+						<li><a href="#">The overview</a></li>
+						<li><a href="#">Contact</a></li>
                         <li><a href="#" class="loginBTN" style="cursor: pointer;">Register/Login</a></li>
                        </ul>
                     </nav>
-                                                <a class="signup-btn signupBTN">Create Resume</a>
-                                            </div>
+						<a class="signup-btn signupBTN">Create Resume</a>
+                  </div>
                 <!-- #nav-menu-container -->
             </div>
         </div>

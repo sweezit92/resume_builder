@@ -198,7 +198,7 @@ include("header.php");
             </div>
             <div class="col-lg-6">
                 <div class="_active-feature-carusel">
-                    <img class="img-fluid" src="img/c4.png" alt="">
+                    <img class="img-fluid" src="img/mobile.png" alt="">
                 </div>
             </div>
         </div>

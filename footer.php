@@ -8,13 +8,13 @@
                         <h4>Popular Tools</h4>
                         <ul class="menu-list">
 
-                            <li><a target="_blank" href="/resume-writing/free-resume-samples">Resume Samples</a></li>
-                            <li><a target="_blank" href="/coverletter/free-cover-letter-samples">Cover Letter Samples</a></li>
+                            <li><a target="_blank" href="#">Resume Samples</a></li>
+                            <li><a target="_blank" href="#">Cover Letter Samples</a></li>
 
-                            <li><a target="_blank" href="/coverletter/free-cover-letter-builder-online">Cover Letter Builder</a></li>
+                            <li><a target="_blank" href="#">Cover Letter Builder</a></li>
                             
-                            <li><a target="_blank" href="/interviews/different-type-of-resume-formats">Resume Formats</a></li>
-                            <li><a target="_blank" href="/interviews/different-type-of-resume-formats">Cover Letter Formats</a></li>
+                            <li><a target="_blank" href="#">Resume Formats</a></li>
+                            <li><a target="_blank" href="#">Cover Letter Formats</a></li>
 
                         </ul>
                     </div>
@@ -26,12 +26,11 @@
                         <h4>Most Viewed</h4>
                         <ul class="menu-list">
 
-                            <li><a target="_blank" href="/blog/what-is-difference-between-resume-cv/">What is the difference between Resume and CV?</a></li>
-                            <li><a target="_blank" href="/interviews/things-to-say-in-a-job-interview">Things to say in job interview</a></li>
-                            <li><a target="_blank" href="/interviews/24-things-you-should-never-say-during-a-job-interview">Things to never say in job interview</a></li>
-                            
-                            <li><a target="_blank" href="/blog/what-recruiter-looks-in-resume/">What recruiter looks for in a Resume?</a></li>
-                            <li><a target="_blank" href="/blog/what-not-to-include-in-your-resume/">What Not To Include In Your Resume?</a></li>
+                            <li><a target="_blank" href="#">What is the difference between Resume and CV?</a></li>
+                            <li><a target="_blank" href="#">Things to say in job interview</a></li>
+                            <li><a target="_blank" href="#">Things to never say in job interview</a></li>                            
+                            <li><a target="_blank" href="#">What recruiter looks for in a Resume?</a></li>
+                            <li><a target="_blank" href="#">What Not To Include In Your Resume?</a></li>
                         </ul>
                     </div>
                 </div>
@@ -40,17 +39,17 @@
                     <div class="single-footer-widget">
                         <h4>About Us</h4>
                         <ul class="menu-list">
-                            <li><a target="_blank" href="/about-us">About Us</a></li>
-                            <li><a target="_blank" href="/resume-writing-success-stories">Testimonials</a></li>
-                            <li><a target="_blank" href="/faq">FAQ</a></li>
-                            <li><a target="_blank" href="/partner-program">Partner Program</a></li>
-                            <li><a target="_blank" href="/contact">Contact Us</a></li>
+                            <li><a target="_blank" href="#">About Us</a></li>
+                            <li><a target="_blank" href="#">Testimonials</a></li>
+                            <li><a target="_blank" href="#">FAQ</a></li>
+                            <li><a target="_blank" href="#">Partner Program</a></li>
+                            <li><a target="_blank" href="#">Contact Us</a></li>
                         </ul>
                         <ul class="social-icons">
-                            <li><a target="_blank" href="https://www.facebook.com/yourcvowl"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a target="_blank" href="https://twitter.com/cv_owl"><i class="fab fa-twitter"></i></a></li>
-                            <li><a target="_blank" href="https://www.linkedin.com/company/cvowl"><i class="fab fa-linkedin"></i></a></li>
-                            <li><a target="_blank" href="https://plus.google.com/u/4/117564200247606950824"><i class="fab fa-google"></i></a></li>
+                            <li><a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a target="_blank" href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a target="_blank" href="#"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a target="_blank" href="#"><i class="fab fa-google"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -155,19 +154,19 @@
                             <ul class="social-icons" style="font-size: 20px;">  
 
                                 <li>
-                                    <a target="_blank" href="https://www.cvowl.com/login/facebook">
+                                    <a target="_blank" href="#">
                                         <i class="fab fa-facebook" style="color:#3B5998;"></i>
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a target="_blank" href="https://www.cvowl.com/login/google">
+                                    <a target="_blank" href="#">
                                         <i class="fab fa-google" style="color:#DB4437;"></i>
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a target="_blank" href="https://www.cvowl.com/login/linkedin">
+                                    <a target="_blank" href="#">
                                         <i class="fab fa-linkedin" style="color:#0077B5;"></i>
                                     </a>
                                 </li>
