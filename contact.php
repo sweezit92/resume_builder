@@ -73,7 +73,7 @@ include("header.php");
 
 <!-- Start hero-section -->
 <section class="hero-section-blog-details">
-    <div style="background: url('http://diversityhrsolutions.com/wp-content/uploads/2016/05/Great-Cover-Letter-Banner.jpg');">
+    <div style="background: url('img/Great-Cover-Letter-Banner.jpg');">
         <div class="text-center" style="margin:40px;">
             <div class="col-md-12 pt-100 pb-80">
                <a class="blog-heading">WANT TO BUILD YOUR OWN RESUME?</a>
