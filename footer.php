@@ -40,7 +40,7 @@
                     <div class="single-footer-widget">
                         <h4>About Us</h4>
                         <ul class="menu-list">
-                            <li><a target="_blank" href="/about-us">About CV Owl</a></li>
+                            <li><a target="_blank" href="/about-us">About Us</a></li>
                             <li><a target="_blank" href="/resume-writing-success-stories">Testimonials</a></li>
                             <li><a target="_blank" href="/faq">FAQ</a></li>
                             <li><a target="_blank" href="/partner-program">Partner Program</a></li>

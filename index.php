@@ -3,17 +3,6 @@
 <html lang="zxx" class="no-js">
 
 <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-86201110-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-86201110-1');
-    </script>
-
-    <meta name="google-site-verification" content="k4xe9OhSgLDZfAVXiuPA6wC5UDTbC09Ee2x6eWt3RFc" />
 
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,7 +12,7 @@
     
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>CV Maker, Free Resume Builder, Resume Writing Services | CV Owl</title>
+    <title>Resume Builder - Home</title>
 
 <?php
 include("metalinks.php");
@@ -161,7 +150,7 @@ include("header.php");
             <div class="col-lg-12">
                 <h2>Free CV Maker and Professional Resume Writing Services</h2>
                 <p style="max-width: 100%">
-                    Resumes or CV's created using CV Owl's powerful free CV Maker helps you stand out in the job market as the <a href="#">professional resume templates</a> offered here are well researched. We have thousands of pre-defined content templates that suits your Industry & Job Skills. Moreover, get your resume developed by professional resume writers to showcase your skills, experience and achievements. Your Resume is formatted and designed as per latest industry specific layout and keywords. Avail online resume writing services for experienced professionals and job seekers. Get expert advice & tips for Resume Writing at CV Owl. We have thousands of pre-defined content templates that suits your Industry & Job Skills
+                    Resumes or CV's created using Resume Builder powerful free CV Maker helps you stand out in the job market as the <a href="#">professional resume templates</a> offered here are well researched. We have thousands of pre-defined content templates that suits your Industry & Job Skills. Moreover, get your resume developed by professional resume writers to showcase your skills, experience and achievements. Your Resume is formatted and designed as per latest industry specific layout and keywords. Avail online resume writing services for experienced professionals and job seekers. Get expert advice & tips for Resume Writing at Resume Builder. We have thousands of pre-defined content templates that suits your Industry & Job Skills
                 </p>
             </div>
         </div>
@@ -176,7 +165,7 @@ include("header.php");
                             <h4 class="mb-20">Mobile Compatible CV Maker</h4>
                         </a>
                         <p>
-                            CV Owl's online CV Maker enables you to easily access and create your resume on mobile while you are travelling. View or edit your resume content for the specific job opportunity, and then send your resume instantly to the prospective employer!
+                            Resume Builder online CV Maker enables you to easily access and create your resume on mobile while you are travelling. View or edit your resume content for the specific job opportunity, and then send your resume instantly to the prospective employer!
                         </p>
                     </div>
                 </div>
@@ -202,7 +191,7 @@ include("header.php");
                             <h4 class="mb-20">Edit, Download, Share Your Resume</h4>
                         </a>
                         <p>
-                            Create attention-grabbing resume with CV Owl's online CV Maker where you can edit, format, download, print and share your resume from one place- It is really that simple to build your resume and share it with your potential employers.
+                            Create attention-grabbing resume with Resume Builder online CV Maker where you can edit, format, download, print and share your resume from one place- It is really that simple to build your resume and share it with your potential employers.
                         </p>
                     </div>
                 </div>
@@ -284,7 +273,7 @@ include("header.php");
             <div class="col-lg-12">
                 <h2>Advanced CV Maker - Create Your Professional Resume online for free</h2>
                 <p style="max-width: 100%">
-                    Choose from multiple custom-built <a href="#" target="_blank">professional resume templates</a> that have helped thousands of people to get the jobs they ever dreamt of. CV Owl's CV Maker makes it fast and easy to create the powerful, professional <a target="_blank" href="#">resume</a> HR managers are looking for. Use CV Owl's professional resume templates and resume samples to improve your chances of getting called for a job interview as these resume templates and resume samples have been approved by recruiters and employers.
+                    Choose from multiple custom-built <a href="#" target="_blank">professional resume templates</a> that have helped thousands of people to get the jobs they ever dreamt of. Resume Builder CV Maker makes it fast and easy to create the powerful, professional <a target="_blank" href="#">resume</a> HR managers are looking for. Use Resume Builder professional resume templates and resume samples to improve your chances of getting called for a job interview as these resume templates and resume samples have been approved by recruiters and employers.
                 </p>
             </div>
         </div>
@@ -337,7 +326,7 @@ include("header.php");
                     <div class="desc ml-20">
                         <h4>Get CV by Experts</h4>
                         <p class="mt-20 mb-0">
-                            Use our "Ask an Expert" service, featuring a real time 1-on-1 Certified Professional Resume review by CV Owl Resume Experts. Our online Certified Resume Expert will review your resume for accuracy and clarity.
+                            Use our "Ask an Expert" service, featuring a real time 1-on-1 Certified Professional Resume review by Resume Builder Resume Experts. Our online Certified Resume Expert will review your resume for accuracy and clarity.
                         </p>
                     </div>
                 </div>
@@ -351,11 +340,11 @@ include("header.php");
     <div class="container">
         <div class="row justify-content-center section-title-wrap" style="text-align: left;">
             <div class="col-lg-6" style="text-align: justify;">
-                <h2>Why Use CV Owl's Online CV Maker</h2>
+                <h2>Why Use Resume Builder Online CV Maker</h2>
                 <p>
                     Do you aspire to land your dream job with the perfect resume employers are looking for?
                     <br><br>
-                    CV Owl's Free Resume Builder now makes it easy and fun for you to build professional out-of-the-box resumes, instantly generated by the most advanced resume builder technology available. 
+                    Resume Builder Free Resume Builder now makes it easy and fun for you to build professional out-of-the-box resumes, instantly generated by the most advanced resume builder technology available. 
                     <br><br>Simply fill in your details and generate beautiful Ms Word and PDF resumes! Choose from several custom resume templates to build your perfect resume.
                     <br><br>
                     So what are you waiting for? Start using the most advanced online CV Maker now and Get a brand new Professional Resume for your next job.
@@ -376,7 +365,7 @@ include("header.php");
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <h2 class="text-white">AVAIL RESUME WRITING SERVICES BY CV OWL'S RESUME WRITING EXPERTS!</h2>
+                <h2 class="text-white">AVAIL RESUME WRITING SERVICES BY RESUME BUILDER RESUME WRITING EXPERTS!</h2>
             </div>
             <div class="col-lg-6">
                 <div class="d-flex flex-row justify-content-end cta-btn">
@@ -393,12 +382,12 @@ include("header.php");
         <div class="row align-items-center justify-content-between">
             <div class="col-lg-6 about-left">
                 <h2>
-                CV Owl - Free CV Maker & Resume writing services <br>
+                Resume Builder - Free CV Maker & Resume writing services <br>
                 </h2>
                 <p class="pt-20 pb-20 " style="text-align: justify;">
-                    Building a professional resume is the first important step towards getting a good job. CV Owl's free resume builder enables you achieve this goal faster.<br><br>
+                    Building a professional resume is the first important step towards getting a good job. Resume Builder free resume builder enables you achieve this goal faster.<br><br>
                     Check out our professional resume examples, resume samples, and resume templates will help you build the perfect resume for your next interview - that too in 5 minutes.<br><br>
-                    Furthermore, CV Owl's in-house team of resume writing experts with 15+ years of experience will craft a highly professional, relevant and recruiter friendly resume format. <br><br>
+                    Furthermore, Resume Builder in-house team of resume writing experts with 15+ years of experience will craft a highly professional, relevant and recruiter friendly resume format. <br><br>
                     Our resume writing experts will hold telephonic discussion with you personally to grasp your career goals and past achievements. There will be multiple iterations until you get a perfect resume that does justice to your career aspirations. 
                 </p>
                 <a href="#" class="genric-btn2 signupBTN" style="font-size: 24px;">FREE CV MAKER</a>
@@ -417,7 +406,7 @@ include("header.php");
             <div class="col-lg-12">
                 <h2>Hire An Expert Resume Writing Service Provider</h2>
                 <p>
-                    Get in touch with CV Owl's expert resume writers to help you prepare a professional resume that works best for you. Feel free to talk to us regarding any query you may have about CV Owl's online resume maker and cover letter builder.
+                    Get in touch with Resume Builder expert resume writers to help you prepare a professional resume that works best for you. Feel free to talk to us regarding any query you may have about Resume Builder online resume maker and cover letter builder.
                 </p>
             </div>
         </div>

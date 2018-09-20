@@ -13,19 +13,18 @@
                              <!-- <li class="menu-has-children"><a href="">Resume Writing Services</a>
                                 <ul> 
                                     <li><a target="_blank" href="/resume-writing/resume-writing-services/">Resume Writing Services</a>
-                                    </li>   
-                                    <li><a target="_blank" href="/resume-writing/why-cv-owl-resume-writing-services/">Why CV Owl?</a>
+                                    </li>
                                     </li>
                                     <li><a target="_blank" href="/resume-writing/hire-resume-writing-expert/">Why Resume Writing Services?</a>
                                     </li>
                                 </ul>
                             </li>
  -->
- 						<li><a href="#" class="loginBTN" style="cursor: pointer;">Home</a></li>
-						<li><a href="#" class="loginBTN" style="cursor: pointer;">Testimonials</a></li>						
-						<li><a href="#" class="loginBTN" style="cursor: pointer;">The overview</a></li>
-						<li><a href="#" class="loginBTN" style="cursor: pointer;">Contact</a></li>
-                        <li><a href="#" class="loginBTN" style="cursor: pointer;">Login</a></li>
+ 						<li><a href="index.php">Home</a></li>
+						<li><a href="testimonial.php">Testimonials</a></li>						
+						<li><a href="overview.php">The overview</a></li>
+						<li><a href="contact.php">Contact</a></li>
+                        <li><a href="#" class="loginBTN" style="cursor: pointer;">Register/Login</a></li>
                        </ul>
                     </nav>
                                                 <a class="signup-btn signupBTN">Create Resume</a>
