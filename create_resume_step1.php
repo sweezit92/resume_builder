@@ -1,30 +1,10 @@
-
 <!DOCTYPE html>
-<html lang="zxx" class="no-js">
+<html>
 
 <head>
-     
-
-    <meta name="google-site-verification" content="k4xe9OhSgLDZfAVXiuPA6wC5UDTbC09Ee2x6eWt3RFc" />
-
-    <!-- Mobile Specific Meta -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="https://www.cvowl.com/static/homepage/assets/common/img/favicon.png">
-    
-    <meta name="description" content='How to Write Resume in 2018. How to create the perfect resume. Write your professional title and resume summary. Use resume keywords and action verbs. Resume Writing Tips.'>
-    
-    <meta name="keywords" content="Resume Builder, CV Maker, Free Resume Maker, Resume Templates | CV Owl">
-    
-    <meta property="og:url" content="https://www.cvowl.com/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="CV Owl" />
-    <meta property="og:description" content="World's Best and Free Online CV Builder - CV Owl" />
-    <meta property="og:image" content="/static/classic/topbar/assets/images/favicon.png"/>
-    
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>How to Write Resume in 2018 | Best Resume Writing Tips | CV Owl</title>
+    <title>Resume Builder</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700,900" rel="stylesheet">
@@ -82,11 +62,11 @@ include("header.php");
 ?>
     <!-- End Header Area -->
     <!-- Start hero-section -->
-<section class="hero-section-blog-details">
-    <div style="background: url('http://diversityhrsolutions.com/wp-content/uploads/2016/05/Great-Cover-Letter-Banner.jpg');">
+<section class="hero-section-blog-details" style="height:40%;">
+    <div style="background: url('img/Great-Cover-Letter-Banner.jpg');">
         <div class="text-center" style="margin:40px;">
-            <div class="col-md-12 pt-100">
-               <a class="blog-heading ">How To Create Resume</a>
+            <div class="col-md-12 pt-100 pb-80" style="verticle-align:middle;">
+              <a class="blog-heading">Resume Builder</a>
             </div>
         </div>
     </div>

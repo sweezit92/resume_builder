@@ -2,22 +2,16 @@
 					<div class="side-bar">
 						<div class="post-cat">
 							<div class="cat-box">
-								<a class="cat-link" href="">Personal Information</a>
+								<a class="cat-link" href="create_resume_step1.php">Personal Information</a>
 							</div>
 							<div class="cat-box">
-								<a class="cat-link" href="">Education</a>
+								<a class="cat-link" href="create_resume_step2.php">Education</a>
 							</div>
 							<div class="cat-box">
-								<a class="cat-link" href="">Business Analyst Resume</a>
+								<a class="cat-link" href="create_resume_step3.php">Skill/Certificates</a>
 							</div>
 							<div class="cat-box">
-								<a class="cat-link" href="">Sales Executive Resume</a>
-							</div>
-							<div class="cat-box">
-								<a class="cat-link" href="">Accountant Resume</a>
-							</div>
-							<div class="cat-box">
-								<a class="cat-link" href="">HR Executive Resume</a>
+								<a class="cat-link" href="create_resume_step4.php">Work Experience</a>
 							</div>
 						</div>
 					</div>
