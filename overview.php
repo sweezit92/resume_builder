@@ -66,11 +66,8 @@ include("header.php");
 <section class="hero-section-blog-details">
     <div style="background: url('http://diversityhrsolutions.com/wp-content/uploads/2016/05/Great-Cover-Letter-Banner.jpg');">
         <div class="text-center" style="margin:40px;">
-            <div class="col-md-12 pt-100">
-               <a class="blog-heading mt-50">THE OVERVIEW</a>
-            </div>
-            <div class="col-md-12 pt-30 pt-50 pb-30">
-               <a href="#" class="genric-btn signupBTN">Try resume builder now</a>
+            <div class="col-md-12 pt-100 pb-80">
+               <a class="blog-heading">THE OVERVIEW</a>
             </div>
         </div>
     </div>
