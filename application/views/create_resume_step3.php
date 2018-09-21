@@ -99,7 +99,7 @@ $this->load->view('common/resume_sidebar');
 							  <input class="form-control" id="date" name="date" placeholder="Language" type="text"/>
 							</div>
 							<div class="form-group col-md-6">
-							  <label for="inputEmail4">Rate</label>
+							  <label for="inputEmail4">Proficiency</label>
 							  <select id="inputState" class="form-control">
 								<option selected>Choose...</option>
 								<option value="1">1</option>

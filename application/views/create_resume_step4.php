@@ -100,6 +100,31 @@ $this->load->view("common/resume_sidebar");
 							  </div>
 							  <div class="form-row">
 								<div class="form-group col-md-4">
+								  <label for="inputEmail4">Vessel name</label>
+								  <input type="text" class="form-control" id="inputEmail4" placeholder="Vessel name">
+								</div>
+								<div class="form-group col-md-4">
+								  <label for="inputEmail4">Length of the vessel</label>
+								  <input type="text" class="form-control" id="inputEmail4" placeholder="Length of the vessel">
+								</div>
+								<div class="form-group col-md-4">
+							  <label for="inputEmail4">Type of the vessel</label>
+							  <select id="inputState" class="form-control">
+								<option selected>Choose...</option>
+								<option value="1">Tanker</option>
+								<option value="2">Bulk Carrier</option>
+								<option value="1">Cargo</option>
+								<option value="2">Container</option>
+								<option value="2">Passenger</option>
+								<option value="1">Offshore</option>
+								<option value="2">Yacht</option>
+								<option value="2">River</option>
+								<option value="2">Onshore</option>
+							  </select>
+							</div>
+							  </div>
+							  <div class="form-row">
+								<div class="form-group col-md-4">
 								  <label for="inputEmail4">Starting Date</label>
 								  <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
 								</div>
@@ -137,6 +162,12 @@ $this->load->view("common/resume_sidebar");
 								<div class="form-group col-md-6">
 								  <label for="inputEmail4">Contact Info</label>
 								  <input type="text" class="form-control" id="inputEmail4" placeholder="Contact Info">
+								</div>
+							  </div>
+							  <div class="form-row">
+								<div class="form-group col-md-12">
+								  <label for="inputEmail4">Tasks</label>
+								  <textarea class="form-control" rows="5" id="comment" type="text"></textarea>
 								</div>
 							  </div>
 							   <hr>
