@@ -51,6 +51,7 @@ $this->load->view("common/metalinks");
             display: none;
         }
     }
+	
 
 </style>
 
@@ -116,10 +117,40 @@ $this->load->view('common/resume_sidebar');
 						  <br>
 						  <div class="form-row">
 							<div class="form-group col-md-12">
-							  <label for="inputEmail4">Certificates(Use comma as separator)</label>
-							  <input type="text" class="form-control" id="inputEmail4" placeholder="Certificate Name">
+							  <label for="inputEmail4">Certificates</label>
+							  <select class="custom-select" multiple>
+								<option selected disabled>Choose Certificates</option>
+								<option value="COC Reg. II/2 Master Unlimited">COC Reg. II/2 Master Unlimited</option>
+								<option value="DPO (Dynamic Position Officer)">DPO (Dynamic Position Officer)</option>
+								<option value="COC Reg. II/3 Master 500">COC Reg. II/3 Master 500</option>
+								<option value="COC Reg. II/2 Chief Officer Unlimited">COC Reg. II/2 Chief Officer Unlimited</option>
+								<option value="COC Reg. II/1 3rd Officer">COC Reg. II/1 3rd Officer</option>
+								<option value="COC Reg. II/5 (Able Seaman)">COC Reg. II/5 (Able Seaman)</option>
+								<option value="COC Reg. II/4 (Ordinary Seaman)">COC Reg. II/4 (Ordinary Seaman)</option>
+								<option value="COC Reg. III/2 Chief Engineer Unlimited">COC Reg. III/2 Chief Engineer Unlimited</option>
+								<option value="COC Reg. III/2 2nd Engineer">COC Reg. III/2 2nd Engineer</option>
+								<option value="COC Reg. III/1 3rd Engineer">COC Reg. III/1 3rd Engineer</option>
+								<option value="COC Reg. III/5 Motorman">COC Reg. III/5 Motorman</option>
+								<option value="COC Reg. III/4 Motorman (Oiler)">COC Reg. III/4 Motorman (Oiler)</option>
+								<option value="COC Reg. II/7 Electrician">COC Reg. II/7 Electrician</option>
+								<option value="COC Reg. II/6 Electro –Technical Officer">COC Reg. II/6 Electro -Technical Officer</option>
+								<option value="Fitter">Fitter</option>
+								<option value="Ship's Cook">Ship's Cook</option>
+								<option value="Deck Cadet">Deck Cadet</option>
+								<option value="Engine Cadet">Engine Cadet</option>
+								<option value="Steward">Steward</option>
+								<option value="Waiter">Waiter</option>
+								<option value="Welder Certificate">Welder Certificate</option>
+							</select>
 							</div>
 						  </div>
+						  <div class="form-row">
+							<div class="custom-file">
+							  <input type="file" class="custom-file-input" id="customFile">
+							  <label class="custom-file-label" for="customFile">Upload Certificates</label>
+							</div>
+						  </div>
+						  <br>
 						  <button type="submit" class="btn btn-primary">Next</button>
 					  
 					  
@@ -147,6 +178,7 @@ function add_another()
 	$("#language_div").clone().appendTo("#main_div");
 }
 </script>
+
     
 </body>
 

@@ -89,7 +89,7 @@ $this->load->view('common/resume_sidebar');
 					 <div class="form-row">
 						<div class="custom-file">
 						  <input type="file" class="custom-file-input" id="customFile">
-						  <label class="custom-file-label" for="customFile">Choose file</label>
+						  <label class="custom-file-label" for="customFile">Upload Your Image</label>
 						</div>
 					  </div>
 					  <div class="form-row" style="margin-top:10px;">
