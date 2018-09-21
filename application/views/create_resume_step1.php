@@ -92,7 +92,7 @@ $this->load->view('common/resume_sidebar');
 						  <label class="custom-file-label" for="customFile">Choose file</label>
 						</div>
 					  </div>
-					  <div class="form-row"style="margin-top:10px;">
+					  <div class="form-row" style="margin-top:10px;">
 						<div class="form-group col-md-6">
 						  <label for="inputEmail4">Full Name</label>
 						  <input type="text" class="form-control" id="inputEmail4" placeholder="Full Name">
@@ -107,15 +107,33 @@ $this->load->view('common/resume_sidebar');
 						  <label for="inputPassword4">Nationality (Which country issued your passport?) </label>
 						  <input type="text" class="form-control" id="inputPassword4" placeholder="Nationality">
 						</div>						
-						<div class="form-group col-md-6">
+						<div class="form-group col-md-6" style="margin-top:22px;">
 						  <label for="inputEmail4">Short and engaging pitch about yourself</label>
 						  <input type="text" class="form-control" id="inputEmail4" placeholder="Short and engaging pitch about yourself">
 						</div>
 					  </div>
 					  <div class="form-row">
 						<div class='form-group date col-md-6' id='datepicker1'>
+							<label for="inputPassword4">Residence (Where Do you live?)</label>
+							<input class="form-control" id="date" name="date" placeholder="Country of Residence " type="text"/>
+						</div>
+						<div class='form-group date col-md-6' id='datepicker1'>
+							<label for="inputPassword4">Current Location</label>
+							<input class="form-control" id="date" name="date" placeholder="Current Location" type="text"/>
+						</div>
+					  </div>
+					  <div class="form-row">
+						<div class='form-group date col-md-6' id='datepicker1'>
 							<label for="inputPassword4">Date Of Birth</label>
-							<input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+							<input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
+						</div>
+						<div class="form-group col-md-2">
+						  <label for="inputEmail4">Country Prefix</label>
+						  <input type="text" class="form-control" id="inputEmail4" placeholder="Country Prefix">
+						</div>
+						<div class="form-group col-md-4">
+						  <label for="inputEmail4">Telephone Number</label>
+						  <input type="text" class="form-control" id="inputEmail4" placeholder="Telephone Number">
 						</div>
 					  </div>
 					  <div class="form-row">
@@ -123,21 +141,17 @@ $this->load->view('common/resume_sidebar');
 						  <label for="inputCity">City</label>
 						  <input type="text" class="form-control" id="inputCity" placeholder="City">
 						</div>
-						<div class="form-group col-md-4">
+						<div class="form-group col-md-6">
 						  <label for="inputState">State</label>
 						  <select id="inputState" class="form-control">
 							<option selected>Choose...</option>
 							<option>...</option>
 						  </select>
 						</div>
-						<div class="form-group col-md-2">
-						  <label for="inputZip">Zip</label>
-						  <input type="text" class="form-control" id="inputZip">
-						</div>
 					  </div>
 					  <div class="form-group">
-						<label for="inputAddress">Curren Address</label>
-						<input type="text" class="form-control" id="inputAddress" placeholder="Curren Address">
+						<label for="inputAddress">Current Address</label>
+						<input type="text" class="form-control" id="inputAddress" placeholder="Current Address">
 					  </div>
 					  <div class="form-group">
 						<div class="form-check">
@@ -157,27 +171,24 @@ $this->load->view('common/resume_sidebar');
 						  <input type="text" class="form-control" id="inputEmail4" placeholder="Email">
 						</div>
 						<div class="form-group col-md-6">
-						  <label for="inputEmail4">Telephone Number</label>
-						  <input type="text" class="form-control" id="inputEmail4" placeholder="Telephone Number">
+						  <label for="inputEmail4">Skype Address</label>
+						  <input type="text" class="form-control" id="inputEmail4" placeholder="Skype Address">
 						</div>
 					  </div>
 					  <div class="form-row">
 						<div class="form-group col-md-6">
-						  <label for="inputEmail4">Visa</label>
+						  <label for="inputEmail4">LinkedIn Profile</label>
+						  <input type="text" class="form-control" id="inputEmail4" placeholder="LinkedIn Profile">
+						</div>
+						<div class="form-group col-md-6">
+						  <label for="inputEmail4">Do you currently have valid B1/B2 visa?</label>
 						  <select id="inputState" class="form-control">
 							<option selected>Choose...</option>
 							<option value="1">Yes</option>
 							<option value="2">No</option>
 						  </select>
 						</div>
-						<div class="form-group col-md-6">
-						  <label for="inputEmail4">Visa Category</label>
-						  <select id="inputState" class="form-control">
-							<option selected>Choose...</option>
-							<option value="1">B1</option>
-							<option value="2">B2</option>
-						  </select>
-						</div>
+						
 					  </div>
 					  <div class="form-row">
 						<div class="form-group col-md-6">
