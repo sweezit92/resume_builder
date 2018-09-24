@@ -24,10 +24,11 @@
 						<li><a href="<?php echo base_url("testimonial");?>">Testimonials</a></li>						
 						<li><a href="<?php echo base_url("overview");?>">The overview</a></li>
 						<li><a href="<?php echo base_url("contact");?>">Contact</a></li>
-                        <li><a href="#" class="loginBTN" style="cursor: pointer;">Register/Login</a></li>
+                        <li><a href="<?php echo base_url("register");?>">Register</a></li>
+						<li><a href="<?php echo base_url("login");?>">Login</a></li>
                        </ul>
                     </nav>
-						<a class="signup-btn signupBTN">Create Resume</a>
+						<a class="signup-btn signupBTN" href="<?php echo base_url("create_resume_step1");?>">Create Resume</a>
                   </div>
                 <!-- #nav-menu-container -->
             </div>

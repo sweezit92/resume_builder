@@ -186,6 +186,67 @@ $this->load->view("common/resume_sidebar");
         </div>
     </div>
 </section>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+                    <div class="modal-header" style="display: block;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Login to continue</h4>
+                    </div>
+                    <div class="modal-body" style="margin-bottom:10px;">
+                        <div class="login-form">
+                            <center>
+                                <h4 class="errorLog" id="loginHelp"></h4>
+                            </center>
+
+                            <form id="loginForm">
+
+
+                                <input type="text" class="common-input mb-20 form-control" id="loginEmail" name="loginEmail" placeholder="Email" autocomplete="off">
+                                
+                                <input type="password" class="common-input mb-20 form-control" id="loginPassword" name="loginPassword"  placeholder="Password" autocomplete="off">
+
+                                <h4 style="text-align: right;"><span class="forgotpassword">Forgot Password?</span></h4>
+                                <button type="submit" class="btn btn-login genric-btn2" id="login_submit">
+                                    <b>Log in</b>
+                                </button>
+
+                                <h4 onclick="toggleSignup()" style="text-align: center; margin-top: 24px; font-size: 12px; color: #8c8c8c; cursor: pointer;"><span class="forgotpassword">Don't have an account? <a style="font-weight: 500;">Sign Up here</a></span></h4>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="background: none;text-align: center;display: block;">
+
+                        <div class="footer-area" style="background: none;">
+                        <div class="single-footer-widget">
+                            <ul class="social-icons" style="font-size: 20px;">  
+
+                                <li>
+                                    <a target="_blank" href="#">
+                                        <i class="fab fa-facebook" style="color:#3B5998;"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a target="_blank" href="#">
+                                        <i class="fab fa-google" style="color:#DB4437;"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a target="_blank" href="#">
+                                        <i class="fab fa-linkedin" style="color:#0077B5;"></i>
+                                    </a>
+                                </li>
+                            </ul> 
+                        </div>
+                    </div>
+                    </div>
+                </div>
+		  </div>
+		</div>
+
 <?php
 $this->load->view("common/footer");
 ?>
@@ -194,7 +255,18 @@ function add_another()
 {
 	$("#primary_div").clone().appendTo("#main_div");
 }
+
+$('.signupBTN').click(function(e){
+            toggleSignup();
+            $('#LoginModal').modal('show');
+        });
+
+        $('.loginBTN').click(function(e){
+            $('.login-text').trigger('click');
+            $('#LoginModal').modal('show');
+        });
 </script>
+ 
 </body>
 
 </html>

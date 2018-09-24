@@ -76,7 +76,7 @@ $this->load->view("common/header");
     <div style="background: url('<?php echo base_url();?>img/Great-Cover-Letter-Banner.jpg');">
         <div class="text-center" style="margin:40px;">
             <div class="col-md-12 pt-100 pb-80">
-               <a class="blog-heading">WANT TO BUILD YOUR OWN RESUME?</a>
+               <a class="blog-heading">LOGIN</a>
             </div>
         </div>
     </div>
@@ -95,23 +95,17 @@ $this->load->view("common/header");
         </div>
         <div class="row justify-content-between align-items-end">
             <div class="col-lg-6 col-md-6 contact-left">
-                <img class="img-fluid" src="<?php echo base_url();?>img/contact-img.png" alt="">
+                <img class="img-fluid" src="<?php echo base_url();?>img/reg-manangement-hero.png" alt="" style="margin-top:-70px;">
             </div>
             <div class="col-lg-5 col-md-6 contact-right">
                 <form class="form-area contact-form text-right" id="contactform">
                     
-                    <input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
-
-                    <input name="mobile" placeholder="Enter your mobile" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
-
                     <input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
 
-                    <!-- <input name="subject" placeholder="Enter subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter subject'" class="common-input mb-20 form-control" required="" type="text"> -->
-
-                    <textarea class="common-textarea form-control" cols="30" rows="7" name="message" placeholder="Enter Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Messege'" required=""></textarea>
+                    <input name="password" placeholder="Enter password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter password'" class="common-input mb-20 form-control" required="" type="password">
 
                     <div class="d-flex flex-column">
-                        <button type="submit" class="genric-btn2 d-block mt-30 mr-0 ml-auto">Send Message</button>
+                        <button type="submit" class="genric-btn2 d-block mt-30 mr-0 ml-auto">Sign in</button>
                         <div class="alert-msg"></div>
                     </div>
                 </form>
