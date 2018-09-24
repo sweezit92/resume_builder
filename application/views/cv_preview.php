@@ -20,10 +20,9 @@
     <!-- ===========================================
         CSS
     ============================================= -->
-  <?php
-	include("metalinks.php");
-	?>
-  
+<?php
+$this->load->view("common/metalinks");
+?>
     
 </head>
 
@@ -73,12 +72,12 @@
 <body class="version-blog">
     <!-- start Header Area -->
 <?php
-include("header.php");
+$this->load->view("common/header");
 ?>
     <!-- End Header Area -->
     <!-- Start hero-section -->
 <section class="hero-section-blog-details">
-    <div style="background: url('img/Great-Cover-Letter-Banner.jpg');">
+    <div style="background: url('<?php echo base_url();?>img/Great-Cover-Letter-Banner.jpg');">
         <div class="text-center" style="margin:40px;">
             <div class="col-md-12 pt-100 pb-80">
                <a class="blog-heading">RESUME</a>
@@ -92,12 +91,12 @@ include("header.php");
 <section class="blog-post" style="margin-top:-10px;">
     <div class="details-body">
         <div class="container">
-            <div class="row" style="border:2px solid black;">
+            <div class="row" style="border:2px solid black;" id="content">
 				
 
 						<div class="col-md-4">
 							<div class="col-md-12">
-							   <img src="img/PZuxCF8.png" style="margin-top:10px;">
+							   <img src="<?php echo base_url();?>img/PZuxCF8.png" style="margin-top:10px;">
 							<div>
 								<p style="font-size:18px;margin-left:-20px;padding:5px;color:#479099;"><b>PERSONAL INFORMATION</b></p>
 									<ul style="margin-left:-15px;font-family:italic;">
@@ -190,19 +189,37 @@ include("header.php");
 							</div>
 							</div>
 						</div>
-
-				
+						
+						
             </div>
         </div>
     </div>
 </section>
 <br>
+
+<div><div id="editor"></div><a href="" id="cmd" class="genric-btn2" style="padding:5px;margin-left:580px;">DOWNLOAD AS PDF</a></div><br>
+
 <?php
-include("footer.php");
+$this->load->view("common/footer");
 ?>
 
 </body>
+<script>
+var doc = new jsPDF();
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }
+};
 
+$('#cmd').click(function () {
+    doc.fromHTML($('#content').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+    });
+    doc.save('sample-file.pdf');
+});
+</script>
 
 
 </html>
