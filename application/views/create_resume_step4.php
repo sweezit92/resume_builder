@@ -126,11 +126,11 @@ $this->load->view("common/resume_sidebar");
 							  <div class="form-row">
 								<div class="form-group col-md-4">
 								  <label for="inputEmail4">Starting Date</label>
-								  <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+								  <input class="form-control" id="date" name="date" placeholder="MM/YYYY" type="text"/>
 								</div>
 								<div class="form-group col-md-4">
 								  <label for="inputEmail4">Ending Date</label>
-								  <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+								  <input class="form-control" id="date" name="date" placeholder="MM/YYYY" type="text"/>
 								</div>
 								<div class="form-group col-md-4">
 								  <label for="inputEmail4">Currently Working</label>
@@ -146,12 +146,6 @@ $this->load->view("common/resume_sidebar");
 								<div class="form-group col-md-6">
 								  <label for="inputEmail4">Company Description</label>
 								  <input type="text" class="form-control" id="inputEmail4" placeholder="Company Description">
-								</div>
-							  </div>
-							  <div class="form-row">
-								<div class="form-group col-md-12">
-								  <label for="inputEmail4">Achievements(Use comma as separator)</label>
-								  <input type="text" class="form-control" id="inputEmail4" placeholder="Achievement Name">
 								</div>
 							  </div>
 							  <div class="form-row">
@@ -173,6 +167,24 @@ $this->load->view("common/resume_sidebar");
 							   <hr>
 						</div>
 					</div>
+					<br/>
+<div class="container">
+  <div class="row">
+       <div class="col-lg-12">
+     <div class="button-group">
+        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span> <span class="caret"></span></button>
+<ul class="dropdown-menu">
+  <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 1</a></li>
+  <li><a href="#" class="small" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 2</a></li>
+  <li><a href="#" class="small" data-value="option3" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 3</a></li>
+  <li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 4</a></li>
+  <li><a href="#" class="small" data-value="option5" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 5</a></li>
+  <li><a href="#" class="small" data-value="option6" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 6</a></li>
+</ul>
+  </div>
+</div>
+  </div>
+</div>
 					  
 					  <button type="submit" class="btn btn-primary">Next</button>
 					  <a href="javascript:void(0);" onclick="add_another();" class="btn btn-primary">Add Another Work</a>
@@ -265,6 +277,30 @@ $('.signupBTN').click(function(e){
             $('.login-text').trigger('click');
             $('#LoginModal').modal('show');
         });
+</script>
+<script>
+var options = [];
+
+$( '.dropdown-menu a' ).on( 'click', function( event ) {
+
+   var $target = $( event.currentTarget ),
+       val = $target.attr( 'data-value' ),
+       $inp = $target.find( 'input' ),
+       idx;
+
+   if ( ( idx = options.indexOf( val ) ) > -1 ) {
+      options.splice( idx, 1 );
+      setTimeout( function() { $inp.prop( 'checked', false ) }, 0);
+   } else {
+      options.push( val );
+      setTimeout( function() { $inp.prop( 'checked', true ) }, 0);
+   }
+
+   $( event.target ).blur();
+      
+   console.log( options );
+   return false;
+});
 </script>
  
 </body>

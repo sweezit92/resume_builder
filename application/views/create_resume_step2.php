@@ -118,25 +118,7 @@ $this->load->view('common/resume_sidebar');
 							</div>
 						  </div>
 						</div>
-					</div>
-					<div class="form-row">
-							<div class="form-group col-md-12">
-							  <label for="inputEmail4">Offshore courses</label>
-							  <select class="custom-select" multiple>
-								<option selected disabled>Choose Skills</option>
-								<option value="OPITO E-BOSIET Digital Delivery BOSIET (5703)">OPITO E-BOSIET Digital Delivery BOSIET (5703)</option>
-								<option value="OPITO BOSIET with EBS (5700) + CA-EBS (5902)">OPITO BOSIET with EBS (5700) + CA-EBS (5902)</option>
-								<option value="OPITO BOSIET with EBS (5700)">OPITO BOSIET with EBS (5700)</option>
-								<option value="OPITO FOET with EBS (5858) + CA-EBS (5902)">OPITO FOET with EBS (5858) + CA-EBS (5902)</option>
-								<option value="OPITO FOET with EBS (5858">OPITO FOET with EBS (5858)</option>
-								<option value="OPITO HUET with EBS (5095) + CA-EBS (5902)">OPITO HUET with EBS (5095) + CA-EBS (5902)</option>
-								<option value="OPITO  HUET with EBS (5095)">OPITO  HUET with EBS (5095)</option>
-								<option value="OPITO Banksman & Slinger Stage 1 & 2 (9067)">OPITO Banksman & Slinger Stage 1 & 2 (9067)</option>
-								<option value="OPITO CA-EBS (5902)">OPITO CA-EBS (5902)</option>
-							</select>
-							</div>
-					</div>
-					  
+					</div>	  
 					  
 					  <button type="submit" class="btn btn-primary">Next</button>
 					  <a href="javascript:void(0);" onclick="add_another();" class="btn btn-primary">Add Another Education</a>
