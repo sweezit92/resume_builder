@@ -12,13 +12,12 @@
     <link rel="stylesheet" href="<?php echo base_url();?>css/owl.carousel.css">
     <link rel="stylesheet" href="<?php echo base_url();?>css/main.css">
     <link rel="stylesheet" href="<?php echo base_url();?>css/custom.css">
-    <script src="<?php echo base_url();?>js/jquery-2.2.4.min.js"></script>
+     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
-	<script src="<?php echo base_url();?>js/popper.min.js"></script>
+	
     <script src="<?php echo base_url();?>js/bootstrap.min.js"></script>
-    <script src="<?php echo base_url();?>js/easing.min.js"></script>
-    <script src="<?php echo base_url();?>js/superfish.min.js"></script>
+    
     <script src="<?php echo base_url();?>js/owl.carousel.min.js"></script>
-    <script src="<?php echo base_url();?>js/main.js"></script>
+    
 	<script src="<?php echo base_url();?>js/custom.js"></script>
 	<script src="<?php echo base_url();?>js/jspdf.min.js"></script>

@@ -8,15 +8,17 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700,900" rel="stylesheet">
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+
+
     <!-- ===========================================
         CSS
     ============================================= -->
 <?php
 $this->load->view("common/metalinks");
 ?>
-  
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/jquery.dropdown.css">
+  <script src="<?php echo base_url();?>js/jquery.dropdown.js"></script>
     
 </head>
 
@@ -90,24 +92,26 @@ $this->load->view('common/resume_sidebar');
 						  <div class="form-row">
 							<div class="form-group col-md-6">
 							  <label for="inputEmail4">Deck Skills</label>
-							  <select class="custom-select" multiple>
-								<option selected disabled>Choose Skills</option>
-								<option value="Cleaning & Detailing">Cleaning & Detailing</option>
-								<option value="Watchkeeping">Watchkeeping</option>
-								<option value="General Repairs & Maintenance">General Repairs & Maintenance</option>
-								<option value="Line Handling">Line Handling</option>
-								<option value="Rigging">Rigging</option>
-								<option value="Filling & Fairing">Filling & Fairing</option>
-								<option value="Painting">Painting</option>
-								<option value="ISM/ISPS Procedures">ISM/ISPS Procedures</option>
-								<option value="Crane Operation">Crane Operation</option>
-								<option value="Tender Driving">Tender Driving</option>
-								<option value="Whipping & Splicing">Whipping & Splicing</option>
-								<option value="Varnishing">Varnishing</option>
-								<option value="Carpentry">Carpentry</option>
-								<option value="Sail Repairs">Sail Repairs</option>
-								<option value="Welding">Welding</option>
-							</select>
+							  <div class="dropdown-mul-1">
+								<select name="" id="mul-1" multiple placeholder="Select">
+									<option selected disabled>Choose Skills</option>
+									<option value="Cleaning & Detailing">Cleaning & Detailing</option>
+									<option value="Watchkeeping">Watchkeeping</option>
+									<option value="General Repairs & Maintenance">General Repairs & Maintenance</option>
+									<option value="Line Handling">Line Handling</option>
+									<option value="Rigging">Rigging</option>
+									<option value="Filling & Fairing">Filling & Fairing</option>
+									<option value="Painting">Painting</option>
+									<option value="ISM/ISPS Procedures">ISM/ISPS Procedures</option>
+									<option value="Crane Operation">Crane Operation</option>
+									<option value="Tender Driving">Tender Driving</option>
+									<option value="Whipping & Splicing">Whipping & Splicing</option>
+									<option value="Varnishing">Varnishing</option>
+									<option value="Carpentry">Carpentry</option>
+									<option value="Sail Repairs">Sail Repairs</option>
+									<option value="Welding">Welding</option>
+								</select>
+							</div>
 							</div>
 							<div class="form-group col-md-6">
 							  <label for="inputEmail4">Propulsion Skills</label>
@@ -436,6 +440,11 @@ function add_another()
 {
 	$("#language_div").clone().appendTo("#main_div");
 }
+
+$('.dropdown-mul-1').dropdown({
+      limitCount: 5,
+      searchable: false
+    });
 </script>
 
     
