@@ -85,7 +85,7 @@ $this->load->view('common/resume_sidebar');
 
                 <div class="col-lg-8" style="font-size: 16px;">
                     <h2 class="head">Personal Information</h2>
-                    <form>
+                    <form method="post" action="<?php echo base_url("create_resume_step1/add_personal");?>" enctype="multipart/form-data">
 					 <div class="form-row">
 						<div class="custom-file">
 						  <input type="file" class="custom-file-input" id="customFile" name="image">
