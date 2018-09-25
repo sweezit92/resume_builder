@@ -91,10 +91,9 @@ $this->load->view('common/resume_sidebar');
                     <form>
 						  <div class="form-row">
 							<div class="form-group col-md-6">
-							  <label for="inputEmail4">Deck Skills</label>
+							  <label>Deck Skills</label>
 							  <div class="dropdown-mul-1">
-								<select name="" id="mul-1" multiple placeholder="Select">
-									<option selected disabled>Choose Skills</option>
+								<select name="" id="mul-1" multiple placeholder="Select">									
 									<option value="Cleaning & Detailing">Cleaning & Detailing</option>
 									<option value="Watchkeeping">Watchkeeping</option>
 									<option value="General Repairs & Maintenance">General Repairs & Maintenance</option>
@@ -114,9 +113,9 @@ $this->load->view('common/resume_sidebar');
 							</div>
 							</div>
 							<div class="form-group col-md-6">
-							  <label for="inputEmail4">Propulsion Skills</label>
-							  <select class="custom-select" multiple>
-								<option selected disabled>Choose Skills</option>
+							  <label>Propulsion Skills</label>
+							  <div class="dropdown-mul-2">
+								<select name="" id="mul-2" multiple placeholder="Select">								
 								<option value="Single Screw">Single Screw</option>
 								<option value="Water Jet">Water Jet</option>
 								<option value="Bow Thruster">Bow Thruster</option>
@@ -129,16 +128,16 @@ $this->load->view('common/resume_sidebar');
 								<option value="Single Screw (with Kort nozzle)">Single Screw (with Kort nozzle)</option>
 								<option value="Zero Speed Stabiliser">Zero Speed Stabiliser</option>
 								<option value="Voith Schneider">Voith Schneider</option>
-								<option value="Single Screw">Single Screw</option>
 								<option value="Sail Racing">Sail Racing</option>
 							</select>
 							</div>
 						  </div>
+						  </div>
 						  <div class="form-row">
 							<div class="form-group col-md-6">
-							  <label for="inputEmail4">Interior Skills</label>
-							  <select class="custom-select" multiple>
-								<option selected disabled>Choose Skills</option>
+							  <label>Interior Skills</label>
+							  <div class="dropdown-mul-3">
+								<select name="" id="mul-3" multiple placeholder="Select">								
 								<option value="Detailing">Detailing</option>
 								<option value="Hospitality">Hospitality</option>
 								<option value="Management">Management</option>
@@ -161,10 +160,11 @@ $this->load->view('common/resume_sidebar');
 								<option value="Nurse Assistant">Nurse Assistant</option>
 							</select>
 							</div>
+							</div>
 							<div class="form-group col-md-6">
-							  <label for="inputEmail4">Engineering Skills</label>
-							  <select class="custom-select" multiple>
-								<option selected disabled>Choose Skills</option>
+							  <label>Engineering Skills</label>
+							  <div class="dropdown-mul-4">
+								<select name="" id="mul-4" multiple placeholder="Select">								
 								<option value="Electrical">Electrical</option>
 								<option value="Outboard Engines">Outboard Engines</option>
 								<option value="AV & IT">AV & IT</option>
@@ -198,12 +198,13 @@ $this->load->view('common/resume_sidebar');
 								<option value="Steam Turbine">Steam Turbine</option>
 							</select>
 							</div>
+							</div>
 						  </div>
 						  <div class="form-row">
 							<div class="form-group col-md-6">
-							  <label for="inputEmail4">Culinary Skills</label>
-							  <select class="custom-select" multiple>
-								<option selected disabled>Choose Skills</option>
+							  <label>Culinary Skills</label>
+							  <div class="dropdown-mul-5">
+								<select name="" id="mul-5" multiple placeholder="Select">
 								<option value="French cuisine">French cuisine</option>
 								<option value="Thai cuisine">Thai cuisine</option>
 								<option value="Healthy / Clean">Healthy / Clean</option>
@@ -227,10 +228,11 @@ $this->load->view('common/resume_sidebar');
 								<option value="Japanese cuisine">Japanese cuisine</option>
 							</select>
 							</div>
+							</div>
 							<div class="form-group col-md-6">
-							  <label for="inputEmail4">Massage Skills</label>
-							  <select class="custom-select" multiple>
-								<option selected disabled>Choose Skills</option>
+							  <label>Massage Skills</label>
+							  <div class="dropdown-mul-6">
+								<select name="" id="mul-6" multiple placeholder="Select">
 								<option value="Swedish">Swedish</option>
 								<option value="Aromatherapy">Aromatherapy</option>
 								<option value="Deep Tissue">Deep Tissue</option>
@@ -242,12 +244,13 @@ $this->load->view('common/resume_sidebar');
 								<option value="Thai">Thai</option>
 							</select>
 							</div>
+							</div>
 						  </div>
 						  <div class="form-row">
 							<div class="form-group col-md-6">
-							  <label for="inputEmail4">Personal Trainer Skills</label>
-							  <select class="custom-select" multiple>
-								<option selected disabled>Choose Skills</option>
+							  <label>Personal Trainer Skills</label>
+							  <div class="dropdown-mul-7">
+								<select name="" id="mul-7" multiple placeholder="Select">
 								<option value="Aerobics/ Interval Training">Aerobics/ Interval Training</option>
 								<option value="Circuits">Circuits</option>
 								<option value="Weights">Weights</option>
@@ -263,10 +266,11 @@ $this->load->view('common/resume_sidebar');
 								<option value="Kettlebells">Kettlebells</option>
 							</select>
 							</div>
+							</div>
 							<div class="form-group col-md-6">
-							  <label for="inputEmail4">Other Skills</label>
-							  <select class="custom-select" multiple>
-								<option selected disabled>Choose Skills</option>
+							  <label>Other Skills</label>
+							  <div class="dropdown-mul-8">
+								<select name="" id="mul-8" multiple placeholder="Select">
 								<option value="Staff Management">Staff Management</option>
 								<option value="Staff Development">Staff Development</option>
 								<option value="Performance Management">Performance Management</option>
@@ -304,15 +308,15 @@ $this->load->view('common/resume_sidebar');
 							</select>
 							</div>
 						  </div>
-
+						  </div>
 						  <div id="main_div">
 						  	<div class="form-row" id="language_div">
 							<div class="form-group col-md-6">
-							  <label for="inputEmail4">Language</label>
+							  <label>Language</label>
 							  <input class="form-control" id="date" name="date" placeholder="Language" type="text"/>
 							</div>
 							<div class="form-group col-md-6">
-							  <label for="inputEmail4">Proficiency Level</label>
+							  <label>Proficiency Level</label>
 							  <select id="inputState" class="form-control">
 								<option selected>Choose...</option>
 								<option value="Level 1">Level 1</option>
@@ -328,10 +332,28 @@ $this->load->view('common/resume_sidebar');
 						  <a href="javascript:void(0);" onclick="add_another();" class="btn btn-primary" style="margin-bottom:10px;">Add Another Language</a>
 						  <br>
 						  <div class="form-row">
+							<div class="form-group col-md-12">
+							  <label>Offshore Courses</label>
+							  <div class="dropdown-mul-7">
+								<select name="" id="mul-7" multiple placeholder="Select">
+								<option value="OPITO E-BOSIET Digital Delivery BOSIET (5703)">OPITO E-BOSIET Digital Delivery BOSIET (5703)</option>
+								<option value="OPITO BOSIET with EBS (5700) + CA-EBS (5902)">OPITO BOSIET with EBS (5700) + CA-EBS (5902)</option>
+								<option value="OPITO BOSIET with EBS (5700)">OPITO BOSIET with EBS (5700)</option>
+								<option value="OPITO FOET with EBS (5858) + CA-EBS (5902)">OPITO FOET with EBS (5858) + CA-EBS (5902)</option>
+								<option value="OPITO FOET with EBS (5858)">OPITO FOET with EBS (5858)</option>
+								<option value="OPITO HUET with EBS (5095) + CA-EBS (5902)">OPITO HUET with EBS (5095) + CA-EBS (5902)</option>
+								<option value="OPITO  HUET with EBS (5095)">OPITO  HUET with EBS (5095)</option>
+								<option value="OPITO Banksman & Slinger Stage 1 & 2 (9067)">OPITO Banksman & Slinger Stage 1 & 2 (9067)</option>
+								<option value="OPITO CA-EBS (5902)">OPITO CA-EBS (5902)</option>
+							</select>
+							</div>
+							</div>							
+						  </div>
+						  <div class="form-row">
 							<div class="form-group col-md-6">
-							  <label for="inputEmail4">Certificates</label>
-							  <select class="custom-select" multiple>
-								<option selected disabled>Choose Certificates</option>
+							  <label>Certificates</label>
+							  <div class="dropdown-mul-9">
+								<select name="" id="mul-9" multiple placeholder="Select">
 								<option value="COC Reg. II/2 Master Unlimited">COC Reg. II/2 Master Unlimited</option>
 								<option value="DPO (Dynamic Position Officer)">DPO (Dynamic Position Officer)</option>
 								<option value="COC Reg. II/3 Master 500">COC Reg. II/3 Master 500</option>
@@ -371,10 +393,11 @@ $this->load->view('common/resume_sidebar');
 								<option value="Marine Electrical/Electronics, IT">Marine Electrical/Electronics, IT</option>
 							</select>
 							</div>
+							</div>
 							<div class="form-group col-md-6">
-							  <label for="inputEmail4">STCW Certificates</label>
-							  <select class="custom-select" multiple>
-								<option selected disabled>Choose Certificates</option>
+							  <label>STCW Certificates</label>
+							  <div class="dropdown-mul-10">
+								<select name="" id="mul-10" multiple placeholder="Select">
 								<option value="STCW Basic Safety Training (BST)">STCW Basic Safety Training (BST)</option>
 								<option value="STCW Advanced Fire Fighting">STCW Advanced Fire Fighting</option>
 								<option value="STCW Personal Survival Techniques (PST)">STCW Personal Survival Techniques (PST)</option>
@@ -412,14 +435,15 @@ $this->load->view('common/resume_sidebar');
 							</select>
 							</div>
 						  </div>
+						  </div>
 
-						  <div class="form-row">
-							<div class="custom-file">
+						  <div class="form-group" id="certificate">
+							<div class="custom-file" id="certificate_div">
 							  <input type="file" class="custom-file-input" id="customFile">
 							  <label class="custom-file-label" for="customFile">Upload Certificates</label>
 							</div>
-						  </div>
-						  <br>
+						  </div>						  
+						  <a href="javascript:void(0);" onclick="add_certificate();" class="btn btn-primary" style="margin-bottom:10px;">Add Another Certificate</a><br>
 						  <button type="submit" class="btn btn-primary">Next</button>		
 					  				  
 					</form>
@@ -440,8 +464,52 @@ function add_another()
 {
 	$("#language_div").clone().appendTo("#main_div");
 }
+function add_certificate()
+{
+	$("#certificate_div").clone().appendTo("#certificate");
+}
 
 $('.dropdown-mul-1').dropdown({
+      limitCount: 5,
+      searchable: false
+    });
+$('.dropdown-mul-2').dropdown({
+      limitCount: 5,
+      searchable: false
+    });
+$('.dropdown-mul-3').dropdown({
+      limitCount: 5,
+      searchable: false
+    });
+$('.dropdown-mul-4').dropdown({
+      limitCount: 5,
+      searchable: false
+    });
+$('.dropdown-mul-5').dropdown({
+      limitCount: 5,
+      searchable: false
+    });
+$('.dropdown-mul-6').dropdown({
+      limitCount: 5,
+      searchable: false
+    });
+$('.dropdown-mul-7').dropdown({
+      limitCount: 5,
+      searchable: false
+    });
+$('.dropdown-mul-8').dropdown({
+      limitCount: 5,
+      searchable: false
+    });
+$('.dropdown-mul-9').dropdown({
+      limitCount: 5,
+      searchable: false
+    });
+$('.dropdown-mul-10').dropdown({
+      limitCount: 5,
+      searchable: false
+    });
+$('.dropdown-mul-11').dropdown({
       limitCount: 5,
       searchable: false
     });

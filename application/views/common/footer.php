@@ -17,10 +17,10 @@
                     <div class="single-footer-widget">
                         <h4>Popular Links</h4>
                         <ul class="menu-list">
-                            <li><a target="_blank" href="#">About Us</a></li>
-                            <li><a target="_blank" href="#">Testimonials</a></li>
-                            <li><a target="_blank" href="#">Overview</a></li>
-                            <li><a target="_blank" href="#">Contact Us</a></li>
+                            <li><a target="_blank" href="<?php echo base_url("home");?>">Home</a></li>
+                            <li><a target="_blank" href="<?php echo base_url("testimonial");?>">Testimonials</a></li>
+                            <li><a target="_blank" href="<?php echo base_url("overview");?>">Overview</a></li>
+                            <li><a target="_blank" href="<?php echo base_url("contact");?>">Contact Us</a></li>
                         </ul>
                         <ul class="social-icons">
                             <li><a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a></li>
