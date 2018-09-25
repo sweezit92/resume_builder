@@ -8,14 +8,15 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700,900" rel="stylesheet">
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+	
     <!-- ===========================================
         CSS
     ============================================= -->
   <?php
     $this->load->view('common/metalinks');
 	?>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
   
     
 </head>
@@ -105,11 +106,11 @@ $this->load->view('common/resume_sidebar');
 						  <div class="form-row">
 							<div class="form-group col-md-4">
 							  <label for="inputEmail4">Starting Date</label>
-							  <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+							  <input type="text" class="form-control form-control-2 input-sm to" placeholder="Starting date">
 							</div>
 							<div class="form-group col-md-4">
 							  <label for="inputEmail4">Ending Date</label>
-							  <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+							  <input type="text" class="form-control form-control-2 input-sm to" placeholder="Ending date">
 							</div>
 							<div class="form-group col-md-4">
 							  <label for="inputEmail4">Currently Studying</label>
@@ -139,6 +140,40 @@ function add_another()
 {
 	$("#primary_div").clone().appendTo(".main_div");
 }
+</script>
+
+<script>
+var startDate = new Date();
+var fechaFin = new Date();
+var FromEndDate = new Date();
+var ToEndDate = new Date();
+
+
+
+
+$('.from').datepicker({
+    autoclose: true,
+    minViewMode: 1,
+    format: 'mm/yyyy'
+}).on('changeDate', function(selected){
+        startDate = new Date(selected.date.valueOf());
+        startDate.setDate(startDate.getDate(new Date(selected.date.valueOf())));
+        $('.to').datepicker('setStartDate', startDate);
+    }); 
+
+$('.to').datepicker({
+    autoclose: true,
+    minViewMode: 1,
+    format: 'mm/yyyy'
+}).on('changeDate', function(selected){
+        FromEndDate = new Date(selected.date.valueOf());
+        FromEndDate.setDate(FromEndDate.getDate(new Date(selected.date.valueOf())));
+        $('.from').datepicker('setEndDate', FromEndDate);
+    });
+
+
+
+
 </script>
     
 </body>
