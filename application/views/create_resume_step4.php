@@ -168,12 +168,7 @@ $this->load->view("common/resume_sidebar");
 							   <hr>
 						</div>
 					</div>
-<<<<<<< HEAD
-					<br/>					  
-=======
-					<br/>
-					  
->>>>>>> d62c4d1aa6c2f3b41276013fae0c6cd4a7011ce5
+
 					  <button type="submit" class="btn btn-primary">Next</button>
 					  <a href="javascript:void(0);" onclick="add_another();" class="btn btn-primary">Add Another Work</a>
 					</form>
@@ -184,10 +179,7 @@ $this->load->view("common/resume_sidebar");
     </div>
 </section>
 
-<<<<<<< HEAD
-=======
-        
->>>>>>> d62c4d1aa6c2f3b41276013fae0c6cd4a7011ce5
+
 <?php
 $this->load->view("common/footer");
 ?>
