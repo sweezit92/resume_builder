@@ -97,24 +97,48 @@ $this->load->view("common/header");
             <div class="col-lg-6 col-md-6 contact-left">
                 <img class="img-fluid" src="<?php echo base_url();?>img/reg-manangement-hero.png" alt="" style="margin-top:-400px;">
             </div>
-            <div class="col-lg-5 col-md-6 contact-right">
-                <form class="form-area contact-form text-right" id="contactform">
-                    
-                    <input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
-
-                    <input name="mobile" placeholder="Enter your mobile" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
-
-                    <input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
-
-                    <input name="password" placeholder="Enter password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter password'" class="common-input mb-20 form-control" required="" type="password">
-
-					<input name="confirm password" placeholder="Enter confirm password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter confirm password'" class="common-input mb-20 form-control" required="" type="password">
-
-                    <div class="d-flex flex-column">
-                        <button type="submit" class="genric-btn2 d-block mt-30 mr-0 ml-auto">Sign up</button>
-                        <div class="alert-msg"></div>
+            <div class="col-lg-5 col-md-6 contact-left">
+                <?php
+                  if($this->session->flashdata('pass_failed')){
+                ?>
+                    <div class="alert alert-danger" style="margin-bottom:40px;">
+                        <strong><?php echo $this->session->flashdata('pass_failed');?></strong>
                     </div>
-                </form>
+                <?php
+                }if($this->session->flashdata('duplicate')){
+                ?>
+                    <div class="alert alert-danger" style="margin-bottom:40px;">
+                        <strong><?php echo $this->session->flashdata('duplicate');?></strong>
+                    </div>
+                <?php
+                }
+                ?>
+               
+				<form method="POST" action="<?php echo base_url('register/user');?>">
+				<div class="form-group">
+				<label for="exampleInputEmail1">Full Name</label>
+				<input type="text" class="form-control" id="exampleInputEmail1" name="name" aria-describedby="emailHelp" placeholder="Enter Full Name">
+				</div>
+				<div class="form-group">
+				<label for="exampleInputEmail1">Email address</label>
+				<input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter E-mail">
+				</div>
+				<div class="form-group">
+				<label for="exampleInputEmail1">Phone Number</label>
+				<input type="text" class="form-control" id="exampleInputEmail1" name="phone" aria-describedby="emailHelp" placeholder="Enter Phone">
+				</div>
+				<div class="form-group">
+				<label for="exampleInputPassword1">Password</label>
+				<input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+				</div>
+				<div class="form-group">
+				<label for="exampleInputPassword1">Confirm Password</label>
+				<input type="password" class="form-control" id="exampleInputPassword1" name="confirm_password" placeholder="Confirm Password">
+				</div>
+				<div class="form-group form-check">
+				</div>
+				<button type="submit" class="btn btn-primary">Signup</button>
+				</form>
             </div>
         </div>
     </div>
