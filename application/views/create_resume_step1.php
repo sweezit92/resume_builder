@@ -8,14 +8,18 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700,900" rel="stylesheet">
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+	
     <!-- ===========================================
         CSS
     ============================================= -->
   <?php
 	$this->load->view('common/metalinks');
 	?>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker3.min.css" />
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js"></script>
+
   
     
 </head>
@@ -113,9 +117,11 @@ $this->load->view('common/resume_sidebar');
 						</div>
 					  </div>
 					  <div class="form-row">
-						<div class='form-group date col-md-6' id='datepicker1'>
+						<div class='form-group date col-md-6' id='datePicker'>
 							<label>Date Of Birth</label>
-							<input class="form-control" id="date" name="dob" placeholder="MM/DD/YYYY" type="text"/>
+							<input type="text" class="form-control" name="dob" />
+                			<span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+		                    </span>
 						</div>
 						<div class="form-group col-md-2">
 						  <label>Country Prefix</label>
@@ -360,12 +366,12 @@ $this->load->view('common/resume_sidebar');
 					  </div>
 					  <div class="form-row">
 						<div class="form-group col-md-6">
-						  <label>City</label>
-						  <input type="text" class="form-control" name="city" id="inputCity" placeholder="City">
+						  <label>Residence</label>
+						  <input type="text" class="form-control" name="residence" id="inputCity" placeholder="Residence">
 						</div>
 						<div class="form-group col-md-6">
-						  <label>State</label>
-						  <input type="text" class="form-control" name="state" id="inputCity" placeholder="City">
+						  <label>Current Location</label>
+						  <input type="text" class="form-control" name="location" id="inputCity" placeholder="Current Location">
 						</div>
 					  </div>
 					  <div class="form-row">
@@ -446,6 +452,48 @@ $this->load->view('common/resume_sidebar');
 <?php
 $this->load->view('common/footer');
 ?>
+
+<script type="text/javascript">
+ $(document).ready(function() {
+    $('#datePicker')
+        .datepicker({
+            format: 'mm/dd/yyyy'
+        })
+        .on('changeDate', function(e) {
+            // Revalidate the date field
+            $('#eventForm').formValidation('revalidateField', 'date');
+        });
+
+    $('#eventForm').formValidation({
+        framework: 'bootstrap',
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            name: {
+                validators: {
+                    notEmpty: {
+                        message: 'The name is required'
+                    }
+                }
+            },
+            date: {
+                validators: {
+                    notEmpty: {
+                        message: 'The date is required'
+                    },
+                    date: {
+                        format: 'MM/DD/YYYY',
+                        message: 'The date is not a valid'
+                    }
+                }
+            }
+        }
+    });
+});
+        </script>
     
 </body>
 

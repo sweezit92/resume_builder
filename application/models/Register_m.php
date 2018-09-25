@@ -18,6 +18,15 @@ class Register_m extends CI_Model {
 		return $this->db->insert_id();
 	}
 
+	public function insert_all($all_array)
+	{
+		$this->db->insert('personal', $all_array);
+		$this->db->insert('education', $all_array);
+		$this->db->insert('certificate', $all_array);
+		$this->db->insert('experience', $all_array);
+		return true;
+	}
+
 }
 
 /* End of file Register_m.php */

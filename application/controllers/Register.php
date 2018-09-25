@@ -39,6 +39,8 @@ class Register extends CI_Controller {
 				$insert_data = $this->register_m->insert_user($insert_array);
 				if($insert_data != "")
 				{
+					$all_array = array("user_id" => $insert_data);
+					$insert_all = $this->register_m->insert_all($all_array);
 					$session_data = array(
 											'user_id' => $insert_data,
 											'name' =>$name,
