@@ -15,14 +15,15 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700,900" rel="stylesheet">
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
     <!-- ===========================================
         CSS
     ============================================= -->
 <?php
 $this->load->view("common/metalinks");
 ?>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+
     
 </head>
 
@@ -89,9 +90,9 @@ $this->load->view("common/header");
 
 <!-- Start main body contents -->
 <section class="blog-post" style="margin-top:-10px;">
-    <div class="details-body">
+    <div class="details-body" style="background:white;" id="content">
         <div class="container">
-            <div class="row" style="border:2px solid black;" id="content">
+            <div class="row" >
 				
 
 						<div class="col-md-4">
@@ -205,19 +206,13 @@ $this->load->view("common/footer");
 
 </body>
 <script>
-var doc = new jsPDF();
-var specialElementHandlers = {
-    '#editor': function (element, renderer) {
-        return true;
-    }
-};
-
-$('#cmd').click(function () {
-    doc.fromHTML($('#content').html(), 15, 15, {
-        'width': 170,
-            'elementHandlers': specialElementHandlers
-    });
-    doc.save('sample-file.pdf');
+$('#cmd').click(function() {
+  var options = {
+  };
+  var pdf = new jsPDF('p', 'pt', 'a3');
+  pdf.addHTML($("#content"), 20, 80, options, function() {
+    pdf.save('pageContent.pdf');
+  });
 });
 </script>
 

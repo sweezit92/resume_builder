@@ -8,14 +8,15 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700,900" rel="stylesheet">
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+	
     <!-- ===========================================
         CSS
     ============================================= -->
 <?php
 $this->load->view("common/metalinks");
 ?>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
   
     
 </head>
@@ -126,11 +127,11 @@ $this->load->view("common/resume_sidebar");
 							  <div class="form-row">
 								<div class="form-group col-md-4">
 								  <label for="inputEmail4">Starting Date</label>
-								  <input class="form-control" id="date" name="date" placeholder="MM/YYYY" type="text"/>
+								  <input type="text" class="form-control form-control-2 input-sm from" placeholder="Starting date">
 								</div>
 								<div class="form-group col-md-4">
 								  <label for="inputEmail4">Ending Date</label>
-								  <input class="form-control" id="date" name="date" placeholder="MM/YYYY" type="text"/>
+								  <input type="text" class="form-control form-control-2 input-sm to" placeholder="Ending date">
 								</div>
 								<div class="form-group col-md-4">
 								  <label for="inputEmail4">Currently Working</label>
@@ -168,23 +169,6 @@ $this->load->view("common/resume_sidebar");
 						</div>
 					</div>
 					<br/>
-<div class="container">
-  <div class="row">
-       <div class="col-lg-12">
-     <div class="button-group">
-        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span> <span class="caret"></span></button>
-<ul class="dropdown-menu">
-  <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 1</a></li>
-  <li><a href="#" class="small" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 2</a></li>
-  <li><a href="#" class="small" data-value="option3" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 3</a></li>
-  <li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 4</a></li>
-  <li><a href="#" class="small" data-value="option5" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 5</a></li>
-  <li><a href="#" class="small" data-value="option6" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 6</a></li>
-</ul>
-  </div>
-</div>
-  </div>
-</div>
 					  
 					  <button type="submit" class="btn btn-primary">Next</button>
 					  <a href="javascript:void(0);" onclick="add_another();" class="btn btn-primary">Add Another Work</a>
@@ -199,66 +183,7 @@ $this->load->view("common/resume_sidebar");
     </div>
 </section>
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		  <div class="modal-dialog" role="document">
-			<div class="modal-content">
-                    <div class="modal-header" style="display: block;">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Login to continue</h4>
-                    </div>
-                    <div class="modal-body" style="margin-bottom:10px;">
-                        <div class="login-form">
-                            <center>
-                                <h4 class="errorLog" id="loginHelp"></h4>
-                            </center>
-
-                            <form id="loginForm">
-
-
-                                <input type="text" class="common-input mb-20 form-control" id="loginEmail" name="loginEmail" placeholder="Email" autocomplete="off">
-                                
-                                <input type="password" class="common-input mb-20 form-control" id="loginPassword" name="loginPassword"  placeholder="Password" autocomplete="off">
-
-                                <h4 style="text-align: right;"><span class="forgotpassword">Forgot Password?</span></h4>
-                                <button type="submit" class="btn btn-login genric-btn2" id="login_submit">
-                                    <b>Log in</b>
-                                </button>
-
-                                <h4 onclick="toggleSignup()" style="text-align: center; margin-top: 24px; font-size: 12px; color: #8c8c8c; cursor: pointer;"><span class="forgotpassword">Don't have an account? <a style="font-weight: 500;">Sign Up here</a></span></h4>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="modal-footer" style="background: none;text-align: center;display: block;">
-
-                        <div class="footer-area" style="background: none;">
-                        <div class="single-footer-widget">
-                            <ul class="social-icons" style="font-size: 20px;">  
-
-                                <li>
-                                    <a target="_blank" href="#">
-                                        <i class="fab fa-facebook" style="color:#3B5998;"></i>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a target="_blank" href="#">
-                                        <i class="fab fa-google" style="color:#DB4437;"></i>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a target="_blank" href="#">
-                                        <i class="fab fa-linkedin" style="color:#0077B5;"></i>
-                                    </a>
-                                </li>
-                            </ul> 
-                        </div>
-                    </div>
-                    </div>
-                </div>
-		  </div>
-		</div>
-
+        
 <?php
 $this->load->view("common/footer");
 ?>
@@ -278,29 +203,40 @@ $('.signupBTN').click(function(e){
             $('#LoginModal').modal('show');
         });
 </script>
+</script>
+
 <script>
-var options = [];
+var startDate = new Date();
+var fechaFin = new Date();
+var FromEndDate = new Date();
+var ToEndDate = new Date();
 
-$( '.dropdown-menu a' ).on( 'click', function( event ) {
 
-   var $target = $( event.currentTarget ),
-       val = $target.attr( 'data-value' ),
-       $inp = $target.find( 'input' ),
-       idx;
 
-   if ( ( idx = options.indexOf( val ) ) > -1 ) {
-      options.splice( idx, 1 );
-      setTimeout( function() { $inp.prop( 'checked', false ) }, 0);
-   } else {
-      options.push( val );
-      setTimeout( function() { $inp.prop( 'checked', true ) }, 0);
-   }
 
-   $( event.target ).blur();
-      
-   console.log( options );
-   return false;
-});
+$('.from').datepicker({
+    autoclose: true,
+    minViewMode: 1,
+    format: 'mm/yyyy'
+}).on('changeDate', function(selected){
+        startDate = new Date(selected.date.valueOf());
+        startDate.setDate(startDate.getDate(new Date(selected.date.valueOf())));
+        $('.to').datepicker('setStartDate', startDate);
+    }); 
+
+$('.to').datepicker({
+    autoclose: true,
+    minViewMode: 1,
+    format: 'mm/yyyy'
+}).on('changeDate', function(selected){
+        FromEndDate = new Date(selected.date.valueOf());
+        FromEndDate.setDate(FromEndDate.getDate(new Date(selected.date.valueOf())));
+        $('.from').datepicker('setEndDate', FromEndDate);
+    });
+
+
+
+
 </script>
  
 </body>
