@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700,900" rel="stylesheet">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
     <!-- ===========================================
         CSS
     ============================================= -->
@@ -110,16 +110,6 @@ $this->load->view('common/resume_sidebar');
 						<div class="form-group col-md-6" style="margin-top:22px;">
 						  <label>Short and engaging pitch about yourself</label>
 						  <input type="text" class="form-control" id="inputEmail4" name="about" placeholder="Short and engaging pitch about yourself">
-						</div>
-					  </div>
-					  <div class="form-row">
-						<div class='form-group date col-md-6' id='datepicker1'>
-							<label>Residence (Where Do you live?)</label>
-							<input class="form-control" id="date"  name="residence" placeholder="Country of Residence " type="text"/>
-						</div>
-						<div class='form-group date col-md-6' id='datepicker1'>
-							<label>Current Location</label>
-							<input class="form-control" id="date" name="location" placeholder="Current Location" type="text"/>
 						</div>
 					  </div>
 					  <div class="form-row">
@@ -377,22 +367,6 @@ $this->load->view('common/resume_sidebar');
 						  <label>State</label>
 						  <input type="text" class="form-control" name="state" id="inputCity" placeholder="City">
 						</div>
-					  </div>
-					  <div class="form-group">
-						<label>Current Address</label>
-						<input type="text" class="form-control" name="current_address" id="inputAddress" placeholder="Current Address">
-					  </div>
-					  <div class="form-group">
-						<div class="form-check">
-						  <input class="form-check-input" type="checkbox" id="gridCheck">
-						  <label class="form-check-label" for="gridCheck">
-							Same as current address
-						  </label>
-						</div>
-					  </div>
-					  <div class="form-group">
-						<label>Permanent Address</label>
-						<input type="text" class="form-control" id="inputAddress2" name="permanent_address" placeholder="Permanent Address">
 					  </div>
 					  <div class="form-row">
 						<div class="form-group col-md-6">
