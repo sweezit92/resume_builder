@@ -86,43 +86,54 @@ $this->load->view('common/resume_sidebar');
 
                 <div class="col-lg-8" style="font-size: 16px;">
                     <h2 class="head">Education</h2>
-                    <form>
+                    <form method="post" action="<?php echo base_url("create_resume_step2/update_course");?>">
 					<div class="main_div">
-					<div id="primary_div">
+					<div class="primary_div">
+					<?php
+					
+					$total = explode(",",$fetch_course->course);
+					$count_total = count($total);
+					for($i = 0 ; $i < $count_total ; $i++){
+					?>
 						<div class="form-row">
 							<div class="form-group col-md-4">
 							  <label for="inputEmail4">Course</label>
-							  <input type="text" class="form-control" id="inputEmail4" placeholder="Course Name">
+							  <input type="text" class="form-control" id="inputEmail4" name="course_name[]" value="<?php echo $total[$i];?>" placeholder="Course Name">
 							</div>
 							<div class="form-group col-md-4">
 							  <label for="inputEmail4">Institute Name</label>
-							  <input type="text" class="form-control" id="inputEmail4" placeholder="Institute Name">
+							  <input type="text" class="form-control" id="inputEmail4" name="institute_name[]" placeholder="Institute Name">
 							</div>
 							<div class="form-group col-md-4">
 							  <label for="inputPassword4">University</label>
-							  <input type="text" class="form-control" id="inputPassword4" placeholder="University Name">
+							  <input type="text" class="form-control" id="inputPassword4" name="university[]"placeholder="University Name">
 							</div>
 						  </div>
 						  <div class="form-row">
 							<div class="form-group col-md-4">
 							  <label for="inputEmail4">Starting Date</label>
-							  <input type="text" class="form-control form-control-2 input-sm to" placeholder="Starting date">
+							  <input type="text" class="form-control form-control-2 input-sm to" name="start_date[]" placeholder="Starting date">
 							</div>
 							<div class="form-group col-md-4">
 							  <label for="inputEmail4">Ending Date</label>
-							  <input type="text" class="form-control form-control-2 input-sm to" placeholder="Ending date">
+							  <input type="text" class="form-control form-control-2 input-sm to" name="end_date[]" placeholder="Ending date">
 							</div>
 							<div class="form-group col-md-4">
 							  <label for="inputEmail4">Currently Studying</label>
 							  <br>
-							  <input class="form-check-input" style="margin: 10px;" type="checkbox" id="gridCheck">
+							  <input class="form-check-input" style="margin: 10px;" type="checkbox" name="currently[]" value="Currently Studying" id="gridCheck">
+							  
 							</div>
 						  </div>
+						  <hr>
+						 <?php
+							}
+						 ?>
 						</div>
 					</div>	  
 					  
 					  <button type="submit" class="btn btn-primary">Next</button>
-					  <a href="javascript:void(0);" onclick="add_another();" class="btn btn-primary">Add Another Education</a>
+					  <a href="javascript:void(0);"  onclick="add_another();" class="btn btn-primary">Add Another Education</a>
 					</form>
                     <hr>
                 </div>
@@ -136,9 +147,50 @@ $this->load->view('common/footer');
 ?>
 
 <script>
-function add_another()
+function add_another() 
 {
-	$("#primary_div").clone().appendTo(".main_div");
+	var max_fields      = 30; 
+    var wrapper         = $(".main_div");
+	var htmlcontent = '<div class="atrri_add_cont"><hr><div class="form-row"><div class="form-group col-md-4"><label for="inputEmail4">Course</label><input type="text" class="form-control" id="inputEmail4" name="course_name[]" placeholder="Course Name"></div><div class="form-group col-md-4"><label for="inputEmail4">Institute Name</label><input type="text" class="form-control" id="inputEmail4" name="institute_name[]" placeholder="Institute Name"></div><div class="form-group col-md-4"><label for="inputPassword4">University</label><input type="text" class="form-control" id="inputPassword4" name="university[]"placeholder="University Name"></div></div><div class="form-row"><div class="form-group col-md-4"><label for="inputEmail4">Starting Date</label><input type="text" class="form-control form-control-2 input-sm to" name="start_date[]" placeholder="Starting date"></div><div class="form-group col-md-4"><label for="inputEmail4">Ending Date</label><input type="text" class="form-control form-control-2 input-sm to" name="end_date[]" placeholder="Ending date"></div><div class="form-group col-md-4"><label for="inputEmail4">Currently Studying</label><br><input class="form-check-input" style="margin: 10px;" type="checkbox" name="currently[]" value="Currently Studying" id="gridCheck"></div></div><a href="javascript:void(0);" class="remove btn btn-danger" style="margin-bottom:20px;">Remove</a></div>';
+	//$(".primary_div").clone().appendTo(".main_div");
+	var x = 1;
+
+        if(x < max_fields){ 
+          x++; 
+          $(wrapper).append(htmlcontent); 
+		  
+			var startDate = new Date();
+var fechaFin = new Date();
+var FromEndDate = new Date();
+var ToEndDate = new Date();
+
+
+
+
+$('.from').datepicker({
+    autoclose: true,
+    minViewMode: 1,
+    format: 'mm/yyyy'
+}).on('changeDate', function(selected){
+        startDate = new Date(selected.date.valueOf());
+        startDate.setDate(startDate.getDate(new Date(selected.date.valueOf())));
+        $('.to').datepicker('setStartDate', startDate);
+    }); 
+
+$('.to').datepicker({
+    autoclose: true,
+    minViewMode: 1,
+    format: 'mm/yyyy'
+}).on('changeDate', function(selected){
+        FromEndDate = new Date(selected.date.valueOf());
+        FromEndDate.setDate(FromEndDate.getDate(new Date(selected.date.valueOf())));
+        $('.from').datepicker('setEndDate', FromEndDate);
+    });
+
+        }
+	$("body").on("click",".remove",function(){ 
+	  $(this).parents(".atrri_add_cont").remove();
+  });
 }
 </script>
 

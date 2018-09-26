@@ -12,21 +12,23 @@ class Create_resume_step1 extends CI_Controller {
     
 	public function index()
 	{
-		$this->load->view('create_resume_step1');
+		$this->load->model('create_resume_step1_m');
+		$user_id = $this->session->userdata['logged_in']['user_id'];
+		$data["get_personal"] = $this->create_resume_step1_m->fetch_personal($user_id);
+		$this->load->view('create_resume_step1',$data);
 	}
 
 	public function add_personal()
 	{
 		$this->load->model('create_resume_step1_m');
-		$user_id = 1;
+		$user_id = $this->session->userdata['logged_in']['user_id'];
 		$fullname = $this->input->post("full_name");
 		$rank = $this->input->post("rank");
 		$nationality = $this->input->post("nationality");
 		$about = $this->input->post("about");
 		$residence = $this->input->post("residence");
-		$location = $this->input->post("");
-		echo $dob = $this->input->post("dob");
-		exit;
+		$location = $this->input->post("location");
+		$dob = $this->input->post("dob");
 		$prefix = $this->input->post("prefix");
 		$phone = $this->input->post("phone");
 		$email = $this->input->post("email");
@@ -51,56 +53,73 @@ class Create_resume_step1 extends CI_Controller {
                     $uploadData = $this->upload->data();
 					$image = $uploadData['file_name'];
 					$records=array(
-									"full_name" => $user_id,
-									"professional_rank" => "vendor",
-									"nationality" => $cus_name,
-									"about_yourself" => $cus_email,
-									"residence" => $cus_phone,
-									"current_location" => $brand,
-									"dob" => $model,
-									"prefix" => $image,
-									"telephone" => $get_vendor_details->store_address,
-									"email" => $cus_address,
-									"skype" => $date,
-									"linkedIn" => "pending",
-									"visa" => $user_id,
-									"seamans_book" => "vendor",
-									"smoke" => $cus_name,
-									"start_job" => $cus_email,
-									"tatto" => $cus_phone,
+									"full_name" => $fullname,
+									"professional_rank" => $rank,
+									"nationality" => $nationality,
+									"about_yourself" => $about,
+									"residence" => $residence,
+									"current_location" => $location,
+									"dob" => $dob,
+									"prefix" => $prefix,
+									"telephone" => $phone,
+									"email" => $email,
+									"skype" => $skype,
+									"linkedIn" => $linkedin,
+									"visa" => $visa,
+									"seamans_book" => $seamans_book,
+									"smoke" => $smoke,
+									"start_job" => $start_job,
+									"tatto" => $tatto,
 									"image" => $image,
-									"date" => $model
+									"date" => $date
 								  );
                 }else{
 					$records=array(
-									"user_id" => $user_id,
-									"type" => "vendor",
-									"cus_name" => $cus_name,
-									"cus_email" => $cus_email,
-									"cus_phone" => $cus_phone,
-									"brand_id" => $brand,
-									"model_id" => $model,
-									"billing_address" => $get_vendor_details->store_address,
-									"shipping_address" => $cus_address,
-									"date" => $date,
-									"order_status" => "pending"
+									"full_name" => $fullname,
+									"professional_rank" => $rank,
+									"nationality" => $nationality,
+									"about_yourself" => $about,
+									"residence" => $residence,
+									"current_location" => $location,
+									"dob" => $dob,
+									"prefix" => $prefix,
+									"telephone" => $phone,
+									"email" => $email,
+									"skype" => $skype,
+									"linkedIn" => $linkedin,
+									"visa" => $visa,
+									"seamans_book" => $seamans_book,
+									"smoke" => $smoke,
+									"start_job" => $start_job,
+									"tatto" => $tatto,
+									"date" => $date
 								  );
                 }
 		}else{
 			$records=array(
-							"user_id" => $user_id,
-							"type" => "vendor",
-							"cus_name" => $cus_name,
-							"cus_email" => $cus_email,
-							"cus_phone" => $cus_phone,
-							"brand_id" => $brand,
-							"model_id" => $model,
-							"billing_address" => $get_vendor_details->store_address,
-							"shipping_address" => $cus_address,
-							"date" => $date,
-							"order_status" => "pending"
+							"full_name" => $fullname,
+							"professional_rank" => $rank,
+							"nationality" => $nationality,
+							"about_yourself" => $about,
+							"residence" => $residence,
+							"current_location" => $location,
+							"dob" => $dob,
+							"prefix" => $prefix,
+							"telephone" => $phone,
+							"email" => $email,
+							"skype" => $skype,
+							"linkedIn" => $linkedin,
+							"visa" => $visa,
+							"seamans_book" => $seamans_book,
+							"smoke" => $smoke,
+							"start_job" => $start_job,
+							"tatto" => $tatto,
+							"date" => $date
 						  );
 		}
+
+		$update_details = $this->create_resume_step1_m->update_details($records,$user_id);
+		redirect('create_resume_step2');
 	}
 }
 
