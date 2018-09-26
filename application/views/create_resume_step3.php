@@ -502,20 +502,17 @@ $('.dropdown-mul-8').dropdown({
       searchable: false
     });
 $('.dropdown-mul-9').dropdown({
-      limitCount: 5,
+      limitCount: 100,
       searchable: false
     });
 $('.dropdown-mul-10').dropdown({
-      limitCount: 5,
+      limitCount: 8,
       searchable: false
     });
 $('.dropdown-mul-11').dropdown({
       limitCount: 5,
       searchable: false
     });
-</script>
-
-    
+</script>    
 </body>
-
 </html>
