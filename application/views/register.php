@@ -11,7 +11,7 @@
     
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>Resume Builder - Contact</title>
+    <title>Resume Builder - Sign Up</title>
 
 <?php
 $this->load->view("common/metalinks");

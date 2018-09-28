@@ -88,13 +88,18 @@ $this->load->view('common/resume_sidebar');
                     <h2 class="head">Education</h2>
                     <form method="post" action="<?php echo base_url("create_resume_step2/update_course");?>">
 					<div class="main_div">
-					<div class="primary_div">
+					
 					<?php
 					
 					$total = explode(",",$fetch_course->course);
+					$institute = explode(",",$fetch_course->institute);
+					$university = explode(",",$fetch_course->university);
+					$start = explode(",",$fetch_course->start);
+					$end = explode(",",$fetch_course->end);
 					$count_total = count($total);
 					for($i = 0 ; $i < $count_total ; $i++){
 					?>
+						<div class="primary_div<?php echo $i;?>">
 						<div class="form-row">
 							<div class="form-group col-md-4">
 							  <label for="inputEmail4">Course</label>
@@ -102,34 +107,43 @@ $this->load->view('common/resume_sidebar');
 							</div>
 							<div class="form-group col-md-4">
 							  <label for="inputEmail4">Institute Name</label>
-							  <input type="text" class="form-control" id="inputEmail4" name="institute_name[]" placeholder="Institute Name">
+							  <input type="text" class="form-control" id="inputEmail4" name="institute_name[]" value="<?php echo $institute[$i];?>" placeholder="Institute Name">
 							</div>
 							<div class="form-group col-md-4">
 							  <label for="inputPassword4">University</label>
-							  <input type="text" class="form-control" id="inputPassword4" name="university[]"placeholder="University Name">
+							  <input type="text" class="form-control" id="inputPassword4" name="university[]" value="<?php echo $university[$i];?>" placeholder="University Name">
 							</div>
 						  </div>
 						  <div class="form-row">
 							<div class="form-group col-md-4">
 							  <label for="inputEmail4">Starting Date</label>
-							  <input type="text" class="form-control form-control-2 input-sm to" name="start_date[]" placeholder="Starting date">
+							  <input type="text" class="form-control form-control-2 input-sm to" name="start_date[]" value="<?php echo $start[$i];?>" placeholder="Starting date">
 							</div>
 							<div class="form-group col-md-4">
 							  <label for="inputEmail4">Ending Date</label>
-							  <input type="text" class="form-control form-control-2 input-sm to" name="end_date[]" placeholder="Ending date">
+							  <input type="text" class="form-control form-control-2 input-sm to" name="end_date[]" value="<?php echo (($end[$i] != "Currently Studying")?$end[$i]:'');?>" placeholder="Ending date">
 							</div>
 							<div class="form-group col-md-4">
 							  <label for="inputEmail4">Currently Studying</label>
 							  <br>
-							  <input class="form-check-input" style="margin: 10px;" type="checkbox" name="currently[]" value="Currently Studying" id="gridCheck">
+							  <input class="form-check-input" style="margin: 10px;" type="checkbox" name="currently[]" <?php echo (($end[$i] == "Currently Studying")?'checked':'');?> value="Currently Studying" id="gridCheck">
 							  
 							</div>
 						  </div>
+						  <?php
+						  if($i > 0)
+						  {
+						  ?>
+						  <a href="javascript:void(0);" onclick="rmv(<?php echo $i;?>)" class="btn btn-danger">Remove</a>
+						  <?php
+						  }
+						  ?>
 						  <hr>
+						  </div>
 						 <?php
 							}
 						 ?>
-						</div>
+						
 					</div>	  
 					  
 					  <button type="submit" class="btn btn-primary">Next</button>
@@ -147,12 +161,20 @@ $this->load->view('common/footer');
 ?>
 
 <script>
+
+function rmv(e)
+{
+	$( ".primary_div"+e+"" ).remove();
+}
+
+
+
 function add_another() 
 {
 	var max_fields      = 30; 
     var wrapper         = $(".main_div");
 	var htmlcontent = '<div class="atrri_add_cont"><hr><div class="form-row"><div class="form-group col-md-4"><label for="inputEmail4">Course</label><input type="text" class="form-control" id="inputEmail4" name="course_name[]" placeholder="Course Name"></div><div class="form-group col-md-4"><label for="inputEmail4">Institute Name</label><input type="text" class="form-control" id="inputEmail4" name="institute_name[]" placeholder="Institute Name"></div><div class="form-group col-md-4"><label for="inputPassword4">University</label><input type="text" class="form-control" id="inputPassword4" name="university[]"placeholder="University Name"></div></div><div class="form-row"><div class="form-group col-md-4"><label for="inputEmail4">Starting Date</label><input type="text" class="form-control form-control-2 input-sm to" name="start_date[]" placeholder="Starting date"></div><div class="form-group col-md-4"><label for="inputEmail4">Ending Date</label><input type="text" class="form-control form-control-2 input-sm to" name="end_date[]" placeholder="Ending date"></div><div class="form-group col-md-4"><label for="inputEmail4">Currently Studying</label><br><input class="form-check-input" style="margin: 10px;" type="checkbox" name="currently[]" value="Currently Studying" id="gridCheck"></div></div><a href="javascript:void(0);" class="remove btn btn-danger" style="margin-bottom:20px;">Remove</a></div>';
-	//$(".primary_div").clone().appendTo(".main_div");
+	
 	var x = 1;
 
         if(x < max_fields){ 
