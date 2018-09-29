@@ -12,7 +12,58 @@ class Create_resume_step4 extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('create_resume_step4');
+		$this->load->model('create_resume_step4_m');
+		$user_id = $this->session->userdata['logged_in']['user_id'];
+		$data["fetch_experience"] = $this->create_resume_step4_m->fetch_experience($user_id);
+		$this->load->view('create_resume_step4',$data);
+	}
+
+	public function update_experience()
+	{
+		$this->load->model('create_resume_step4_m');
+		$user_id = $this->session->userdata['logged_in']['user_id'];
+		$title = implode(",",$this->input->post("title"));
+		$company_name = implode(",",$this->input->post("company_name"));
+		$vessel_name = implode(",",$this->input->post("vessel_name"));
+		$vessel_length = implode(",",$this->input->post("vessel_length"));		
+		$veseel_type = implode(",",$this->input->post("veseel_type"));
+		$Start_date = implode(",",$this->input->post("Start_date"));
+		$c_end_date = count($this->input->post("end_date"));
+		$end_date = $this->input->post("end_date");
+		for($i=1 ; $i < $c_end_date ; $i++){
+			
+			if($end_date[$i] == ""){
+				$end_date[$i] = "Currently working";
+			}
+		}
+		$final_date = implode(",",$end_date);		
+		$company_loc = implode(",",$this->input->post("company_loc"));
+		$company_description = implode(",",$this->input->post("company_detail"));
+		$contact_person = implode(",",$this->input->post("contact_person"));
+		$contact_info = implode(",",$this->input->post("contact_info"));		
+		$task = implode(",",$this->input->post("task"));
+		$date = time();
+
+		$records = array(
+							"title" => $title,
+							"company" => $company_name,
+							"vessel_name" => $vessel_name,
+							"vessel_length" => $vessel_length,
+							"vessel_type" => $veseel_type,
+							"start" => $Start_date,
+							"end" => $final_date,
+							"company_location" => $company_loc,
+							"company_description" => $company_description,
+							"contact_person" => $contact_person,
+							"contact_info" => $contact_info,
+							"task" => $task,
+							"date" => $date
+						);
+		
+		$update_experience = $this->create_resume_step4_m->update_experience($records,$user_id);
+		redirect(cv_preview);
+		
+		
 	}
 
 }

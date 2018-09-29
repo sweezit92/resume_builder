@@ -571,7 +571,7 @@ $('.dropdown-mul-9').dropdown({
       searchable: false
     });
 $('.dropdown-mul-10').dropdown({
-      limitCount: 8,
+      limitCount: 100,
       searchable: false
     });
 $('.dropdown-mul-11').dropdown({

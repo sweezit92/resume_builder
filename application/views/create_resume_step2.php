@@ -102,12 +102,12 @@ $this->load->view('common/resume_sidebar');
 						<div class="primary_div<?php echo $i;?>">
 						<div class="form-row">
 							<div class="form-group col-md-4">
-							  <label for="inputEmail4">Course</label>
-							  <input type="text" class="form-control" id="inputEmail4" name="course_name[]" value="<?php echo $total[$i];?>" placeholder="Course Name">
+							  <label for="inputEmail4">Specialization</label>
+							  <input type="text" class="form-control" id="inputEmail4" name="course_name[]" value="<?php echo $total[$i];?>" placeholder="E.g: Navigation and Marine Power Engineering">
 							</div>
 							<div class="form-group col-md-4">
-							  <label for="inputEmail4">Institute Name</label>
-							  <input type="text" class="form-control" id="inputEmail4" name="institute_name[]" value="<?php echo $institute[$i];?>" placeholder="Institute Name">
+							  <label for="inputEmail4">Educational Insitutuion</label>
+							  <input type="text" class="form-control" id="inputEmail4" name="institute_name[]" value="<?php echo $institute[$i];?>" placeholder="E.g: Warsash Maritime Academy">
 							</div>
 							<div class="form-group col-md-4">
 							  <label for="inputPassword4">University</label>
@@ -120,8 +120,8 @@ $this->load->view('common/resume_sidebar');
 							  <input type="text" class="form-control form-control-2 input-sm to" name="start_date[]" value="<?php echo $start[$i];?>" placeholder="Starting date">
 							</div>
 							<div class="form-group col-md-4">
-							  <label for="inputEmail4">Ending Date</label>
-							  <input type="text" class="form-control form-control-2 input-sm to" name="end_date[]" value="<?php echo (($end[$i] != "Currently Studying")?$end[$i]:'');?>" placeholder="Ending date">
+							  <label for="inputEmail4">Year of Graduation</label>
+							  <input type="text" class="form-control form-control-2 input-sm to" name="end_date[]" value="<?php echo (($end[$i] != "Currently Studying")?$end[$i]:'');?>" placeholder="E.g: 2000">
 							</div>
 							<div class="form-group col-md-4">
 							  <label for="inputEmail4">Currently Studying</label>

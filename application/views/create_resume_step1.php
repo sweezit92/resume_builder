@@ -104,14 +104,14 @@ $this->load->view('common/resume_sidebar');
 					?>
 					  <div class="form-row">
 						<div class="custom-file col-md-6">
-						  <input type="file" class="custom-file-input" id="customFile" name="image">
-						  <label class="custom-file-label" for="customFile">Upload Your Image</label>
+						  <input type="file" class="custom-file-input" id="customFile" value="" name="image">
+						  <label class="custom-file-label" for="customFile"><?php echo $get_personal->image;?></label>
 						</div>
 					  </div>
 					  <div class="form-row" style="margin-top:10px;">
 						<div class="form-group col-md-6">
 						  <label>Full Name</label>
-						  <input type="text" class="form-control" id="inputEmail4" name="full_name" value="<?php echo $get_personal->full_name;?>" placeholder="Full Name">
+						  <input type="text" class="form-control" id="inputEmail4" name="full_name" value="<?php echo $get_personal->full_name;?>" placeholder="Please type your name and surname">
 						</div>
 						<div class="form-group col-md-6">
 						  <label>Professional Title/ Rank</label>
@@ -120,12 +120,12 @@ $this->load->view('common/resume_sidebar');
 					  </div>
 					  <div class="form-row">
 						<div class="form-group col-md-6">
-						  <label>Nationality (Which country issued your passport?) </label>
-						  <input type="text" class="form-control" id="inputPassword4" name="nationality" value="<?php echo $get_personal->nationality;?>" placeholder="Nationality">
+						  <label>Nationality</label>
+						  <input type="text" class="form-control" id="inputPassword4" name="nationality" value="<?php echo $get_personal->nationality;?>" placeholder="Which country issued your passport?">
 						</div>						
-						<div class="form-group col-md-6" style="margin-top:22px;">
-						  <label>Short and engaging pitch about yourself</label>
-						  <input type="text" class="form-control" id="inputEmail4" name="about" value="<?php echo $get_personal->about_yourself;?>" placeholder="Short and engaging pitch about yourself">
+						<div class="form-group col-md-6">
+						  <label>Objective and info </label>
+						  <input type="text" class="form-control" id="inputEmail4" name="about" value="<?php echo $get_personal->about_yourself;?>" placeholder="Type a short and engaging pitch about yourself">
 						</div>
 					  </div>
 					  <div class="form-row">
@@ -378,12 +378,12 @@ $this->load->view('common/resume_sidebar');
 					  </div>
 					  <div class="form-row">
 						<div class="form-group col-md-6">
-						  <label>Residence</label>
-						  <input type="text" class="form-control" name="residence" id="inputCity" value="<?php echo $get_personal->residence;?>" placeholder="Residence">
+						  <label>Country of Residence</label>
+						  <input type="text" class="form-control" name="residence" id="inputCity" value="<?php echo $get_personal->residence;?>" placeholder="Where Do you live?">
 						</div>
 						<div class="form-group col-md-6">
 						  <label>Current Location</label>
-						  <input type="text" class="form-control" name="location" id="inputCity" value="<?php echo $get_personal->current_location;?>" placeholder="Current Location">
+						  <input type="text" class="form-control" name="location" id="inputCity" value="<?php echo $get_personal->current_location;?>" placeholder="Where are you now?">
 						</div>
 					  </div>
 					  <div class="form-row">
@@ -392,8 +392,8 @@ $this->load->view('common/resume_sidebar');
 						  <input type="text" class="form-control" id="inputEmail4" name="email" value="<?php echo $get_personal->email;?>" placeholder="Email">
 						</div>
 						<div class="form-group col-md-6">
-						  <label>Skype Address</label>
-						  <input type="text" class="form-control" id="inputEmail4" name="skype" value="<?php echo $get_personal->skype;?>" placeholder="Skype Address">
+						  <label>Skype ID</label>
+						  <input type="text" class="form-control" id="inputEmail4" name="skype" value="<?php echo $get_personal->skype;?>" placeholder="Some recruiters perform job interviews over Skype">
 						</div>
 					  </div>
 					  <div class="form-row">

@@ -83,90 +83,100 @@ $this->load->view("common/header");
 <?php
 $this->load->view("common/resume_sidebar");
 ?>
+			
 
                 <div class="col-lg-8" style="font-size: 16px;">
                     <h2 class="head">Work Experience</h2>
-                    <form>
+                    <form method="post" action="<?php echo base_url("create_resume_step4/update_experience");?>">
 					<div id="main_div">
+
+						<?php
+							foreach($fetch_experience As $fetch_something)
+							{
+						?>
 						<div id="primary_div">
 							<div class="form-row">
 								<div class="form-group col-md-6">
 								  <label for="inputEmail4">Title/Position/Rank</label>
-								  <input type="text" class="form-control" id="inputEmail4" placeholder="Title/Position/Rank Name">
+								  <input type="text" class="form-control" id="inputEmail4" value="<?php echo $fetch_something->title;?>" name="title[]"  placeholder="Title/Position/Rank Name">
 								</div>
 								<div class="form-group col-md-6">
 								  <label for="inputEmail4">Company/Organisation Name</label>
-								  <input type="text" class="form-control" id="inputEmail4" placeholder="Company/Organisation Name">
+								  <input type="text" class="form-control" id="inputEmail4" name="company_name[]" value="<?php echo $fetch_something->company;?>" placeholder="Company/Organisation Name">
 								</div>
 							  </div>
 							  <div class="form-row">
 								<div class="form-group col-md-4">
 								  <label for="inputEmail4">Vessel name</label>
-								  <input type="text" class="form-control" id="inputEmail4" placeholder="Vessel name">
+								  <input type="text" class="form-control" id="inputEmail4" name="vessel_name[]" value="<?php echo $fetch_something->vessel_name;?>"  placeholder="Vessel name">
 								</div>
 								<div class="form-group col-md-4">
 								  <label for="inputEmail4">Length of the vessel</label>
-								  <input type="text" class="form-control" id="inputEmail4" placeholder="Length of the vessel">
+								  <input type="text" class="form-control" id="inputEmail4" name="vessel_length[]" value="<?php echo $fetch_something->vessel_length;?>" placeholder="Length of the vessel">
 								</div>
 								<div class="form-group col-md-4">
-							  <label for="inputEmail4">Type of the vessel</label>
-							  <select id="inputState" class="form-control">
+							  <label for="inputEmail4" >Type of the vessel</label>
+							  <select id="inputState" class="form-control" name="veseel_type[]">
 								<option selected>Choose...</option>
-								<option value="1">Tanker</option>
-								<option value="2">Bulk Carrier</option>
-								<option value="1">Cargo</option>
-								<option value="2">Container</option>
-								<option value="2">Passenger</option>
-								<option value="1">Offshore</option>
-								<option value="2">Yacht</option>
-								<option value="2">River</option>
-								<option value="2">Onshore</option>
+								<option value="Tanker" <?php echo (($fetch_something->vessel_type == "Tanker")?'selected':'') ;?>>Tanker</option>
+								<option value="Bulk Carrier" <?php echo (($fetch_something->vessel_type == "Bulk Carrier")?'selected':'') ;?>>Bulk Carrier</option>
+								<option value="Cargo" <?php echo (($fetch_something->vessel_type == "Cargo")?'selected':'') ;?>>Cargo</option>
+								<option value="Container" <?php echo (($fetch_something->vessel_type == "Container")?'selected':'') ;?>>Container</option>
+								<option value="Passenger" <?php echo (($fetch_something->vessel_type == "Passenger")?'selected':'') ;?>>Passenger</option>
+								<option value="Offshore" <?php echo (($fetch_something->vessel_type == "Offshore")?'selected':'') ;?>>Offshore</option>
+								<option value="Yacht" <?php echo (($fetch_something->vessel_type == "Yacht")?'selected':'') ;?>>Yacht</option>
+								<option value="River" <?php echo (($fetch_something->vessel_type == "River")?'selected':'') ;?>>River</option>
+								<option value="Onshore" <?php echo (($fetch_something->vessel_type == "Onshore")?'selected':'') ;?>>Onshore</option>
 							  </select>
 							</div>
 							  </div>
 							  <div class="form-row">
 								<div class="form-group col-md-4">
 								  <label for="inputEmail4">Starting Date</label>
-								  <input type="text" class="form-control form-control-2 input-sm from" placeholder="Starting date">
+								  <input type="text" class="form-control form-control-2 input-sm from"  value="<?php echo $fetch_something->start;?>" name="Start_date[]" placeholder="Starting date">
 								</div>
 								<div class="form-group col-md-4">
 								  <label for="inputEmail4">Ending Date</label>
-								  <input type="text" class="form-control form-control-2 input-sm to" placeholder="Ending date">
+								  <input type="text" class="form-control form-control-2 input-sm to" value="<?php echo $fetch_something->end;?>" name="end_date[]" placeholder="Ending date">
 								</div>
 								<div class="form-group col-md-4">
 								  <label for="inputEmail4">Currently Working</label>
 								  <br>
-								  <input class="form-check-input" style="margin: 10px;" type="checkbox" id="gridCheck">
+								  <input class="form-check-input" style="margin: 10px;" name="current_work[]" value="current_work" 
+									<?php echo (($fetch_something->end == "Currently working")?'checked':'') ;?> type="checkbox"  id="gridCheck">
 								</div>
 							  </div>
 							  <div class="form-row">
 								<div class="form-group col-md-6">
 								  <label for="inputEmail4">Company Location</label>
-								  <input type="text" class="form-control" id="inputEmail4" placeholder="Company Location">
+								  <input type="text" class="form-control" name="company_loc[]" value="<?php echo $fetch_something->company_location;?>" placeholder="Company Location">
 								</div>
 								<div class="form-group col-md-6">
 								  <label for="inputEmail4">Company Description</label>
-								  <input type="text" class="form-control" id="inputEmail4" placeholder="Company Description">
+								  <input type="text" class="form-control" name="company_detail[]" value="<?php echo $fetch_something->company_description;?>" placeholder="Company Description">
 								</div>
 							  </div>
 							  <div class="form-row">
 								<div class="form-group col-md-6">
 								  <label for="inputEmail4">Contact Person</label>
-								  <input type="text" class="form-control" id="inputEmail4" placeholder="Contact Person">
+								  <input type="text" class="form-control" name="contact_person[]" value="<?php echo $fetch_something->contact_person;?>" placeholder="e.g. Capt. Alex Newman, M/Y Only You">
 								</div>
 								<div class="form-group col-md-6">
 								  <label for="inputEmail4">Contact Info</label>
-								  <input type="text" class="form-control" id="inputEmail4" placeholder="Contact Info">
+								  <input type="text" class="form-control" name="contact_info[]" value="<?php echo $fetch_something->contact_info;?>" placeholder="email and/or phone with commas">
 								</div>
 							  </div>
 							  <div class="form-row">
 								<div class="form-group col-md-12">
 								  <label for="inputEmail4">Tasks</label>
-								  <textarea class="form-control" rows="5" id="comment" type="text"></textarea>
+								  <textarea placeholder="e.g. This yacht was run with 5 crew members during the seasons from June to October. We cruised from Malta to Monaco, Italy, Sardinia, Capri, Corsica, the Balearic Islands, and South of France" class="form-control" rows="5"  name="task[]" type="text"><?php echo $fetch_something->task;?></textarea>
 								</div>
 							  </div>
 							   <hr>
 						</div>
+						<?php
+							}
+						?>
 					</div>
 
 					  <button type="submit" class="btn btn-primary">Next</button>
