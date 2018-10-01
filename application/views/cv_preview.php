@@ -194,9 +194,9 @@ $this->load->view("common/header");
 							  <div style="height:auto;width:100%;background:#479099;margin-top:55px;padding:8px;">
 							  	<div style="margin-left:15px;">
 							  	<h2 style="color:white;"><?php echo ucfirst($get_cv_preview->full_name);?></h2>
-								<h3 style="color:white;"><u><?php echo ucfirst($get_cv_preview->professional_rank);?></u></h3>
+								<h3 style="color:white;"><u><?php echo ucfirst($get_cv_preview->professional_rank);?></u></h3><br>
 								<p style="color:white;"><?php echo ucfirst($get_cv_preview->about_yourself);?></p>
-								</div><br>
+								</div>
 							  </div>
 								<p style="font-size:18px;margin-left:8px;padding:5px;border-bottom:2px solid black;color:#479099;"><b><u>WORK EXPERIENCE</u></b></p>
 							<?php
