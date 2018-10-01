@@ -11,7 +11,7 @@
     
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>Resume Builder - Login</title>
+    <title>Resume Builder</title>
 
 <?php
 $this->load->view("common/metalinks");
@@ -85,17 +85,10 @@ $this->load->view("common/header");
 <!-- Start contact section -->
 <section class="contact-section section-gap_" style="margin-bottom: 30px;margin-top:50px;">
     <div class="container">
-        <div class="row justify-content-center section-title-wrap">
-            <div class="col-lg-12">
-                <h2>Hire An Expert Resume Writing Service Provider</h2>
-                <p>
-                    Get in touch with Resume Builder expert resume writers to help you prepare a professional resume that works best for you. Feel free to talk to us regarding any query you may have about Resume Builder online resume builder.
-                </p>
-            </div>
-        </div>
+        
         <div class="row justify-content-between align-items-end">
             <div class="col-lg-6 col-md-6 contact-left">
-                <img class="img-fluid" src="<?php echo base_url();?>img/reg-manangement-hero.png" alt="" style="margin-top:-70px;">
+                <img class="img-fluid" src="<?php echo base_url();?>img/reg-manangement-hero.png" alt="" style="margin-top:;">
             </div>
             <div class="col-lg-5 col-md-6 contact-left">
                 <?php
@@ -106,27 +99,31 @@ $this->load->view("common/header");
                     </div>
                 <?php
                 }
+                if($this->session->flashdata('success')){
                 ?>
-                <form method="POST" action="<?php echo base_url('login/check_login');?>">
-                <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter E-mail">
-                </div>
-                
-                <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
-                </div>
-                <div class="form-group form-check">
-                </div>
-                <button type="submit" class="btn btn-primary">Login</button>
+                    <div class="alert alert-success" style="margin-bottom:40px;">
+                        <strong><?php echo $this->session->flashdata('success');?></strong>
+                    </div>
+                <?php
+                }
+                ?>
+                <form method="POST" action="<?php echo base_url('setting/update_pass');?>" style="margin-bottom:40px;">
+					
+					<div class="form-group">
+						<label for="exampleInputPassword1">New Password</label>
+						<input type="password" class="form-control" id="exampleInputPassword1" name="new_password" placeholder="Password">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword1">Confirm Password</label>
+						<input type="password" class="form-control" id="exampleInputPassword1" name="confirm_password" placeholder="Password">
+					</div>
+					<button type="submit" class="btn btn-primary">Update</button>
                 </form>
             </div>
         </div>
     </div>
 </section>
 <!-- End contact section -->
-
 
 
 <?php

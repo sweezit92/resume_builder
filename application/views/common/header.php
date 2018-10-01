@@ -15,6 +15,7 @@
 						<?php
 						if(isset($this->session->userdata['logged_in']['user_id'])){
 						?>
+						<li><a href="<?php echo base_url("setting");?>">Setting</a></li>
 						<li><a href="<?php echo base_url("logout");?>">Logout</a></li>
 						<?php
 						}else{
