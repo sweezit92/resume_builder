@@ -88,95 +88,118 @@ $this->load->view("common/resume_sidebar");
                 <div class="col-lg-8" style="font-size: 16px;">
                     <h2 class="head">Work Experience</h2>
                     <form method="post" action="<?php echo base_url("create_resume_step4/update_experience");?>">
-					<div id="main_div">
+					
 
 						<?php
-							foreach($fetch_experience As $fetch_something)
-							{
+							$title = explode(",",$fetch_experience->title);
+							$company = explode(",",$fetch_experience->company);
+							$vessel_name	 = explode(",",$fetch_experience->vessel_name	);
+							$vessel_length = explode(",",$fetch_experience->vessel_length);
+							$vessel_type = explode(",",$fetch_experience->vessel_type);
+							$start = explode(",",$fetch_experience->start);
+							$end = explode(",",$fetch_experience->end);
+							$company_location = explode(",",$fetch_experience->company_location);
+							$company_description = explode(",",$fetch_experience->company_description);
+							$contact_person = explode(",",$fetch_experience->contact_person);
+							$contact_info = explode(",",$fetch_experience->contact_info);
+							$task = explode(",",$fetch_experience->task);
+
+							$count_total = count($title);
+							for($i = 0 ; $i < $count_total ; $i++){
 						?>
-						<div id="primary_div">
+						<div class="primary_div yo<?php echo $i;?>">
 							<div class="form-row">
 								<div class="form-group col-md-6">
 								  <label for="inputEmail4">Title/Position/Rank</label>
-								  <input type="text" class="form-control" id="inputEmail4" value="<?php echo $fetch_something->title;?>" name="title[]"  placeholder="Title/Position/Rank Name">
+								  <input type="text" class="form-control" id="inputEmail4" value="<?php echo $title[$i];?>" name="title[]"  placeholder="Title/Position/Rank Name">
 								</div>
 								<div class="form-group col-md-6">
 								  <label for="inputEmail4">Company/Organisation Name</label>
-								  <input type="text" class="form-control" id="inputEmail4" name="company_name[]" value="<?php echo $fetch_something->company;?>" placeholder="Company/Organisation Name">
+								  <input type="text" class="form-control" id="inputEmail4" name="company_name[]" value="<?php echo $company[$i];?>" placeholder="Company/Organisation Name">
 								</div>
 							  </div>
 							  <div class="form-row">
 								<div class="form-group col-md-4">
 								  <label for="inputEmail4">Vessel name</label>
-								  <input type="text" class="form-control" id="inputEmail4" name="vessel_name[]" value="<?php echo $fetch_something->vessel_name;?>"  placeholder="Vessel name">
+								  <input type="text" class="form-control" id="inputEmail4" name="vessel_name[]" value="<?php echo $vessel_name[$i];?>"  placeholder="Vessel name">
 								</div>
 								<div class="form-group col-md-4">
 								  <label for="inputEmail4">Length of the vessel</label>
-								  <input type="text" class="form-control" id="inputEmail4" name="vessel_length[]" value="<?php echo $fetch_something->vessel_length;?>" placeholder="Length of the vessel">
+								  <input type="text" class="form-control" id="inputEmail4" name="vessel_length[]" value="<?php echo $vessel_length[$i];?>" placeholder="Length of the vessel">
 								</div>
 								<div class="form-group col-md-4">
 							  <label for="inputEmail4" >Type of the vessel</label>
 							  <select id="inputState" class="form-control" name="veseel_type[]">
 								<option selected>Choose...</option>
-								<option value="Tanker" <?php echo (($fetch_something->vessel_type == "Tanker")?'selected':'') ;?>>Tanker</option>
-								<option value="Bulk Carrier" <?php echo (($fetch_something->vessel_type == "Bulk Carrier")?'selected':'') ;?>>Bulk Carrier</option>
-								<option value="Cargo" <?php echo (($fetch_something->vessel_type == "Cargo")?'selected':'') ;?>>Cargo</option>
-								<option value="Container" <?php echo (($fetch_something->vessel_type == "Container")?'selected':'') ;?>>Container</option>
-								<option value="Passenger" <?php echo (($fetch_something->vessel_type == "Passenger")?'selected':'') ;?>>Passenger</option>
-								<option value="Offshore" <?php echo (($fetch_something->vessel_type == "Offshore")?'selected':'') ;?>>Offshore</option>
-								<option value="Yacht" <?php echo (($fetch_something->vessel_type == "Yacht")?'selected':'') ;?>>Yacht</option>
-								<option value="River" <?php echo (($fetch_something->vessel_type == "River")?'selected':'') ;?>>River</option>
-								<option value="Onshore" <?php echo (($fetch_something->vessel_type == "Onshore")?'selected':'') ;?>>Onshore</option>
+								<option value="Tanker" <?php echo (($vessel_type[$i] == "Tanker")?'selected':'') ;?>>Tanker</option>
+								<option value="Bulk Carrier" <?php echo (($vessel_type[$i] == "Bulk Carrier")?'selected':'') ;?>>Bulk Carrier</option>
+								<option value="Cargo" <?php echo (($vessel_type[$i] == "Cargo")?'selected':'') ;?>>Cargo</option>
+								<option value="Container" <?php echo (($vessel_type[$i] == "Container")?'selected':'') ;?>>Container</option>
+								<option value="Passenger" <?php echo (($vessel_type[$i] == "Passenger")?'selected':'') ;?>>Passenger</option>
+								<option value="Offshore" <?php echo (($vessel_type[$i] == "Offshore")?'selected':'') ;?>>Offshore</option>
+								<option value="Yacht" <?php echo (($vessel_type[$i] == "Yacht")?'selected':'') ;?>>Yacht</option>
+								<option value="River" <?php echo (($vessel_type[$i] == "River")?'selected':'') ;?>>River</option>
+								<option value="Onshore" <?php echo (($vessel_type[$i] == "Onshore")?'selected':'') ;?>>Onshore</option>
 							  </select>
 							</div>
 							  </div>
 							  <div class="form-row">
 								<div class="form-group col-md-4">
 								  <label for="inputEmail4">Starting Date</label>
-								  <input type="text" class="form-control form-control-2 input-sm from"  value="<?php echo $fetch_something->start;?>" name="Start_date[]" placeholder="Starting date">
+								  <input type="text" class="form-control form-control-2 input-sm from"  value="<?php echo $start[$i];?>" name="Start_date[]" placeholder="Starting date">
 								</div>
 								<div class="form-group col-md-4">
 								  <label for="inputEmail4">Ending Date</label>
-								  <input type="text" class="form-control form-control-2 input-sm to" value="<?php echo $fetch_something->end;?>" name="end_date[]" placeholder="Ending date">
+								  <input type="text" class="form-control form-control-2 input-sm to" value="<?php echo (($end[$i] != 'Currently working')?$end[$i]:'');?>" name="end_date[]" placeholder="Ending date">
 								</div>
 								<div class="form-group col-md-4">
 								  <label for="inputEmail4">Currently Working</label>
 								  <br>
 								  <input class="form-check-input" style="margin: 10px;" name="current_work[]" value="current_work" 
-									<?php echo (($fetch_something->end == "Currently working")?'checked':'') ;?> type="checkbox"  id="gridCheck">
+									<?php echo (($end[$i] == "Currently working")?'checked':'') ;?> type="checkbox"  id="gridCheck">
 								</div>
 							  </div>
 							  <div class="form-row">
 								<div class="form-group col-md-6">
 								  <label for="inputEmail4">Company Location</label>
-								  <input type="text" class="form-control" name="company_loc[]" value="<?php echo $fetch_something->company_location;?>" placeholder="Company Location">
+								  <input type="text" class="form-control" name="company_loc[]" value="<?php echo $company_location[$i];?>" placeholder="Company Location">
 								</div>
 								<div class="form-group col-md-6">
 								  <label for="inputEmail4">Company Description</label>
-								  <input type="text" class="form-control" name="company_detail[]" value="<?php echo $fetch_something->company_description;?>" placeholder="Company Description">
+								  <input type="text" class="form-control" name="company_detail[]" value="<?php echo $company_description[$i];?>" placeholder="Company Description">
 								</div>
 							  </div>
 							  <div class="form-row">
 								<div class="form-group col-md-6">
 								  <label for="inputEmail4">Contact Person</label>
-								  <input type="text" class="form-control" name="contact_person[]" value="<?php echo $fetch_something->contact_person;?>" placeholder="e.g. Capt. Alex Newman, M/Y Only You">
+								  <input type="text" class="form-control" name="contact_person[]" value="<?php echo $contact_person[$i];?>" placeholder="e.g. Capt. Alex Newman, M/Y Only You">
 								</div>
 								<div class="form-group col-md-6">
 								  <label for="inputEmail4">Contact Info</label>
-								  <input type="text" class="form-control" name="contact_info[]" value="<?php echo $fetch_something->contact_info;?>" placeholder="email and/or phone with commas">
+								  <input type="text" class="form-control" name="contact_info[]" value="<?php echo $contact_info[$i];?>" placeholder="email and/or phone with commas">
 								</div>
 							  </div>
 							  <div class="form-row">
 								<div class="form-group col-md-12">
 								  <label for="inputEmail4">Tasks</label>
-								  <textarea placeholder="e.g. This yacht was run with 5 crew members during the seasons from June to October. We cruised from Malta to Monaco, Italy, Sardinia, Capri, Corsica, the Balearic Islands, and South of France" class="form-control" rows="5"  name="task[]" type="text"><?php echo $fetch_something->task;?></textarea>
+								  <textarea placeholder="e.g. This yacht was run with 5 crew members during the seasons from June to October. We cruised from Malta to Monaco, Italy, Sardinia, Capri, Corsica, the Balearic Islands, and South of France" class="form-control" rows="5"  name="task[]" type="text"><?php echo $task[$i];?></textarea>
 								</div>
 							  </div>
-							   <hr>
+							  <?php
+							  if($i > 0)
+							  {
+							  ?>
+							  <a href="javascript:void(0);" style="" onclick="rmv(<?php echo $i;?>)" class="btn btn-danger">Remove</a>
+							  <?php
+							  }
+							  ?>
+							 
 						</div>
+						<hr>
 						<?php
 							}
 						?>
+					<div class="main_div">
 					</div>
 
 					  <button type="submit" class="btn btn-primary">Next</button>
@@ -194,9 +217,58 @@ $this->load->view("common/resume_sidebar");
 $this->load->view("common/footer");
 ?>
 <script>
-function add_another()
+
+function rmv(e)
 {
-	$("#primary_div").clone().appendTo("#main_div");
+	$( ".yo"+e+"" ).remove();
+}
+
+function add_another() 
+{
+	
+	var max_fields      = 30; 
+    var wrapper         = $(".main_div");
+	var htmlcontent = '<div class="atrri_add_cont" style="margin-top:20px;"><div class="form-row"><div class="form-group col-md-6"> <label for="inputEmail4">Title/Position/Rank</label> <input type="text" class="form-control" id="inputEmail4" name="title[]" placeholder="Title/Position/Rank Name"></div><div class="form-group col-md-6"> <label for="inputEmail4">Company/Organisation Name</label> <input type="text" class="form-control" id="inputEmail4" name="company_name[]" placeholder="Company/Organisation Name"></div></div><div class="form-row"><div class="form-group col-md-4"> <label for="inputEmail4">Vessel name</label> <input type="text" class="form-control" id="inputEmail4" name="vessel_name[]" placeholder="Vessel name"></div><div class="form-group col-md-4"> <label for="inputEmail4">Length of the vessel</label> <input type="text" class="form-control" id="inputEmail4" name="vessel_length[]" placeholder="Length of the vessel"></div><div class="form-group col-md-4"> <label for="inputEmail4" >Type of the vessel</label> <select id="inputState" class="form-control" name="veseel_type[]"><option selected>Choose...</option><option value="Tanker">Tanker</option><option value="Bulk Carrier">Bulk Carrier</option><option value="Cargo">Cargo</option><option value="Container">Container</option><option value="Passenger">Passenger</option><option value="Offshore">Offshore</option><option value="Yacht">Yacht</option><option value="River">River</option><option value="Onshore">Onshore</option> </select></div></div><div class="form-row"><div class="form-group col-md-4"> <label for="inputEmail4">Starting Date</label> <input type="text" class="form-control form-control-2 input-sm from"" name="Start_date[]" placeholder="Starting date"></div><div class="form-group col-md-4"> <label for="inputEmail4">Ending Date</label> <input type="text" class="form-control form-control-2 input-sm to" name="end_date[]" placeholder="Ending date"></div><div class="form-group col-md-4"> <label for="inputEmail4">Currently Working</label> <br><input class="form-check-input" style="margin: 10px;" name="current_work[]" value="current_work" type="checkbox" id="gridCheck"></div></div><div class="form-row"><div class="form-group col-md-6"> <label for="inputEmail4">Company Location</label> <input type="text" class="form-control" name="company_loc[]" placeholder="Company Location"></div><div class="form-group col-md-6"> <label for="inputEmail4">Company Description</label> <input type="text" class="form-control" name="company_detail[]" placeholder="Company Description"></div></div><div class="form-row"><div class="form-group col-md-6"> <label for="inputEmail4">Contact Person</label> <input type="text" class="form-control" name="contact_person[]" placeholder="e.g. Capt. Alex Newman, M/Y Only You"></div><div class="form-group col-md-6"> <label for="inputEmail4">Contact Info</label> <input type="text" class="form-control" name="contact_info[]" placeholder="email and/or phone with commas"></div></div><div class="form-row"><div class="form-group col-md-12"> <label for="inputEmail4">Tasks</label> <textarea placeholder="e.g. This yacht was run with 5 crew members during the seasons from June to October. We cruised from Malta to Monaco, Italy, Sardinia, Capri, Corsica, the Balearic Islands, and South of France" class="form-control" rows="5" name="task[]" type="text"></textarea></div></div><a href="javascript:void(0);" class="remove btn btn-danger" style="margin-bottom:20px;">Remove</a></div>';
+	
+	var x = 1;
+
+        if(x < max_fields){ 
+          x++; 
+          $(wrapper).append(htmlcontent); 
+
+		  var startDate = new Date();
+var fechaFin = new Date();
+var FromEndDate = new Date();
+var ToEndDate = new Date();
+
+
+
+
+$('.from').datepicker({
+    autoclose: true,
+    minViewMode: 1,
+    format: 'mm/yyyy'
+}).on('changeDate', function(selected){
+        startDate = new Date(selected.date.valueOf());
+        startDate.setDate(startDate.getDate(new Date(selected.date.valueOf())));
+        $('.to').datepicker('setStartDate', startDate);
+    }); 
+
+$('.to').datepicker({
+    autoclose: true,
+    minViewMode: 1,
+    format: 'mm/yyyy'
+}).on('changeDate', function(selected){
+        FromEndDate = new Date(selected.date.valueOf());
+        FromEndDate.setDate(FromEndDate.getDate(new Date(selected.date.valueOf())));
+        $('.from').datepicker('setEndDate', FromEndDate);
+    });
+
+
+        }
+	$("body").on("click",".remove",function(){ 
+	  $(this).parents(".atrri_add_cont").remove();
+  });
 }
 
 $('.signupBTN').click(function(e){

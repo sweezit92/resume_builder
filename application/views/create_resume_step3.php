@@ -339,7 +339,7 @@ $this->load->view('common/resume_sidebar');
 							$level = explode(",",$fetch_cert->level);
 							$count_total = count($language);
 							for($i = 0 ; $i < $count_total ; $i++){
-							?>
+						  ?>
 							<div class=" yo<?php echo $i;?>">
 						  	<div class="form-row">
 							<div class="form-group col-md-6">
@@ -350,15 +350,15 @@ $this->load->view('common/resume_sidebar');
 							  <label>Proficiency Level</label>
 							  <select id="inputState" name="level[]" class="form-control">
 								<option selected>Choose...</option>
-								<option value="Level 1" <?php echo (($level[$i] == "Level 1")?'selected':'');?>>Level 1</option>
-								<option value="Level 2" <?php echo (($level[$i] == "Level 2")?'selected':'');?>>Level 2</option>
-								<option value="Level 3" <?php echo (($level[$i] == "Level 3")?'selected':'');?>>Level 3</option>
-								<option value="Level 4" <?php echo (($level[$i] == "Level 4")?'selected':'');?>>Level 4</option>
-								<option value="Level 5" <?php echo (($level[$i] == "Level 5")?'selected':'');?>>Level 5</option>
+								<option value="1" <?php echo (($level[$i] == "1")?'selected':'');?>>Level 1</option>
+								<option value="2" <?php echo (($level[$i] == "2")?'selected':'');?>>Level 2</option>
+								<option value="3" <?php echo (($level[$i] == "3")?'selected':'');?>>Level 3</option>
+								<option value="4" <?php echo (($level[$i] == "4")?'selected':'');?>>Level 4</option>
+								<option value="5" <?php echo (($level[$i] == "5")?'selected':'');?>>Level 5</option>
 							  </select>
 							</div>
 							</div>
-							 <?php
+						  <?php
 						  if($i > 0)
 						  {
 						  ?>
@@ -520,7 +520,7 @@ function add_another()
 	
 	var max_fields      = 30; 
     var wrapper         = $(".main_div");
-	var htmlcontent = '<div class="atrri_add_cont"><hr><div class="form-row language_div"><div class="form-group col-md-6"><label>Language</label><input class="form-control" id="date" name="language[]" placeholder="Language" type="text"/></div><div class="form-group col-md-6"><label>Proficiency Level</label><select id="inputState" name="level[]" class="form-control"><option selected>Choose...</option><option value="Level 1">Level 1</option><option value="Level 2">Level 2</option><option value="Level 3">Level 3</option><option value="Level 4">Level 4</option><option value="Level 5">Level 5</option></select></div></div><a href="javascript:void(0);" class="remove btn btn-danger" style="margin-bottom:20px;">Remove</a></div>';
+	var htmlcontent = '<div class="atrri_add_cont"><hr><div class="form-row language_div"><div class="form-group col-md-6"><label>Language</label><input class="form-control" id="date" name="language[]" placeholder="Language" type="text"/></div><div class="form-group col-md-6"><label>Proficiency Level</label><select id="inputState" name="level[]" class="form-control"><option selected>Choose...</option><option value="1">Level 1</option><option value="2">Level 2</option><option value="3">Level 3</option><option value="4">Level 4</option><option value="5">Level 5</option></select></div></div><a href="javascript:void(0);" class="remove btn btn-danger" style="margin-bottom:20px;">Remove</a></div>';
 	
 	var x = 1;
 
