@@ -16,6 +16,8 @@
 
 	
     <script src="<?php echo base_url();?>js/bootstrap.min.js"></script>
+	<script src="<?php echo base_url();?>js/main.js"></script>
+	<script src="<?php echo base_url();?>js/superfish.min.js"></script>
     
     <script src="<?php echo base_url();?>js/owl.carousel.min.js"></script>
     
