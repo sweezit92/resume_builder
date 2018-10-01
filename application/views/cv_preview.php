@@ -97,59 +97,93 @@ $this->load->view("common/header");
 
 						<div class="col-md-4">
 							<div class="col-md-12">
-							   <img src="<?php echo base_url();?>img/PZuxCF8.png" style="margin-top:10px;">
+							   <img src="<?php echo base_url();?>uploads/<?php echo $get_cv_preview->image;?>" style="margin-top:10px;">
 							<div>
 								<p style="font-size:18px;margin-left:-20px;padding:5px;color:#479099;"><b>PERSONAL INFORMATION</b></p>
 									<ul style="margin-left:-15px;font-family:italic;">
-									<li>Year of birth :</li>
-									<li>Nationality (Which country issued your passport?):</li>
-									<li>Country of Residence (Where Do you live?):</li>
-									<li>Current Location:</li>
-									<li>Do you currently have valid B1/B2 visa?: Yes/No</li>
-									<li>Seaman's Book: Yes/No</li>
-									<li>Telephone Number with Country prefix:</li>
-									<li>Skype ID (Some recruiters perform job interviews over Skype):</li>
-									<li>When you can start the new job?(now, in 1 month, in 2 m..)</li>
-									<li>Do you smoke?: Yes/ No</li>
-									<li>Do you have visible tattoos?:Yes/No</li>
+									<li>Year of birth : <?php echo $get_cv_preview->dob;?></li>
+									<li>Nationality (Which country issued your passport?): <?php echo ucfirst($get_cv_preview->nationality);?></li>
+									<li>Country of Residence (Where Do you live?):  <?php echo ucfirst($get_cv_preview->residence);?></li>
+									<li>Current Location: <?php echo ucfirst($get_cv_preview->current_location);?></li>
+									<li>Do you currently have valid B1/B2 visa?: <?php echo ucfirst($get_cv_preview->visa);?></li>
+									<li>Seaman's Book: <?php echo ucfirst($get_cv_preview->seamans_book);?></li>
+									<li>Telephone Number with Country prefix: <?php echo ucfirst($get_cv_preview->telephone);?></li>
+									<li>Skype ID (Some recruiters perform job interviews over Skype): <?php echo ucfirst($get_cv_preview->skype);?></li>
+									<li>When you can start the new job?<br/>(now, in 1 month, in 2 m..): <?php echo ucfirst($get_cv_preview->start_job);?></li>
+									<li>Do you smoke?: <?php echo ucfirst($get_cv_preview->smoke);?></li>
+									<li>Do you have visible tattoos?: <?php echo ucfirst($get_cv_preview->tatto);?></li>
 									</ul>
 							</div><br>
-							<div>
-								<p style="font-size:18px;margin-left:-20px;padding:5px;color:#479099;"><b><u>SKILL SETS</u></b></p>
-								  <div style="margin-left:-20px;">
-									<button type="button" class="btn btn-info">French cuisine</button>
-									<button type="button" class="btn btn-info">Mid Eastern cuisine</button>
-									<button type="button" class="btn btn-info">Vegan food</button>
-									<button type="button" class="btn btn-info">Fusion</button>
-									<button type="button" class="btn btn-info">Sweets/pastry</button>
-								  </div>
-						   </div><br>
+							
 							<div>
 								<p style="font-size:18px;margin-left:-20px;padding:5px;color:#479099;"><b><u>LANGUAGES</u></b></p>
-								  <p style="font-size:18px;margin-left:-15px;">English</p>
+								<?php
+									$explode_level = explode(',',$get_cv_preview->level);
+									$explode_languages = explode(',',$get_cv_preview->language);
+									foreach($explode_languages AS $key=> $each_lang){
+								?>
+								  <p style="font-size:18px;margin-left:-15px;"><?php echo $each_lang;?></p>
 								   <div style="margin-left:-15px;">
-									<span class="dot"></span>
-									<span class="dot"></span>
-									<span class="dot"></span>
-									<span class="dot"></span>
-									<span class="dot"></span>
+								   	<?php
+								   		for($i = 1; $i<= $explode_level[$key]; $i++){
+								   	?>
+										<span class="dot"></span>
+									<?php
+									}
+									?>
 								   </div>
-								   <p style="font-size:18px;margin-left:-15px;">French</p>
-								   <div style="margin-left:-15px;">
-									<span class="dot"></span>
-									<span class="dot"></span>
-									<span class="dot"></span>
-									<span class="dot"></span>
-									<span class="dot"></span>
-								   </div>
+							   <?php
+							   		}
+							   ?>
 							</div><br>
+
+							<div style="margin-top:50px;">
+							 <p style="font-size:18px;padding:5px;margin-left:-20px;color:#479099;"><b><u>EDUCATION</u></b></p>
+							 <?php 
+							 	$explode_course = explode(',',$get_cv_preview->course);
+							 	$explode_institute = explode(',',$get_cv_preview->institute);
+							 	$explode_university = explode(',',$get_cv_preview->university);
+							 	$explode_year_start = explode(',',$get_cv_preview->start);
+							 	$explode_year_end = explode(',',$get_cv_preview->end);
+
+							 	foreach($explode_course AS $key=> $each_course){
+							 ?>
+							 <ul style="font-size:12px;margin-left:-15px;">
+								<li>Courses: <?php echo $each_course;?></li>
+								<li>Institution/ Place of Education: <?php echo $explode_institute[$key];?></li>
+								<li>University: <?php echo $explode_university[$key];?></li>
+								<li>Year: <?php echo $explode_year_start[$key];?> - <?php echo $explode_year_end[$key];?></li>
+							 </ul>
+							 <br>
+							 <?php
+								}
+							 ?>
+							</div><br>
+
 							<div>
 								<p style="font-size:18px;margin-left:-20px;padding:5px;color:#479099;"><b><u>CERTIFICATES</u></b></p>
 								<ul>
-									<li type="square">Medical First Aid</li>
-									<li type="square">STCW Basic</li>
-									<li type="square">Safety Training</li>
-									<li type="square">Security Awarn</li>
+								<?php
+									$explode_certificate = explode(',',$get_cv_preview->certificate);
+									foreach($explode_certificate AS $each_certificate){
+								?>
+									<li type="square"><?php echo $each_certificate;?></li>
+								<?php
+									}
+								?>
+								</ul>
+							</div><br>
+							<div>
+								<p style="font-size:18px;margin-left:-20px;padding:5px;color:#479099;"><b><u>STCW</u></b></p>
+								<ul>
+								<?php
+									$explode_stcw = explode(',',$get_cv_preview->stcw);
+									foreach($explode_stcw AS $each_stcw){
+								?>
+									<li type="square"><?php echo $each_stcw;?></li>
+								<?php
+									}
+								?>
 								</ul>
 							</div>
 							</div>
@@ -157,36 +191,142 @@ $this->load->view("common/header");
 
 						<div class="col-md-8" style="margin-top:10px;">
 							<div class="col-md-12">
-							  <div style="height:100px;width:100%;background:#479099;margin-top:55px;padding:8px;">
+							  <div style="height:auto;width:100%;background:#479099;margin-top:55px;padding:8px;">
 							  	<div style="margin-left:15px;">
-							  	<h2 style="color:white;">Your Name</h2>
-								<h3 style="color:white;"><u>Professional Title/ Rank</u></h3>
-								<pre style="color:white;">Short and engaging pitch about yourself.</pre>
+							  	<h2 style="color:white;"><?php echo ucfirst($get_cv_preview->full_name);?></h2>
+								<h3 style="color:white;"><u><?php echo ucfirst($get_cv_preview->professional_rank);?></u></h3>
+								<p style="color:white;"><?php echo ucfirst($get_cv_preview->about_yourself);?></p>
 								</div><br>
 							  </div>
 								<p style="font-size:18px;margin-left:8px;padding:5px;border-bottom:2px solid black;color:#479099;"><b><u>WORK EXPERIENCE</u></b></p>
-								
-							   <div style="margin-left:15px;border-bottom:2px solid black;">
-								<pre style="color:#479099;"><b>Title/Position/Rank</b><br><i>Vessel name<br>10/2015 - Present<br>Company Name<br>Length of the vessel<br>Tasks</i></pre>
-								<ul style="margin-left:15px;"><li type="square">Working as a Sole Chef for a private and charter yacht providing 5* food contracted until 4th September based en, also providing dietary, allergen needs and catering for specific cultural requirements</li></ul>
-								<pre style="margin-left:15px;color:#479099;">Contact for Reference: Capt. Andreas Ianou - +357 25 25 478 32 </pre>					
-							 </div>
+							<?php
+								foreach($get_experience AS $each_experience){
+							?>
 							 <div style="margin-left:15px;border-bottom:2px solid black;">
-								<pre style="color:#479099;"><b>Title/Position/Rank</b><br><i>Vessel name<br>10/2015 - Present<br>Company Name<br>Length of the vessel<br>Tasks</i></pre>
-								<ul style="margin-left:15px;"><li type="square">Working as a Sole Chef for a private and charter yacht providing 5* food contracted until 4th September based en, also providing dietary, allergen needs and catering for specific cultural requirements</li></ul>
-								<pre style="margin-left:15px;color:#479099;">Contact for Reference: Capt. Andreas Ianou - +357 25 25 478 32 </pre>					
+								<p style="color:#479099;"><b><?php echo ucfirst($each_experience->title);?></b><br><i><?php echo ucfirst($each_experience->vessel_name);?><br><?php echo ucfirst($each_experience->start);?> - <?php echo ucfirst($each_experience->end);?><br><?php echo ucfirst($each_experience->company);?><br><?php echo ucfirst($each_experience->vessel_length);?><br></i><li type="square"><?php echo ucfirst($each_experience->task);?></li></p>
+
+								<p style="margin-left:15px;color:#479099;font-size:12px;">Contact for Reference: <?php echo $each_experience->contact_person;?>- <?php echo $each_experience->contact_info;?> </p>					
 							 </div>
+							 <?php
+								}
+							 ?>
+							 
 							 <div>
-							 <div style="margin-top:105px;">
-							 <p style="font-size:18px;padding:5px;margin-left:15px;color:#479099;"><b><u>EDUCATION</u></b></p>
-							 <ul style="font-size:12px;margin-left:20px;">
-								<li>Study Programme:</li>
-								<li>Institution/ Place of Education:</li>
-								<li>City/ Country:</li>
-								<li>Courses:</li>
-								<li>Year:</li>
-							 </ul>
-							</div>
+
+							<p style="font-size:18px;margin-left:15px;padding:5px;color:#479099;margin-top:50px;"><b><u>Skill Sets</u></b></p>
+							 <div class="row">
+							 	<div class="col-md-3">
+								
+								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;"><b><u>Deck</u></b></p>
+								 	<?php
+								 		$break_skills = explode(',',$get_cv_preview->deck);
+								 		foreach($break_skills AS $each_skills){
+								 	?>
+									  <div style="margin-left:20px;">
+										<code style="font-size:12px;"><?php echo $each_skills;?></code>
+									  </div>
+									 <?php
+									 	}
+									 ?>
+							   	 
+							   	</div>
+							   	<div class="col-md-3">
+								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;"><b><u>Propulsion</u></b></p>
+								 	<?php
+								 		$break_skills = explode(',',$get_cv_preview->propulsion);
+								 		foreach($break_skills AS $each_skills){
+								 	?>
+									  <div style="margin-left:20px;">
+										<code style="font-size:12px;"><?php echo $each_skills;?></code>
+									  </div>
+									 <?php
+									 	}
+									 ?>
+							   	</div>
+							   	<div class="col-md-3">
+								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;"><b><u>Interior</u></b></p>
+								 	<?php
+								 		$break_skills = explode(',',$get_cv_preview->interior);
+								 		foreach($break_skills AS $each_skills){
+								 	?>
+									  <div style="margin-left:20px;">
+										<code style="font-size:12px;"><?php echo $each_skills;?></code>
+									  </div>
+									 <?php
+									 	}
+									 ?>
+							   	</div>
+							   	<div class="col-md-3">
+								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;"><b><u>Engineering</u></b></p>
+								 	<?php
+								 		$break_skills = explode(',',$get_cv_preview->engineering);
+								 		foreach($break_skills AS $each_skills){
+								 	?>
+									  <div style="margin-left:20px;">
+										<code style="font-size:12px;"><?php echo $each_skills;?></code>
+									  </div>
+									 <?php
+									 	}
+									 ?>
+							   	</div>
+							   </div>
+
+							   <div class="row">
+							 	<div class="col-md-3">
+								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;"><b><u>Culinary</u></b></p>
+								 	<?php
+								 		$break_skills = explode(',',$get_cv_preview->culinary);
+								 		foreach($break_skills AS $each_skills){
+								 	?>
+									  <div style="margin-left:20px;">
+										<code style="font-size:12px;"><?php echo $each_skills;?></code>
+									  </div>
+									 <?php
+									 	}
+									 ?>
+							   	</div>
+							   	<div class="col-md-3">
+								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;"><b><u>Massage</u></b></p>
+								 	<?php
+								 		$break_skills = explode(',',$get_cv_preview->massage);
+								 		foreach($break_skills AS $each_skills){
+								 	?>
+									  <div style="margin-left:20px;">
+										<code style="font-size:12px;"><?php echo $each_skills;?></code>
+									  </div>
+									 <?php
+									 	}
+									 ?>
+							   	</div>
+							   	<div class="col-md-3">
+								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;"><b><u>Personnal Trainer</u></b></p>
+								 	<?php
+								 		$break_skills = explode(',',$get_cv_preview->personnal_trainer);
+								 		foreach($break_skills AS $each_skills){
+								 	?>
+									  <div style="margin-left:20px;">
+										<code style="font-size:12px;"><?php echo $each_skills;?></code>
+									  </div>
+									 <?php
+									 	}
+									 ?>
+							   	</div>
+							   	<div class="col-md-3">
+								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;"><b><u>Other</u></b></p>
+								 	<?php
+								 		$break_skills = explode(',',$get_cv_preview->other);
+								 		foreach($break_skills AS $each_skills){
+								 	?>
+									  <div style="margin-left:20px;">
+										<code style="font-size:12px;"><?php echo $each_skills;?></code>
+									  </div>
+									 <?php
+									 	}
+									 ?>
+							   	</div>
+							   </div>
+
+							 
 							</div>
 							</div>
 						</div>
