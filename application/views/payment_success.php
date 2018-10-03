@@ -11,7 +11,7 @@
     
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>Resume Builder - Contact</title>
+    <title>Resume Builder - Payment Successful</title>
 
 <?php
 $this->load->view("common/metalinks");
@@ -76,7 +76,7 @@ $this->load->view("common/header");
     <div style="background: url('<?php echo base_url();?>img/Great-Cover-Letter-Banner.jpg');">
         <div class="text-center" style="margin:40px;">
             <div class="col-md-12 pt-100 pb-80">
-               <a class="blog-heading">WANT TO BUILD YOUR OWN RESUME?</a>
+               <a class="blog-heading">PAYMENT SUCCESSFUL</a>
             </div>
         </div>
     </div>

@@ -24,6 +24,7 @@ class Register_m extends CI_Model {
 		$this->db->insert('education', $all_array);
 		$this->db->insert('certificate', $all_array);
 		$this->db->insert('experience', $all_array);
+		$this->db->insert('payment', $all_array);
 		return true;
 	}
 

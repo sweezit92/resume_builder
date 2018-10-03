@@ -8,10 +8,13 @@
 								<a class="cat-link" href="<?php echo base_url("create_resume_step2");?>">Education</a>
 							</div>
 							<div class="cat-box">
-								<a class="cat-link" href="<?php echo base_url("create_resume_step3");?>">Skill/Certificates</a>
+								<a class="cat-link" href="<?php echo base_url("create_resume_step3");?>">Certificates</a>
 							</div>
 							<div class="cat-box">
-								<a class="cat-link" href="<?php echo base_url("create_resume_step4");?>">Work Experience</a>
+								<a class="cat-link" href="<?php echo base_url("create_resume_step4");?>">Skill</a>
+							</div>
+							<div class="cat-box">
+								<a class="cat-link" href="<?php echo base_url("create_resume_step5");?>">Work Experience</a>
 							</div>
 						</div>
 					</div>

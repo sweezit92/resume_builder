@@ -96,49 +96,80 @@ $this->load->view('common/resume_sidebar');
 					?>
 					 <div class="form-row">
 						<div class="form-group col-md-6">
-						  <img src="<?php echo base_url()?>uploads/<?php echo $get_personal->image;?>" class="img-circle" width="200" height="200">
+						  <img src="<?php echo base_url()?>uploads/<?php echo $get_personal->image;?>" class="img-circle" width="200" height="200" id="blah">
 						</div>
-					  </div>
+					</div>
 					<?php
-					}
+						}else{
 					?>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+						  <img src="#" class="img-circle" id="blah" width="200" height="200">
+						</div>
+					</div>
+				    <?php
+				  		}
+				    ?>
 					  <div class="form-row">
 						<div class="custom-file col-md-6">
-						  <input type="file" class="custom-file-input" id="customFile" value="" name="image">
+						  <input type="file" class="custom-file-input" id="customFile" value="" name="image" onchange="readURL(this);">
 						  <label class="custom-file-label" for="customFile"><?php echo $get_personal->image;?></label>
 						</div>
 					  </div>
 					  <div class="form-row" style="margin-top:10px;">
 						<div class="form-group col-md-6">
-						  <label>Full Name</label>
-						  <input type="text" class="form-control" id="inputEmail4" name="full_name" value="<?php echo $get_personal->full_name;?>" placeholder="Please type your name and surname">
+						  <label>Full Name</label><br>
+						  <span style="font-size:11px;">Please type your name and surname</span>
+						  <input type="text" class="form-control" id="inputEmail4" name="full_name" value="<?php echo $get_personal->full_name;?>" placeholder="">
 						</div>
+						<!--<div class="form-group col-md-6">
+						  <label>Professional Title/ Rank</label><br>
+						  <span style="font-size:11px;">Professional Title/ Rank</span>
+						  <input type="text" class="form-control" id="inputEmail4" name="rank" value="<?php echo $get_personal->professional_rank;?>" placeholder="">
+						</div>-->
 						<div class="form-group col-md-6">
-						  <label>Professional Title/ Rank</label>
-						  <input type="text" class="form-control" id="inputEmail4" name="rank" value="<?php echo $get_personal->professional_rank;?>" placeholder="Professional Title/ Rank">
+						  <label>Objective and info </label><br>
+						  <span style="font-size:11px;">Type a short and engaging pitch about yourself</span>
+						  <input type="text" class="form-control" id="inputEmail4" name="about" value="<?php echo $get_personal->about_yourself;?>" placeholder="">
 						</div>
 					  </div>
 					  <div class="form-row">
 						<div class="form-group col-md-6">
-						  <label>Nationality</label>
-						  <input type="text" class="form-control" id="inputPassword4" name="nationality" value="<?php echo $get_personal->nationality;?>" placeholder="Which country issued your passport?">
+						  <label>Nationality</label><br>
+						  <span style="font-size:11px;">Which country issued your passport?</span>
+						  <input type="text" class="form-control" id="inputPassword4" name="nationality" value="<?php echo $get_personal->nationality;?>" placeholder="">
 						</div>						
 						<div class="form-group col-md-6">
-						  <label>Objective and info </label>
-						  <input type="text" class="form-control" id="inputEmail4" name="about" value="<?php echo $get_personal->about_yourself;?>" placeholder="Type a short and engaging pitch about yourself">
+						  <label>Country of Residence</label><br>
+						  <span style="font-size:11px;">Where Do you live?</span>
+						  <input type="text" class="form-control" name="residence" id="inputCity" value="<?php echo $get_personal->residence;?>" placeholder="">
 						</div>
 					  </div>
 					  <div class="form-row">
-						<div class='form-group date col-md-6' id='datePicker'>
-							<label>Date Of Birth</label>
-							<input type="text" class="form-control" name="dob" value="<?php echo $get_personal->dob;?>"/>
-                			<span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
-		                    </span>
+					  	<div class="form-group col-md-6">
+						  <label>Current Location</label><br>
+						  <span style="font-size:11px;">Where are you now?</span>
+						  <input type="text" class="form-control" name="location" id="inputCity" value="<?php echo $get_personal->current_location;?>" placeholder="">
 						</div>
+						<div class='form-group date col-md-6' id='datePicker'>
+							<label>Date Of Birth</label><br>
+						  	<span style="font-size:11px;">Date of Birth</span>
+								<input type="text" class="form-control" name="dob" value="<?php echo $get_personal->dob;?>"/>
+                				<span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+						</div>
+					  </div>
+
+					  <div class="form-row">
+						<div class="form-group col-md-6">
+						  <label>Skype ID</label><br>
+						  <span style="font-size:11px;">Some recruiters perform job interviews over Skype</span>
+						  <input type="text" class="form-control" id="inputEmail4" name="skype" value="<?php echo $get_personal->skype;?>" placeholder="">
+						</div>
+
 						<div class="form-group col-md-2">
-						  <label>Country Prefix</label>
+						  <label>Country Prefix</label><br>
+						  <span style="font-size:11px;">Choose...</span>
 						  <select id="inputState" class="form-control" name="prefix">
-							<option selected disabled>Choose...</option>
 							<option value="+376" <?php echo (($get_personal->prefix == "+376")?'selected':'') ;?>>AD - Andorra (+376)</option>
 							<option value="+971" <?php echo (($get_personal->prefix == "+971")?'selected':'') ;?>>AE - United Arab Emirates (+971)</option>
 							<option value="+93" <?php echo (($get_personal->prefix == "+93")?'selected':'') ;?>>AF - Afghanistan (+93)</option>
@@ -372,77 +403,64 @@ $this->load->view('common/resume_sidebar');
 						  </select>
 						</div>
 						<div class="form-group col-md-4">
-						  <label>Telephone Number</label>
-						  <input type="text" class="form-control" name="phone" id="inputEmail4" value="<?php echo $get_personal->telephone;?>" placeholder="Telephone Number">
+						  <label>Telephone Number</label><br>
+						  <span style="font-size:11px;">Telephone Number</span>
+						  <input type="text" class="form-control" name="phone" id="inputEmail4" value="<?php echo $get_personal->telephone;?>" placeholder="">
 						</div>
 					  </div>
-					  <div class="form-row">
-						<div class="form-group col-md-6">
-						  <label>Country of Residence</label>
-						  <input type="text" class="form-control" name="residence" id="inputCity" value="<?php echo $get_personal->residence;?>" placeholder="Where Do you live?">
-						</div>
-						<div class="form-group col-md-6">
-						  <label>Current Location</label>
-						  <input type="text" class="form-control" name="location" id="inputCity" value="<?php echo $get_personal->current_location;?>" placeholder="Where are you now?">
-						</div>
-					  </div>
+					 
 					  <div class="form-row">
 						<div class="form-group col-md-6">
 						  <label>Email</label>
 						  <input type="text" class="form-control" id="inputEmail4" name="email" value="<?php echo $get_personal->email;?>" placeholder="Email">
 						</div>
 						<div class="form-group col-md-6">
-						  <label>Skype ID</label>
-						  <input type="text" class="form-control" id="inputEmail4" name="skype" value="<?php echo $get_personal->skype;?>" placeholder="Some recruiters perform job interviews over Skype">
-						</div>
-					  </div>
-					  <div class="form-row">
-						<div class="form-group col-md-6">
 						  <label>LinkedIn Profile</label>
 						  <input type="text" class="form-control" id="inputEmail4" name="linkedin" value="<?php echo $get_personal->linkedIn;?>" placeholder="LinkedIn Profile">
 						</div>
+					  </div>
+					  <div class="form-row">						
 						<div class="form-group col-md-6">
 						  <label>Do you currently have valid B1/B2 visa?</label>
 						  <select id="inputState" class="form-control" name="visa">
-							<option selected disabled>Choose...</option>
+						  	<option value="">Choose...</option>
 							<option value="yes" <?php echo (($get_personal->visa == "yes")?'selected':'') ;?>>Yes</option>
 							<option value="no" <?php echo (($get_personal->visa == "no")?'selected':'') ;?>>No</option>
 						  </select>
 						</div>
-						
-					  </div>
-					  <div class="form-row">
 						<div class="form-group col-md-6">
 						  <label>Seaman's Book</label>
 						  <select id="inputState" class="form-control" name="seamans_book">
-							<option selected disabled>Choose...</option>
+						  	<option value="">Choose...</option>
 							<option value="yes" <?php echo (($get_personal->seamans_book == "yes")?'selected':'') ;?>>Yes</option>
 							<option value="no" <?php echo (($get_personal->seamans_book == "no")?'selected':'') ;?>>No</option>
 						  </select>
 						</div>
+					  </div>
+					  <div class="form-row">
 						<div class="form-group col-md-6">
 						  <label>Smoke</label>
 						  <select id="inputState" class="form-control" name="smoke">
-							<option selected disabled>Choose...</option>
+						  	<option value="">Choose...</option>
 							<option value="yes" <?php echo (($get_personal->smoke == "yes")?'selected':'') ;?>>Yes</option>
 							<option value="no" <?php echo (($get_personal->smoke == "no")?'selected':'') ;?>>No</option>
 						  </select>
 						</div>
-					  </div>
-					  <div class="form-row">
 						<div class="form-group col-md-6">
 						  <label>When you can start the new job?</label>
 						  <select id="inputState" class="form-control" name="start_job">
-							<option selected disabled>Choose...</option>
+						  	<option value="">Choose...</option>
 							<option value="Now" <?php echo (($get_personal->start_job == "Now")?'selected':'') ;?>>Now</option>
 							<option value="In 1 Month" <?php echo (($get_personal->start_job == "In 1 Month")?'selected':'') ;?>>In 1 Month</option>
 							<option value="In 2 Month" <?php echo (($get_personal->start_job == "In 2 Month")?'selected':'') ;?>>In 2 Month</option>
 						  </select>
 						</div>
+					  </div>
+					  <div class="form-row">						
 						<div class="form-group col-md-6">
 						  <label>Visible Tattos</label>
 						  <select id="inputState" class="form-control" name="tatto">
-							<option selected disabled>Choose...</option>
+						  	<option value="">Choose...</option>
 							<option value="yes" <?php echo (($get_personal->tatto == "yes")?'selected':'') ;?>>Yes</option>
 							<option value="no" <?php echo (($get_personal->tatto == "no")?'selected':'') ;?>>No</option>
 						  </select>
@@ -469,11 +487,14 @@ $this->load->view('common/footer');
  $(document).ready(function() {
     $('#datePicker')
         .datepicker({
-            format: 'mm/dd/yyyy'
+            format: 'mm/dd/yyyy',
         })
+
         .on('changeDate', function(e) {
             // Revalidate the date field
+            $('#datePicker').datepicker('hide');
             $('#eventForm').formValidation('revalidateField', 'date');
+
         });
 
     $('#eventForm').formValidation({
@@ -506,7 +527,19 @@ $this->load->view('common/footer');
     });
 });
         </script>
-    
+ <script type="text/javascript">
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
 </body>
 
 </html>

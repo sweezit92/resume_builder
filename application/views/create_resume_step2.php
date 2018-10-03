@@ -101,31 +101,37 @@ $this->load->view('common/resume_sidebar');
 					?>
 						<div class="primary_div<?php echo $i;?>">
 						<div class="form-row">
+                            <div class="form-group col-md-4">
+                              <label for="inputEmail4">Educational Institution</label><br>
+                              <span style="font-size:11px;">E.g: Warsash Maritime Academy</span>
+                              <input type="text" class="form-control" id="inputEmail4" name="institute_name[]" value="<?php echo $institute[$i];?>" placeholder="">
+                            </div>
+                            <div class="form-group col-md-4">
+                              <label for="inputEmail4">Year of Graduation</label><br>
+                              <span style="font-size:11px;">E.g: 2000</span>
+                              <input type="text" class="form-control form-control-2 input-sm to" name="end_date[]" value="<?php echo (($end[$i] != "Currently Studying")?$end[$i]:'');?>" placeholder="">
+                            </div>
 							<div class="form-group col-md-4">
-							  <label for="inputEmail4">Specialization</label>
-							  <input type="text" class="form-control" id="inputEmail4" name="course_name[]" value="<?php echo $total[$i];?>" placeholder="E.g: Navigation and Marine Power Engineering">
-							</div>
-							<div class="form-group col-md-4">
-							  <label for="inputEmail4">Educational Insitutuion</label>
-							  <input type="text" class="form-control" id="inputEmail4" name="institute_name[]" value="<?php echo $institute[$i];?>" placeholder="E.g: Warsash Maritime Academy">
-							</div>
-							<div class="form-group col-md-4">
-							  <label for="inputPassword4">University</label>
-							  <input type="text" class="form-control" id="inputPassword4" name="university[]" value="<?php echo $university[$i];?>" placeholder="University Name">
+							  <label for="inputEmail4">Specialization</label><br>
+                              <span style="font-size:11px;">E.g: Navigation and Marine Power Engineering</span>
+							  <input type="text" class="form-control" id="inputEmail4" name="course_name[]" value="<?php echo $total[$i];?>" placeholder="">
 							</div>
 						  </div>
 						  <div class="form-row">
+                            <div class="form-group col-md-4">
+                              <label for="inputPassword4">University</label><br>
+                              <span style="font-size:11px;">University Name</span>
+                              <input type="text" class="form-control" id="inputPassword4" name="university[]" value="<?php echo $university[$i];?>" placeholder="">
+                            </div>
 							<div class="form-group col-md-4">
-							  <label for="inputEmail4">Starting Date</label>
-							  <input type="text" class="form-control form-control-2 input-sm to" name="start_date[]" value="<?php echo $start[$i];?>" placeholder="Starting date">
+							  <label for="inputEmail4">Starting Date</label><br>
+                              <span style="font-size:11px;">Starting date</span>
+							  <input type="text" class="form-control form-control-2 input-sm to" name="start_date[]" value="<?php echo $start[$i];?>" placeholder="">
 							</div>
-							<div class="form-group col-md-4">
-							  <label for="inputEmail4">Year of Graduation</label>
-							  <input type="text" class="form-control form-control-2 input-sm to" name="end_date[]" value="<?php echo (($end[$i] != "Currently Studying")?$end[$i]:'');?>" placeholder="E.g: 2000">
-							</div>
+							
 							<div class="form-group col-md-4">
 							  <label for="inputEmail4">Currently Studying</label>
-							  <br>
+							  <br><br>
 							  <input class="form-check-input" style="margin: 10px;" type="checkbox" name="currently[]" <?php echo (($end[$i] == "Currently Studying")?'checked':'');?> value="Currently Studying" id="gridCheck">
 							  
 							</div>

@@ -23,6 +23,7 @@ $this->load->view("common/metalinks");
 ?>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
 
     
 </head>
@@ -93,8 +94,6 @@ $this->load->view("common/header");
     <div class="details-body" style="background:white;" id="content">
         <div class="container">
             <div class="row" >
-				
-
 						<div class="col-md-4">
 							<div class="col-md-12">
 							   <img src="<?php echo base_url();?>uploads/<?php echo $get_cv_preview->image;?>" style="margin-top:10px;">
@@ -178,7 +177,10 @@ $this->load->view("common/header");
 								<ul>
 								<?php
 									$explode_stcw = explode(',',$get_cv_preview->stcw);
-									foreach($explode_stcw AS $each_stcw){
+									$explode_user_idz = $get_cv_preview->user_id;
+									foreach($explode_stcw AS $key=>$each_stcw){
+
+										$user_idz = $explode_user_idz;
 								?>
 									<li type="square"><?php echo $each_stcw;?></li>
 								<?php
@@ -200,12 +202,22 @@ $this->load->view("common/header");
 							  </div>
 								<p style="font-size:18px;margin-left:8px;padding:5px;border-bottom:2px solid black;color:#479099;"><b><u>WORK EXPERIENCE</u></b></p>
 							<?php
-								foreach($get_experience AS $each_experience){
+								$title = explode(",",$get_experience->title);
+								$company = explode(",",$get_experience->company);
+								$vessel_name	 = explode(",",$get_experience->vessel_name	);
+								$vessel_length = explode(",",$get_experience->vessel_length);
+								$start = explode(",",$get_experience->start);
+								$end = explode(",",$get_experience->end);
+								$contact_person = explode(",",$get_experience->contact_person);
+								$contact_info = explode(",",$get_experience->contact_info);
+								$task = explode(",",$get_experience->task);
+
+								foreach($title AS $key=>$each_title){
 							?>
 							 <div style="margin-left:15px;border-bottom:2px solid black;">
-								<p style="color:#479099;"><b><?php echo ucfirst($each_experience->title);?></b><br><i><?php echo ucfirst($each_experience->vessel_name);?><br><?php echo ucfirst($each_experience->start);?> - <?php echo ucfirst($each_experience->end);?><br><?php echo ucfirst($each_experience->company);?><br><?php echo ucfirst($each_experience->vessel_length);?><br></i><li type="square"><?php echo ucfirst($each_experience->task);?></li></p>
+								<p style="color:#479099;"><b><?php echo ucfirst($each_title);?></b><br><i><?php echo ucfirst($vessel_name[$key]);?><br><?php echo ucfirst($start[$key]);?> - <?php echo ucfirst($end[$key]);?><br><?php echo ucfirst($company[$key]);?><br><?php echo ucfirst($vessel_length[$key]);?><br></i><li type="square"><?php echo ucfirst($task[$key]);?></li></p>
 
-								<p style="margin-left:15px;color:#479099;font-size:12px;">Contact for Reference: <?php echo $each_experience->contact_person;?>- <?php echo $each_experience->contact_info;?> </p>					
+								<p style="margin-left:15px;color:#479099;font-size:12px;">Contact for Reference: <?php echo $contact_person[$key];?> - <?php echo $contact_info[$key];?> </p>					
 							 </div>
 							 <?php
 								}
@@ -336,8 +348,8 @@ $this->load->view("common/header");
         </div>
     </div>
 </section>
-<br>
-
+<br><div ></div>
+<div id="paypal-button-container1" style="padding:5px;margin-left:580px;"></div><br>
 <div><div id="editor"></div><a href="" id="cmd" class="genric-btn2" style="padding:5px;margin-left:580px;">DOWNLOAD AS PDF</a></div><br>
 
 <?php
@@ -356,5 +368,79 @@ $('#cmd').click(function() {
 });
 </script>
 
+ <script>
+// Render the PayPal button
+paypal.Button.render({
+// Set your environment
+env: 'sandbox', // sandbox | production
+
+// Specify the style of the button
+style: {
+  layout: 'vertical',  // horizontal | vertical
+  size:   'medium',    // medium | large | responsive
+  shape:  'rect',      // pill | rect
+  color:  'gold'       // gold | blue | silver | white | black
+},
+
+// Specify allowed and disallowed funding sources
+//
+// Options:
+// - paypal.FUNDING.CARD
+// - paypal.FUNDING.CREDIT
+// - paypal.FUNDING.ELV
+funding: {
+  allowed: [
+    paypal.FUNDING.CARD,
+    paypal.FUNDING.CREDIT
+  ],
+  disallowed: []
+},
+
+// PayPal Client IDs - replace with your own
+// Create a PayPal app: https://developer.paypal.com/developer/applications/create
+client: {
+  sandbox: 'Ae9NoOU4eFAC2ibKeGyfGESR-uQeuHjOjUHt7hNMIxNJ1CcpVp7iZDc3mIWGuLcisakocU0E5gPs3IV4',
+  production: '<insert production client id>'
+},
+
+payment: function (data, actions) {
+  return actions.payment.create({
+    payment: {
+      transactions: [
+        {
+          amount: {
+            total: '2',
+            currency: 'USD'
+          }
+        }
+      ]
+    }
+  });
+},
+
+onAuthorize: function (data, actions) {
+  return actions.payment.execute().then(function () {
+      window.alert('Payment Complete!');
+      var userz_id = '<?php echo $user_idz;?>';
+      var amountz = '2 USD';
+     /*ajax code start*/
+	 $.ajax({
+        url: '<?php echo base_url("cv_preview/payments");?>',
+        data: {
+				'user_id': userz_id,
+				'amount': amountz				
+			  },
+        type: "post",
+        success: function(response){
+        	 window.location.href = '<?php echo base_url("cv_preview/payment_success");?>';
+        }
+      });
+	 /* ajax code ends*/
+
+    });
+}
+	
+}, '#paypal-button-container1');
+</script>
 
 </html>
