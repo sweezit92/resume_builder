@@ -349,8 +349,17 @@ $this->load->view("common/header");
     </div>
 </section>
 <br><div ></div>
+<?php
+	if($get_payment_details->status == 'pending'){
+?>
 <div id="paypal-button-container1" style="padding:5px;margin-left:580px;"></div><br>
+<?php
+}else if($get_payment_details->status == 'success'){
+?>
 <div><div id="editor"></div><a href="" id="cmd" class="genric-btn2" style="padding:5px;margin-left:580px;">DOWNLOAD AS PDF</a></div><br>
+<?php
+}
+?>
 
 <?php
 $this->load->view("common/footer");
@@ -420,7 +429,7 @@ payment: function (data, actions) {
 
 onAuthorize: function (data, actions) {
   return actions.payment.execute().then(function () {
-      window.alert('Payment Complete!');
+      //window.alert('Payment Complete!');
       var userz_id = '<?php echo $user_idz;?>';
       var amountz = '2 USD';
      /*ajax code start*/
@@ -432,7 +441,7 @@ onAuthorize: function (data, actions) {
 			  },
         type: "post",
         success: function(response){
-        	 window.location.href = '<?php echo base_url("cv_preview/payment_success");?>';
+        	
         }
       });
 	 /* ajax code ends*/

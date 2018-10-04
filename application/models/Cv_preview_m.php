@@ -13,6 +13,15 @@ class Cv_preview_m extends CI_Model {
 		return $query->row();
 	}
 
+	public function fetch_payments($user_id){
+		$this->db->select('*');
+		$this->db->from('user');
+		$this->db->where('user.user_id',$user_id);
+		$this->db->join('payment','payment.user_id = user.user_id');
+		$query = $this->db->get();
+		return $query->row();
+	}
+
 	public function fetch_experience($user_id){
 		$this->db->select('*');
 		$this->db->from('certificate');
@@ -24,13 +33,7 @@ class Cv_preview_m extends CI_Model {
 
 	public function add_paymentzz($records,$user_id){
 		$this->db->where("user_id", $user_id);
-		$query = $this->db->update('payment', $update_success);
-		return true;
-	}
-
-	public function update_paymentz_success($update_success,$user_id){
-		$this->db->where("user_id", $user_id);
-		$query = $this->db->update('payment', $update_success);
+		$query = $this->db->update('payment', $records);
 		return true;
 	}
 
