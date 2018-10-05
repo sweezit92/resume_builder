@@ -88,7 +88,7 @@ $this->load->view('common/resume_sidebar');
 
                 <div class="col-lg-8" style="font-size: 16px;">
                    
-                    <form method="post" action="<?php echo base_url("create_resume_step3/update_certificate");?>">
+                    <form method="post" action="<?php echo base_url("create_resume_step4/update_certificate");?>">
                     	
 						  <h2 class="head">Skill</h2>
 						  <div class="form-row">

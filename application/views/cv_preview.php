@@ -96,7 +96,7 @@ $this->load->view("common/header");
             <div class="row" >
 						<div class="col-md-4">
 							<div class="col-md-12">
-							   <img src="<?php echo base_url();?>uploads/<?php echo $get_cv_preview->image;?>" style="margin-top:10px;">
+							   <img src="<?php echo base_url();?>uploads/<?php echo $get_cv_preview->image;?>" style="margin-top:10px;height:180px;">
 							<div>
 								<p style="font-size:18px;margin-left:-20px;padding:5px;color:#479099;"><b>PERSONAL INFORMATION</b></p>
 									<ul style="margin-left:-15px;font-family:italic;">
@@ -104,6 +104,7 @@ $this->load->view("common/header");
 									<li style="font-weight:bold;">Nationality : <?php echo ucfirst($get_cv_preview->nationality);?></li>
 									<li style="font-weight:bold;">Residence :  <?php echo ucfirst($get_cv_preview->residence);?></li>
 									<li style="font-weight:bold;">Location : <?php echo ucfirst($get_cv_preview->current_location);?></li>
+									<li style="font-weight:bold;">Email :  <?php echo ucfirst($get_cv_preview->email);?></li>
 									<li style="font-weight:bold;">US Visa : <?php echo ucfirst($get_cv_preview->visa);?></li>
 									<li style="font-weight:bold;">Seaman's Book: <?php echo ucfirst($get_cv_preview->seamans_book);?></li>
 									<li style="font-weight:bold;">Telephone : <?php echo ucfirst($get_cv_preview->telephone);?></li>
@@ -239,6 +240,7 @@ $this->load->view("common/header");
 								$company = explode(",",$get_experience->company);
 								$vessel_name	 = explode(",",$get_experience->vessel_name	);
 								$vessel_length = explode(",",$get_experience->vessel_length);
+								$vessel_type = explode(",",$get_experience->vessel_type);
 								$start = explode(",",$get_experience->start);
 								$end = explode(",",$get_experience->end);
 								$contact_person = explode(",",$get_experience->contact_person);
@@ -250,9 +252,17 @@ $this->load->view("common/header");
 							 <div style="margin-left:15px;padding:7px;">
 								<h4 style="color:#479099;margin-bottom:-15px;"><?php echo ucfirst($each_title);?></h4><br>
 								<b><?php echo ucfirst($vessel_name[$key]);?></b><br>
-								<p style="color:#479099;margin-bottom:5px;"><?php echo ucfirst($start[$key]);?> - <?php echo ucfirst($end[$key]);?><br>
+								<p style="color:#479099;margin-bottom:5px;">
+									<span style="color:blue;"><?php echo ucfirst($start[$key]);?> - <?php echo ucfirst($end[$key]);?></span><br>
 									<?php echo ucfirst($company[$key]);?><br>
-									<?php echo ucfirst($vessel_length[$key]);?><br>
+									<div class="row" style="padding:0px;margin:0px;">
+										<div class="col-md-6" style="padding:0px;margin:0px;">
+											<span style="float:left;color:grey;"><?php echo ucfirst($vessel_type[$key]);?></span><br>
+										</div>
+										<div class="col-md-6" style="padding:0px;margin:0px;">
+											<span style="color:grey;float:right;"><?php echo ucfirst($vessel_length[$key]);?></span><br>
+										</div>
+									</div>
 								</p>
 								<?php
 									if($task[$key] != ''){
@@ -450,13 +460,13 @@ $this->load->view("common/header");
 </section>
 <br><div ></div>
 <?php
-	if($get_payment_details->status == 'pending'){
+	if($get_payment_details->status != 'success'){
 ?>
-<div id="paypal-button-container1" style="padding:5px;margin-left:580px;"></div><br>
+	<div id="paypal-button-container1" style="padding:5px;margin-left:580px;"></div><br>
 <?php
-}else if($get_payment_details->status == 'success'){
+}else{
 ?>
-<div><div id="editor"></div><a href="" id="cmd" class="genric-btn2" style="padding:5px;margin-left:580px;">DOWNLOAD AS PDF</a></div><br>
+	<div><div id="editor"></div><a href="" id="cmd" class="genric-btn2" style="padding:5px;margin-left:580px;">DOWNLOAD AS PDF</a></div><br>
 <?php
 }
 ?>
@@ -530,21 +540,21 @@ payment: function (data, actions) {
 onAuthorize: function (data, actions) {
   return actions.payment.execute().then(function () {
       //window.alert('Payment Complete!');
-      var userz_id = '<?php echo $user_idz;?>';
       var amountz = '2 USD';
      /*ajax code start*/
 	 $.ajax({
         url: '<?php echo base_url("cv_preview/payments");?>',
         data: {
-				'user_id': userz_id,
 				'amount': amountz				
 			  },
         type: "post",
         success: function(response){
+        	//alert(response);
+        	if(response == "true"){ // if true (1)
+		       location.reload(); // then reload the page.(3)
+		   }
         }
-
       });
-	 window.location.reload();
 	 /* ajax code ends*/
     });
 }

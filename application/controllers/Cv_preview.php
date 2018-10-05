@@ -31,7 +31,7 @@ class Cv_preview extends CI_Controller {
 	public function payments(){
 		$this->load->model('cv_preview_m');
 
-		$user_id = $this->input->post('user_id');
+		$user_id = $this->session->userdata['logged_in']['user_id'];
 		$amount = $this->input->post('amount');
 		$payment_status = 'success';
 		$date = time();
@@ -45,6 +45,7 @@ class Cv_preview extends CI_Controller {
 		$insert_payments = $this->cv_preview_m->add_paymentzz($records,$user_id);
 		
 		if($insert_payments){
+			echo "true";
 		/* SEND EMAIL */
 			$user_details = $this->cv_preview_m->user_info($user_id);
 			$fullname = $user_details->full_name;
@@ -60,6 +61,9 @@ class Cv_preview extends CI_Controller {
             $this->email->message($payment_success_email);
 
             $okay = $this->email->send();
+            
+		}else{
+			echo "false";
 		}
 		redirect('cv_preview');
 	}

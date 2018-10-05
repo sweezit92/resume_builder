@@ -2,9 +2,9 @@
     <header id="header" class="header-scrolled">
         <div class="container-fluid">
             <div class="row align-items-center justify-content-between">LOGO
-                <!-- <div id="logo">
-                    <a href="#"><img src="img/logo.svg" alt="" title="" /></a>
-                </div> -->
+               <!-- <div id="logo">
+                    <a href="#"><img src="<?php echo base_url();?>img/MARINE CV.png" alt="" title="" /></a>
+                </div>-->
                 <div class="nav-wrap d-flex flex-row align-items-center">
                     <nav id="nav-menu-container">
                         <ul class="nav-menu ">
