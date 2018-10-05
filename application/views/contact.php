@@ -11,7 +11,7 @@
     
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>Resume Builder - Login</title>
+    <title>Resume Builder - Contact</title>
 
 <?php
 $this->load->view("common/metalinks");
@@ -76,7 +76,7 @@ $this->load->view("common/header");
     <div style="background: url('<?php echo base_url();?>img/Great-Cover-Letter-Banner.jpg');">
         <div class="text-center" style="margin:40px;">
             <div class="col-md-12 pt-100 pb-80">
-               <a class="blog-heading">LOGIN</a>
+               <a class="blog-heading">WANT TO BUILD YOUR OWN RESUME?</a>
             </div>
         </div>
     </div>
@@ -93,33 +93,27 @@ $this->load->view("common/header");
                 </p>
             </div>
         </div>
-        <div class="row justify-content-between ">
+        <div class="row justify-content-between align-items-end">
             <div class="col-lg-6 col-md-6 contact-left">
-                <img class="img-fluid" src="<?php echo base_url();?>img/reg-manangement-hero.png" alt="" >
+                <img class="img-fluid" src="<?php echo base_url();?>img/contact-img.png" alt="">
             </div>
-            <div class="col-lg-5 col-md-6 contact-left">
-                <?php
-                  if($this->session->flashdata('failed')){
-                ?>
-                    <div class="alert alert-danger" style="margin-bottom:40px;">
-                        <strong><?php echo $this->session->flashdata('failed');?></strong>
+            <div class="col-lg-5 col-md-6 contact-right">
+                <form class="form-area contact-form text-right" id="contactform">
+                    
+                    <input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
+
+                    <input name="mobile" placeholder="Enter your mobile" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
+
+                    <input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
+
+                    <!-- <input name="subject" placeholder="Enter subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter subject'" class="common-input mb-20 form-control" required="" type="text"> -->
+
+                    <textarea class="common-textarea form-control" cols="30" rows="7" name="message" placeholder="Enter Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Messege'" required=""></textarea>
+
+                    <div class="d-flex flex-column">
+                        <button type="submit" class="genric-btn2 d-block mt-30 mr-0 ml-auto">Send Message</button>
+                        <div class="alert-msg"></div>
                     </div>
-                <?php
-                }
-                ?>
-                <form method="POST" action="<?php echo base_url('login/check_login');?>">
-                <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter E-mail">
-                </div>
-                
-                <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
-                </div>
-                <div class="form-group form-check">
-                </div>
-                <button type="submit" class="btn btn-primary">Login</button>
                 </form>
             </div>
         </div>
@@ -127,7 +121,23 @@ $this->load->view("common/header");
 </section>
 <!-- End contact section -->
 
+<script type="text/javascript">
+    
+    $('#contactform').submit(function(e){
 
+        e.preventDefault();
+        var self = $(this);
+        $.post('/home/contact', self.serializeArray(), function(data){
+
+            self.trigger('reset');
+
+            var obj = $.parseJSON(data);
+
+            self.find('alert-msg').html(obj.data);
+        });
+    });
+
+</script>
 
 <?php
 $this->load->view("common/footer");

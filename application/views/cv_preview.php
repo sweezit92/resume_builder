@@ -100,17 +100,17 @@ $this->load->view("common/header");
 							<div>
 								<p style="font-size:18px;margin-left:-20px;padding:5px;color:#479099;"><b>PERSONAL INFORMATION</b></p>
 									<ul style="margin-left:-15px;font-family:italic;">
-									<li>Year of birth : <?php echo $get_cv_preview->dob;?></li>
-									<li>Nationality (Which country issued your passport?): <?php echo ucfirst($get_cv_preview->nationality);?></li>
-									<li>Country of Residence (Where Do you live?):  <?php echo ucfirst($get_cv_preview->residence);?></li>
-									<li>Current Location: <?php echo ucfirst($get_cv_preview->current_location);?></li>
-									<li>Do you currently have valid B1/B2 visa?: <?php echo ucfirst($get_cv_preview->visa);?></li>
-									<li>Seaman's Book: <?php echo ucfirst($get_cv_preview->seamans_book);?></li>
-									<li>Telephone Number with Country prefix: <?php echo ucfirst($get_cv_preview->telephone);?></li>
-									<li>Skype ID (Some recruiters perform job interviews over Skype): <?php echo ucfirst($get_cv_preview->skype);?></li>
-									<li>When you can start the new job?<br/>(now, in 1 month, in 2 m..): <?php echo ucfirst($get_cv_preview->start_job);?></li>
-									<li>Do you smoke?: <?php echo ucfirst($get_cv_preview->smoke);?></li>
-									<li>Do you have visible tattoos?: <?php echo ucfirst($get_cv_preview->tatto);?></li>
+									<li style="font-weight:bold;">Year of birth : <?php echo $get_cv_preview->dob;?></li>
+									<li style="font-weight:bold;">Nationality : <?php echo ucfirst($get_cv_preview->nationality);?></li>
+									<li style="font-weight:bold;">Residence :  <?php echo ucfirst($get_cv_preview->residence);?></li>
+									<li style="font-weight:bold;">Location : <?php echo ucfirst($get_cv_preview->current_location);?></li>
+									<li style="font-weight:bold;">US Visa : <?php echo ucfirst($get_cv_preview->visa);?></li>
+									<li style="font-weight:bold;">Seaman's Book: <?php echo ucfirst($get_cv_preview->seamans_book);?></li>
+									<li style="font-weight:bold;">Telephone Number : <?php echo ucfirst($get_cv_preview->telephone);?></li>
+									<li style="font-weight:bold;">Skype ID : <?php echo ucfirst($get_cv_preview->skype);?></li>
+									<li style="font-weight:bold;">When you can start the new job? : <?php echo ucfirst($get_cv_preview->start_job);?></li>
+									<li style="font-weight:bold;">Do you smoke? : <?php echo ucfirst($get_cv_preview->smoke);?></li>
+									<li style="font-weight:bold;">Do you have visible tattoos? : <?php echo ucfirst($get_cv_preview->tatto);?></li>
 									</ul>
 							</div><br>
 							
@@ -121,7 +121,7 @@ $this->load->view("common/header");
 									$explode_languages = explode(',',$get_cv_preview->language);
 									foreach($explode_languages AS $key=> $each_lang){
 								?>
-								  <p style="font-size:18px;margin-left:-15px;"><?php echo $each_lang;?></p>
+								  <p style="font-size:18px;margin-left:-15px;font-weight:bold;"><?php echo $each_lang;?></p>
 								   <div style="margin-left:-15px;">
 								   	<?php
 								   		for($i = 1; $i<= $explode_level[$key]; $i++){
@@ -136,28 +136,7 @@ $this->load->view("common/header");
 							   ?>
 							</div><br>
 
-							<div style="margin-top:50px;">
-							 <p style="font-size:18px;padding:5px;margin-left:-20px;color:#479099;"><b><u>EDUCATION</u></b></p>
-							 <?php 
-							 	$explode_course = explode(',',$get_cv_preview->course);
-							 	$explode_institute = explode(',',$get_cv_preview->institute);
-							 	$explode_university = explode(',',$get_cv_preview->university);
-							 	$explode_year_start = explode(',',$get_cv_preview->start);
-							 	$explode_year_end = explode(',',$get_cv_preview->end);
-
-							 	foreach($explode_course AS $key=> $each_course){
-							 ?>
-							 <ul style="font-size:12px;margin-left:-15px;">
-								<li>Courses: <?php echo $each_course;?></li>
-								<li>Institution/ Place of Education: <?php echo $explode_institute[$key];?></li>
-								<li>University: <?php echo $explode_university[$key];?></li>
-								<li>Year: <?php echo $explode_year_start[$key];?> - <?php echo $explode_year_end[$key];?></li>
-							 </ul>
-							 <br>
-							 <?php
-								}
-							 ?>
-							</div><br>
+							
 
 							<div>
 								<p style="font-size:18px;margin-left:-20px;padding:5px;color:#479099;"><b><u>CERTIFICATES</u></b></p>
@@ -166,7 +145,7 @@ $this->load->view("common/header");
 									$explode_certificate = explode(',',$get_cv_preview->certificate);
 									foreach($explode_certificate AS $each_certificate){
 								?>
-									<li type="square"><?php echo $each_certificate;?></li>
+									<li type="square" style="font-weight:bold;"><?php echo $each_certificate;?></li>
 								<?php
 									}
 								?>
@@ -182,7 +161,7 @@ $this->load->view("common/header");
 
 										$user_idz = $explode_user_idz;
 								?>
-									<li type="square"><?php echo $each_stcw;?></li>
+									<li type="square" style="font-weight:bold;"><?php echo $each_stcw;?></li>
 								<?php
 									}
 								?>
@@ -200,6 +179,36 @@ $this->load->view("common/header");
 								<p style="color:white;"><?php echo ucfirst($get_cv_preview->about_yourself);?></p>
 								</div>
 							  </div>
+
+							  <div class="col-md-12"style="margin-top:50px;">
+							 <p style="font-size:18px;margin-left:-5px;padding:5px;border-bottom:2px solid black;color:#479099;"><b><u>EDUCATION</u></b></p>
+							 <div class="row" style="margin-bottom:6px;">
+							 <?php 
+							 	$explode_course = explode(',',$get_cv_preview->course);
+							 	$explode_institute = explode(',',$get_cv_preview->institute);
+							 	$explode_university = explode(',',$get_cv_preview->university);
+							 	$explode_year_start = explode(',',$get_cv_preview->start);
+							 	$explode_year_end = explode(',',$get_cv_preview->end);
+
+							 	foreach($explode_course AS $key=> $each_course){
+							 ?>
+							 
+							 	<div class="col-md-4">
+								 <ul style="font-size:12px;margin-left:-5px;font-weight:bold;">
+									<li>Courses: <?php echo $each_course;?></li>
+									<li>Institution : <?php echo $explode_institute[$key];?></li>
+									<li>University: <?php echo $explode_university[$key];?></li>
+									<li>Year: <?php echo $explode_year_start[$key];?> - <?php echo $explode_year_end[$key];?></li>
+								 </ul>
+								</div>
+							
+							 <br>
+							 <?php
+								}
+							 ?>
+							 </div>
+							</div>
+
 								<p style="font-size:18px;margin-left:8px;padding:5px;border-bottom:2px solid black;color:#479099;"><b><u>WORK EXPERIENCE</u></b></p>
 							<?php
 								$title = explode(",",$get_experience->title);
@@ -214,10 +223,17 @@ $this->load->view("common/header");
 
 								foreach($title AS $key=>$each_title){
 							?>
-							 <div style="margin-left:15px;border-bottom:2px solid black;">
-								<p style="color:#479099;"><b><?php echo ucfirst($each_title);?></b><br><i><?php echo ucfirst($vessel_name[$key]);?><br><?php echo ucfirst($start[$key]);?> - <?php echo ucfirst($end[$key]);?><br><?php echo ucfirst($company[$key]);?><br><?php echo ucfirst($vessel_length[$key]);?><br></i><li type="square"><?php echo ucfirst($task[$key]);?></li></p>
+							 <div style="margin-left:15px;">
+								<h4 style="color:#479099;"><?php echo ucfirst($each_title);?></h4><br>
+								<b><?php echo ucfirst($vessel_name[$key]);?></b><br>
+								<p style="color:#479099;"><?php echo ucfirst($start[$key]);?> - <?php echo ucfirst($end[$key]);?><br>
+									<?php echo ucfirst($company[$key]);?><br>
+									<?php echo ucfirst($vessel_length[$key]);?><br>
+								</p>
+								<span style="font-weight:bold;">*</span> <?php echo ucfirst($task[$key]);?></li>
+								
 
-								<p style="margin-left:15px;color:#479099;font-size:12px;">Contact for Reference: <?php echo $contact_person[$key];?> - <?php echo $contact_info[$key];?> </p>					
+								<p style="font-size:12px;"><i style="color:#479099;">Contact </i>: <?php echo $contact_person[$key];?> - <?php echo $contact_info[$key];?> </p>					
 							 </div>
 							 <?php
 								}
@@ -225,17 +241,17 @@ $this->load->view("common/header");
 							 
 							 <div>
 
-							<p style="font-size:18px;margin-left:15px;padding:5px;color:#479099;margin-top:50px;"><b><u>Skill Sets</u></b></p>
+							<p style="font-size:18px;margin-left:15px;padding:5px;border-bottom:2px solid black;color:#479099;margin-top:10px;"><b><u>Skill Sets</u></b></p>
 							 <div class="row">
 							 	<div class="col-md-3">
 								
-								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;"><b><u>Deck</u></b></p>
+								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;margin-bottom:0px;"><b><u>Deck</u></b></p>
 								 	<?php
 								 		$break_skills = explode(',',$get_cv_preview->deck);
 								 		foreach($break_skills AS $each_skills){
 								 	?>
 									  <div style="margin-left:20px;">
-										<code style="font-size:12px;"><?php echo $each_skills;?></code>
+										<span style="font-size:12px;font-weight:bold;"><?php echo $each_skills;?></span>
 									  </div>
 									 <?php
 									 	}
@@ -243,39 +259,39 @@ $this->load->view("common/header");
 							   	 
 							   	</div>
 							   	<div class="col-md-3">
-								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;"><b><u>Propulsion</u></b></p>
+								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;margin-bottom:0px;"><b><u>Propulsion</u></b></p>
 								 	<?php
 								 		$break_skills = explode(',',$get_cv_preview->propulsion);
 								 		foreach($break_skills AS $each_skills){
 								 	?>
 									  <div style="margin-left:20px;">
-										<code style="font-size:12px;"><?php echo $each_skills;?></code>
+										<span style="font-size:12px;font-weight:bold;"><?php echo $each_skills;?></span>
 									  </div>
 									 <?php
 									 	}
 									 ?>
 							   	</div>
 							   	<div class="col-md-3">
-								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;"><b><u>Interior</u></b></p>
+								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;margin-bottom:0px;"><b><u>Interior</u></b></p>
 								 	<?php
 								 		$break_skills = explode(',',$get_cv_preview->interior);
 								 		foreach($break_skills AS $each_skills){
 								 	?>
 									  <div style="margin-left:20px;">
-										<code style="font-size:12px;"><?php echo $each_skills;?></code>
+										<span style="font-size:12px;font-weight:bold;"><?php echo $each_skills;?></span>
 									  </div>
 									 <?php
 									 	}
 									 ?>
 							   	</div>
 							   	<div class="col-md-3">
-								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;"><b><u>Engineering</u></b></p>
+								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;margin-bottom:0px;"><b><u>Engineering</u></b></p>
 								 	<?php
 								 		$break_skills = explode(',',$get_cv_preview->engineering);
 								 		foreach($break_skills AS $each_skills){
 								 	?>
 									  <div style="margin-left:20px;">
-										<code style="font-size:12px;"><?php echo $each_skills;?></code>
+										<span style="font-size:12px;font-weight:bold;"><?php echo $each_skills;?></span>
 									  </div>
 									 <?php
 									 	}
@@ -285,52 +301,52 @@ $this->load->view("common/header");
 
 							   <div class="row">
 							 	<div class="col-md-3">
-								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;"><b><u>Culinary</u></b></p>
+								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;margin-bottom:0px;"><b><u>Culinary</u></b></p>
 								 	<?php
 								 		$break_skills = explode(',',$get_cv_preview->culinary);
 								 		foreach($break_skills AS $each_skills){
 								 	?>
 									  <div style="margin-left:20px;">
-										<code style="font-size:12px;"><?php echo $each_skills;?></code>
+										<span style="font-size:12px;font-weight:bold;"><?php echo $each_skills;?></span>
 									  </div>
 									 <?php
 									 	}
 									 ?>
 							   	</div>
 							   	<div class="col-md-3">
-								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;"><b><u>Massage</u></b></p>
+								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;margin-bottom:0px;"><b><u>Massage</u></b></p>
 								 	<?php
 								 		$break_skills = explode(',',$get_cv_preview->massage);
 								 		foreach($break_skills AS $each_skills){
 								 	?>
 									  <div style="margin-left:20px;">
-										<code style="font-size:12px;"><?php echo $each_skills;?></code>
+										<span style="font-size:12px;font-weight:bold;"><?php echo $each_skills;?></span>
 									  </div>
 									 <?php
 									 	}
 									 ?>
 							   	</div>
 							   	<div class="col-md-3">
-								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;"><b><u>Personnal Trainer</u></b></p>
+								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;margin-bottom:0px;"><b><u>Personnal Trainer</u></b></p>
 								 	<?php
 								 		$break_skills = explode(',',$get_cv_preview->personnal_trainer);
 								 		foreach($break_skills AS $each_skills){
 								 	?>
 									  <div style="margin-left:20px;">
-										<code style="font-size:12px;"><?php echo $each_skills;?></code>
+										<span style="font-size:12px;font-weight:bold;"><?php echo $each_skills;?></span>
 									  </div>
 									 <?php
 									 	}
 									 ?>
 							   	</div>
 							   	<div class="col-md-3">
-								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;"><b><u>Other</u></b></p>
+								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;margin-bottom:0px;"><b><u>Other</u></b></p>
 								 	<?php
 								 		$break_skills = explode(',',$get_cv_preview->other);
 								 		foreach($break_skills AS $each_skills){
 								 	?>
 									  <div style="margin-left:20px;">
-										<code style="font-size:12px;"><?php echo $each_skills;?></code>
+										<span style="font-size:12px;font-weight:bold;"><?php echo $each_skills;?></span>
 									  </div>
 									 <?php
 									 	}
@@ -441,14 +457,13 @@ onAuthorize: function (data, actions) {
 			  },
         type: "post",
         success: function(response){
-        	
         }
-      });
-	 /* ajax code ends*/
 
+      });
+	 window.location.reload();
+	 /* ajax code ends*/
     });
 }
-	
 }, '#paypal-button-container1');
 </script>
 
