@@ -223,14 +223,14 @@ $this->load->view("common/header");
 
 								foreach($title AS $key=>$each_title){
 							?>
-							 <div style="margin-left:15px;">
-								<h4 style="color:#479099;"><?php echo ucfirst($each_title);?></h4><br>
+							 <div style="margin-left:15px;padding:7px;">
+								<h4 style="color:#479099;margin-bottom:-15px;"><?php echo ucfirst($each_title);?></h4><br>
 								<b><?php echo ucfirst($vessel_name[$key]);?></b><br>
-								<p style="color:#479099;"><?php echo ucfirst($start[$key]);?> - <?php echo ucfirst($end[$key]);?><br>
+								<p style="color:#479099;margin-bottom:5px;"><?php echo ucfirst($start[$key]);?> - <?php echo ucfirst($end[$key]);?><br>
 									<?php echo ucfirst($company[$key]);?><br>
 									<?php echo ucfirst($vessel_length[$key]);?><br>
 								</p>
-								<span style="font-weight:bold;">*</span> <?php echo ucfirst($task[$key]);?></li>
+								<li class="square"> <?php echo ucfirst($task[$key]);?></li>
 								
 
 								<p style="font-size:12px;"><i style="color:#479099;">Contact </i>: <?php echo $contact_person[$key];?> - <?php echo $contact_info[$key];?> </p>					
@@ -388,7 +388,7 @@ $('#cmd').click(function() {
   };
   var pdf = new jsPDF('p', 'pt', 'a3');
   pdf.addHTML($("#content"), 20, 80, options, function() {
-    pdf.save('pageContent.pdf');
+    pdf.save('<?php echo $first_name;?>_<?php echo $last_name;?>.pdf');
   });
 });
 </script>

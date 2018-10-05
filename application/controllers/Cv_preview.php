@@ -18,6 +18,12 @@ class Cv_preview extends CI_Controller {
 		$data["get_cv_preview"] = $this->cv_preview_m->fetch_preview($user_id);
 		$data["get_experience"] = $this->cv_preview_m->fetch_experience($user_id);
 		$data["get_payment_details"] = $this->cv_preview_m->fetch_payments($user_id);
+
+		$full_name = $this->session->userdata['logged_in']['name'];
+		$data['last_name'] = (strpos($full_name, ' ') === false) ? '' : preg_replace('#.*\s([\w-]*)$#', '$1', $full_name);
+		$data['first_name'] = trim( preg_replace('#'.$data['last_name'].'#', '', $full_name ) );
+
+
 		//print_r($data["get_cv_preview"]);
 		$this->load->view('cv_preview',$data);
 	}
