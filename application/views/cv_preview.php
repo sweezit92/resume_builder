@@ -113,7 +113,10 @@ $this->load->view("common/header");
 									<li style="font-weight:bold;">Do you have visible tattoos? : <?php echo ucfirst($get_cv_preview->tatto);?></li>
 									</ul>
 							</div><br>
-							
+
+							<?php
+								if($get_cv_preview->language != ''){
+							?>
 							<div>
 								<p style="font-size:18px;margin-left:-20px;padding:5px;color:#479099;"><b><u>LANGUAGES</u></b></p>
 								<?php
@@ -135,9 +138,13 @@ $this->load->view("common/header");
 							   		}
 							   ?>
 							</div><br>
-
+							<?php
+								}
+							?>
 							
-
+							<?php
+								if($get_cv_preview->certificate != ''){
+							?>
 							<div>
 								<p style="font-size:18px;margin-left:-20px;padding:5px;color:#479099;"><b><u>CERTIFICATES</u></b></p>
 								<ul>
@@ -151,6 +158,12 @@ $this->load->view("common/header");
 								?>
 								</ul>
 							</div><br>
+							<?php
+								}
+							?>
+							<?php
+								if($get_cv_preview->stcw != ''){
+							?>
 							<div>
 								<p style="font-size:18px;margin-left:-20px;padding:5px;color:#479099;"><b><u>STCW</u></b></p>
 								<ul>
@@ -167,6 +180,9 @@ $this->load->view("common/header");
 								?>
 								</ul>
 							</div>
+							<?php
+								}
+							?>
 							</div>
 						</div>
 
@@ -179,8 +195,10 @@ $this->load->view("common/header");
 								<p style="color:white;"><?php echo ucfirst($get_cv_preview->about_yourself);?></p>
 								</div>
 							  </div>
-
-							  <div class="col-md-12"style="margin-top:50px;">
+							<?php
+								if(($get_cv_preview->course != '') && ($get_cv_preview->institute != '') && ($get_cv_preview->university != '') && ($get_cv_preview->start != '') && ($get_cv_preview->end != '')){
+							?>
+							<div class="col-md-12"style="margin-top:50px;">
 							 <p style="font-size:18px;margin-left:-5px;padding:5px;border-bottom:2px solid black;color:#479099;"><b><u>EDUCATION</u></b></p>
 							 <div class="row" style="margin-bottom:6px;">
 							 <?php 
@@ -208,7 +226,13 @@ $this->load->view("common/header");
 							 ?>
 							 </div>
 							</div>
+							<?php
+								}
+							?>
 
+							<?php
+								if(($get_experience->title != '') && ($get_experience->company != '') && ($get_experience->vessel_name != '') && ($get_experience->vessel_length != '') && ($get_experience->start != '') && ($get_experience->end != '') && ($get_experience->contact_person != '') && ($get_experience->contact_info != '') && ($get_experience->task != '')){
+							?>
 								<p style="font-size:18px;margin-left:8px;padding:5px;border-bottom:2px solid black;color:#479099;"><b><u>WORK EXPERIENCE</u></b></p>
 							<?php
 								$title = explode(",",$get_experience->title);
@@ -230,21 +254,37 @@ $this->load->view("common/header");
 									<?php echo ucfirst($company[$key]);?><br>
 									<?php echo ucfirst($vessel_length[$key]);?><br>
 								</p>
+								<?php
+									if($task[$key] != ''){
+								?>
 								<li class="square"> <?php echo ucfirst($task[$key]);?></li>
+								<?php
+									}
+								?>
 								
-
-								<p style="font-size:12px;"><i style="color:#479099;">Contact </i>: <?php echo $contact_person[$key];?> - <?php echo $contact_info[$key];?> </p>					
+								<?php
+									if($contact_person[$key] != '' && $contact_info[$key] != ''){
+								?>
+								<p style="font-size:12px;"><i style="color:#479099;">Contact </i>: <?php echo $contact_person[$key];?> - <?php echo $contact_info[$key];?> </p>	
+								<?php
+									}
+								?>				
 							 </div>
 							 <?php
+									}
 								}
 							 ?>
-							 
-							 <div>
-
+						
+						<?php
+							if(($get_cv_preview->deck != '') && ($get_cv_preview->propulsion != '') && ($get_cv_preview->interior != '') && ($get_cv_preview->engineering != '') && ($get_cv_preview->culinary != '') && ($get_cv_preview->massage != '') && ($get_cv_preview->personnal_trainer != '') && ($get_cv_preview->other != '')){
+						?> 
+						<div>
 							<p style="font-size:18px;margin-left:15px;padding:5px;border-bottom:2px solid black;color:#479099;margin-top:10px;"><b><u>Skill Sets</u></b></p>
 							 <div class="row">
-							 	<div class="col-md-3">
-								
+							 	<?php
+							 		if($get_cv_preview->deck != ""){
+							 	?>
+							 	<div class="col-md-3">								
 								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;margin-bottom:0px;"><b><u>Deck</u></b></p>
 								 	<?php
 								 		$break_skills = explode(',',$get_cv_preview->deck);
@@ -256,8 +296,13 @@ $this->load->view("common/header");
 									 <?php
 									 	}
 									 ?>
-							   	 
 							   	</div>
+							   	<?php
+									}
+							   	?>
+							   	<?php
+							 		if($get_cv_preview->propulsion != ''){
+							 	?>
 							   	<div class="col-md-3">
 								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;margin-bottom:0px;"><b><u>Propulsion</u></b></p>
 								 	<?php
@@ -271,6 +316,12 @@ $this->load->view("common/header");
 									 	}
 									 ?>
 							   	</div>
+							   	<?php
+									}
+							   	?>
+							   	<?php
+							 		if($get_cv_preview->interior != ''){
+							 	?>
 							   	<div class="col-md-3">
 								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;margin-bottom:0px;"><b><u>Interior</u></b></p>
 								 	<?php
@@ -284,6 +335,12 @@ $this->load->view("common/header");
 									 	}
 									 ?>
 							   	</div>
+							   	<?php
+									}
+							   	?>
+							   	<?php
+							 		if($get_cv_preview->engineering != ''){
+							 	?>
 							   	<div class="col-md-3">
 								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;margin-bottom:0px;"><b><u>Engineering</u></b></p>
 								 	<?php
@@ -297,9 +354,14 @@ $this->load->view("common/header");
 									 	}
 									 ?>
 							   	</div>
+							   	<?php
+									}
+							   	?>
 							   </div>
-
 							   <div class="row">
+							   	<?php
+							 		if($get_cv_preview->culinary != ''){
+							 	?>
 							 	<div class="col-md-3">
 								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;margin-bottom:0px;"><b><u>Culinary</u></b></p>
 								 	<?php
@@ -313,6 +375,12 @@ $this->load->view("common/header");
 									 	}
 									 ?>
 							   	</div>
+							   	<?php
+									}
+							   	?>
+							   	<?php
+							 		if($get_cv_preview->massage != ''){
+							 	?>
 							   	<div class="col-md-3">
 								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;margin-bottom:0px;"><b><u>Massage</u></b></p>
 								 	<?php
@@ -326,6 +394,12 @@ $this->load->view("common/header");
 									 	}
 									 ?>
 							   	</div>
+							   	<?php
+									}
+							   	?>
+							   	<?php
+							 		if($get_cv_preview->personnal_trainer != ''){
+							 	?>
 							   	<div class="col-md-3">
 								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;margin-bottom:0px;"><b><u>Personnal Trainer</u></b></p>
 								 	<?php
@@ -339,6 +413,12 @@ $this->load->view("common/header");
 									 	}
 									 ?>
 							   	</div>
+							   	<?php
+									}
+							   	?>
+							   	<?php
+							 		if($get_cv_preview->other != ''){
+							 	?>
 							   	<div class="col-md-3">
 								 	<p style="font-size:14px;padding:5px;margin-left:15px;color:#479099;margin-bottom:0px;"><b><u>Other</u></b></p>
 								 	<?php
@@ -352,10 +432,14 @@ $this->load->view("common/header");
 									 	}
 									 ?>
 							   	</div>
+							   	<?php
+									}
+							   	?>
 							   </div>
-
-							 
 							</div>
+							<?php
+								}
+							?>
 							</div>
 						</div>
 						
@@ -388,7 +472,7 @@ $('#cmd').click(function() {
   };
   var pdf = new jsPDF('p', 'pt', 'a3');
   pdf.addHTML($("#content"), 20, 80, options, function() {
-    pdf.save('<?php echo $first_name;?>_<?php echo $last_name;?>.pdf');
+    pdf.save('MarineCv_<?php echo $first_name;?>_<?php echo $last_name;?>.pdf');
   });
 });
 </script>

@@ -5,10 +5,11 @@ class Cv_preview_m extends CI_Model {
 
 	public function fetch_preview($user_id){
 		$this->db->select('*');
-		$this->db->from('certificate');
-		$this->db->where('certificate.user_id',$user_id);
-		$this->db->join('education','education.user_id = certificate.user_id');
-		$this->db->join('personal','personal.user_id = certificate.user_id');
+		$this->db->from('user');
+		$this->db->where('user.user_id',$user_id);
+		$this->db->join('certificate','certificate.user_id = user.user_id');
+		$this->db->join('education','education.user_id = user.user_id');
+		$this->db->join('personal','personal.user_id = user.user_id');
 		$query = $this->db->get();
 		return $query->row();
 	}

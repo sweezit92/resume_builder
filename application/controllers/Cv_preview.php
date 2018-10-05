@@ -54,7 +54,7 @@ class Cv_preview extends CI_Controller {
 			$payment_success_email = $this->email_template->payment_successful($fullname,$email_id,$phone,$amount);
 			$this->load->library('email');
 			$this->email->set_mailtype("html");
-            $this->email->from('noreply@portme.co');
+            $this->email->from('support@marinecv.com');
             $this->email->to($email_id); 
             $this->email->subject('Payment Successful');
             $this->email->message($payment_success_email);
