@@ -85,7 +85,6 @@ $this->load->view("common/header");
                             <p class="text-justify">
                                 We provide the most successful yacht CV layout and content strategies in the industry.Choose the template you like and start setting up immediately using all our Yacht CV Resources including:CV Strategies by position, 25+ sample Job Bullet Points by position, Land-Based Job Description Strategies, Skill Set lists, and Sample Profiles.Library of several short video tips on setting up your CV.
                             </p>
-
                             <a href="#" class="genric-btn mt-20">Create Resume</a>
                         </div>
                     </div>

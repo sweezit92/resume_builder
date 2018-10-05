@@ -93,27 +93,31 @@ $this->load->view("common/header");
                 </p>
             </div>
         </div>
-        <div class="row justify-content-between align-items-end">
+        <div class="row justify-content-between align-items-start">
             <div class="col-lg-6 col-md-6 contact-left">
                 <img class="img-fluid" src="<?php echo base_url();?>img/contact-img.png" alt="">
             </div>
-            <div class="col-lg-5 col-md-6 contact-right">
-                <form class="form-area contact-form text-right" id="contactform">
+            <div class="col-lg-6 col-md-6 contact-left">
+                <form method="post" action="<?php echo base_url("contact/send_message");?>">
+                    <div class="form-group">
+						<label for="exampleInputEmail1">Your Name</label>
+						<input type="text" class="form-control" id="exampleInputEmail1" name="name" aria-describedby="emailHelp" placeholder="Enter Your Name">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail1">Email address</label>
+						<input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter E-mail">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail1">Phone Number</label>
+						<input type="number" class="form-control" id="exampleInputEmail1" name="phone" aria-describedby="emailHelp" placeholder="Enter Phone Number">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword1">Message</label>
+						<textarea class="form-control" id="exampleInputPassword1" name="message" placeholder="Enter Your Message" rows="4"></textarea>
+					</div>
                     
-                    <input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
-
-                    <input name="mobile" placeholder="Enter your mobile" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
-
-                    <input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
-
-                    <!-- <input name="subject" placeholder="Enter subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter subject'" class="common-input mb-20 form-control" required="" type="text"> -->
-
-                    <textarea class="common-textarea form-control" cols="30" rows="7" name="message" placeholder="Enter Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Messege'" required=""></textarea>
-
-                    <div class="d-flex flex-column">
-                        <button type="submit" class="genric-btn2 d-block mt-30 mr-0 ml-auto">Send Message</button>
-                        <div class="alert-msg"></div>
-                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    
                 </form>
             </div>
         </div>
