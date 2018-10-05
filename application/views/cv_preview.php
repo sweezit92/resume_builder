@@ -106,7 +106,7 @@ $this->load->view("common/header");
 									<li style="font-weight:bold;">Location : <?php echo ucfirst($get_cv_preview->current_location);?></li>
 									<li style="font-weight:bold;">US Visa : <?php echo ucfirst($get_cv_preview->visa);?></li>
 									<li style="font-weight:bold;">Seaman's Book: <?php echo ucfirst($get_cv_preview->seamans_book);?></li>
-									<li style="font-weight:bold;">Telephone Number : <?php echo ucfirst($get_cv_preview->telephone);?></li>
+									<li style="font-weight:bold;">Telephone : <?php echo ucfirst($get_cv_preview->telephone);?></li>
 									<li style="font-weight:bold;">Skype ID : <?php echo ucfirst($get_cv_preview->skype);?></li>
 									<li style="font-weight:bold;">When you can start the new job? : <?php echo ucfirst($get_cv_preview->start_job);?></li>
 									<li style="font-weight:bold;">Do you smoke? : <?php echo ucfirst($get_cv_preview->smoke);?></li>
