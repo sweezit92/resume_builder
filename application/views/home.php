@@ -197,7 +197,7 @@ $this->load->view("common/header");
             </div>
             <div class="col-lg-6">
                 <div class="_active-feature-carusel">
-                    <img class="img-fluid" src="<?php echo base_url();?>img/mobile.png" alt="">
+                    <img class="img-fluid" src="<?php echo base_url();?>img/mobile1.png" alt="">
                 </div>
             </div>
         </div>

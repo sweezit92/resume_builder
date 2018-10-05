@@ -92,7 +92,7 @@ $this->load->view("common/header");
                 </div>
                 <div class="col-lg-6">
                     <div class="_active-feature-carusel" style="text-align: center;margin-top:50px;">
-                        <img class="img-fluid" src="<?php echo base_url();?>img/Stewardess+CV+17.compressed_Page_1.png" alt="" width="80%" style="height:500px;margin-top:-100px;">
+                        <img class="img-fluid" src="<?php echo base_url();?>img/cv.jpg" alt="" width="70%" style="height:500px;margin-top:-100px;">
                     </div>
                 </div>
             </div>
