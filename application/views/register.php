@@ -93,9 +93,9 @@ $this->load->view("common/header");
                 </p>
             </div>
         </div>
-        <div class="row justify-content-between align-items-end">
+        <div class="row justify-content-between">
             <div class="col-lg-6 col-md-6 contact-left">
-                <img class="img-fluid" src="<?php echo base_url();?>img/reg-manangement-hero.png" alt="" style="margin-top:-400px;">
+                <img class="img-fluid" src="<?php echo base_url();?>img/reg-manangement-hero.png" alt="">
             </div>
             <div class="col-lg-5 col-md-6 contact-left">
                 <?php
