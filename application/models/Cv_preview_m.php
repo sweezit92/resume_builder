@@ -3,6 +3,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Cv_preview_m extends CI_Model {
 
+	public function fetch_row_header($user_id){
+		$this->db->select('*');
+		$this->db->from('user');
+		$this->db->where('user.user_id',$user_id);
+		$this->db->join('certificate','certificate.user_id = user.user_id');
+		$this->db->join('education','education.user_id = user.user_id');
+		$this->db->join('personal','personal.user_id = user.user_id');
+		$this->db->where('personal.date','');
+		$query = $this->db->get();
+		return $query->row();
+	}
+
 	public function fetch_preview($user_id){
 		$this->db->select('*');
 		$this->db->from('user');

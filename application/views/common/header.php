@@ -25,9 +25,25 @@
 						<?php
 						}
 						?>
+                        <?php
+                        if(isset($this->session->userdata['logged_in']['user_id'])){
+                            $ci =&get_instance();
+                            $ci->load->model('cv_preview_m');
+                            $get_user_info = $ci->cv_preview_m->fetch_row_header($this->session->userdata['logged_in']['user_id']);
+                            if(count($get_user_info) == '0'){
+                        ?>
+                        <li><a class="signup-btn signupBTN" href="<?php echo base_url("create_resume_step1");?>">My Resume</a></li>
+                        <?php
+                            }else{
+                        ?>
+                        <li><a class="signup-btn signupBTN" href="<?php echo base_url("create_resume_step1");?>">Create My Resume</a></li>
+                        <?php
+                            }
+                        }
+                        ?>
                        </ul>
                     </nav>
-						<a class="signup-btn signupBTN" href="<?php echo base_url("create_resume_step1");?>">Create Resume</a>
+
                   </div>
                 <!-- #nav-menu-container -->
             </div>

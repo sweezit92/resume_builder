@@ -1219,7 +1219,9 @@ td, th {
   transition: all 0.3s ease 0s; }
   @media (max-width: 991px) {
     .signup-btn {
-      display: none !important; } }
+     margin-left:14px !important;
+	 width:160px !important;
+	 } }
   .signup-btn:hover {
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
     color: #fff !important; }

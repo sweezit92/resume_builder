@@ -189,10 +189,22 @@ $this->load->view("common/header");
 
 						<div class="col-md-8" style="margin-top:10px;">
 							<div class="col-md-12">
-							  <div style="height:auto;width:100%;background:#479099;margin-top:55px;padding:8px;">
+							  <div style="height:auto;width:100%;background:#479099;padding:8px;">
 							  	<div style="margin-left:15px;">
 							  	<h2 style="color:white;"><?php echo ucfirst($get_cv_preview->full_name);?></h2>
-								<h3 style="color:white;"><u><?php echo ucfirst($get_cv_preview->professional_rank);?></u></h3><br>
+								<h3 style="color:white;"><u>
+									<?php
+										$mostRecent = 0;
+										$explode_title = explode(',',$get_experience->title);
+										$explode_end_date = explode(',',$get_experience->end);
+										for ($i=0; $i < count($explode_end_date); $i++) { 
+											if ($explode_end_date[$i] == "Currently working")
+											{
+												echo $explode_title[$i];
+											}
+										}
+									?>
+									</u></h3><br>
 								<p style="color:white;"><?php echo ucfirst($get_cv_preview->about_yourself);?></p>
 								</div>
 							  </div>
@@ -250,24 +262,24 @@ $this->load->view("common/header");
 								foreach($title AS $key=>$each_title){
 							?>
 							 <div style="margin-left:15px;padding:7px;">
-								<h4 style="color:#479099;margin-bottom:-15px;"><?php echo ucfirst($each_title);?></h4><br>
+								<h4 style="margin-bottom:-15px;"><b><?php echo ucfirst($each_title);?></b></h4><br>
 								<b><?php echo ucfirst($vessel_name[$key]);?></b><br>
 								<p style="color:#479099;margin-bottom:5px;">
-									<span style="color:blue;"><?php echo ucfirst($start[$key]);?> - <?php echo ucfirst($end[$key]);?></span><br>
-									<?php echo ucfirst($company[$key]);?><br>
+									<i style="color:#479099;"><?php echo ucfirst($start[$key]);?> - <?php echo ucfirst($end[$key]);?></i><br>
+									<i><?php echo ucfirst($company[$key]);?></i><br>
 									<div class="row" style="padding:0px;margin:0px;">
 										<div class="col-md-6" style="padding:0px;margin:0px;">
-											<span style="float:left;color:grey;"><?php echo ucfirst($vessel_type[$key]);?></span><br>
+											<i style="float:left;color:#479099;"><?php echo ucfirst($vessel_type[$key]);?></i><br>
 										</div>
 										<div class="col-md-6" style="padding:0px;margin:0px;">
-											<span style="color:grey;float:right;"><?php echo ucfirst($vessel_length[$key]);?></span><br>
+											<i style="color:#479099;float:right;"><?php echo ucfirst($vessel_length[$key]);?></i><br>
 										</div>
 									</div>
 								</p>
 								<?php
 									if($task[$key] != ''){
 								?>
-								<li class="square"> <?php echo ucfirst($task[$key]);?></li>
+								<li class="square"><i><?php echo ucfirst($task[$key]);?></i></li>
 								<?php
 									}
 								?>
@@ -275,7 +287,7 @@ $this->load->view("common/header");
 								<?php
 									if($contact_person[$key] != '' && $contact_info[$key] != ''){
 								?>
-								<p style="font-size:12px;"><i style="color:#479099;">Contact </i>: <?php echo $contact_person[$key];?> - <?php echo $contact_info[$key];?> </p>	
+								<p style="font-size:12px;"><i style="color:#479099;">Contact : <?php echo $contact_person[$key];?> - <?php echo $contact_info[$key];?></i> </p>	
 								<?php
 									}
 								?>				

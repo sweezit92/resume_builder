@@ -150,13 +150,13 @@ $this->load->view("common/resume_sidebar");
 								</div>
 								<div class="form-group col-md-4">
 								  <label for="inputEmail4">Ending Date</label>
-								  <input type="text" class="form-control form-control-2 input-sm to" value="<?php echo (($end[$i] != 'Currently working')?$end[$i]:'');?>" name="end_date[]" placeholder="">
+								  <input type="text" class="form-control form-control-2 input-sm to endclass<?php echo $i;?>" value="<?php echo (($end[$i] != 'Currently working')?$end[$i]:'');?>" name="end_date[]" placeholder="">
 								</div>
 								<div class="form-group col-md-4">
 								  <label for="inputEmail4">Currently Working</label>
 								  <br>
-								  <input class="form-check-input" style="margin: 10px;" name="current_work[]" value="current_work" 
-									<?php echo (($end[$i] == "Currently working")?'checked':'') ;?> type="checkbox"  id="gridCheck">
+								  <input class="form-check-input" style="margin: 10px;" name="current_work[]" value="1" 
+									<?php echo (($end[$i] == "Currently working")?'checked':'') ;?> type="checkbox"   id="gridCheck">
 								</div>
 							  </div>
 							  <div class="form-row">
@@ -219,9 +219,18 @@ $this->load->view("common/resume_sidebar");
 
 <?php
 $this->load->view("common/footer");
+for($i = 0 ; $i < $count_total ; $i++){
+?>
+	<script>
+	$(document).ready(function(){
+		var end_date = $(".endclass"+i+"").val();
+		alert("ok");
+	});
+	</script>
+<?php
+}
 ?>
 <script>
-
 function rmv(e)
 {
 	$( ".yo"+e+"" ).remove();
