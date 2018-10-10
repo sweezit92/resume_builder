@@ -17,7 +17,7 @@ class email_template {
 		   <head>
 			  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 			  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-			  <title>Gravity Adviser Quote</title>
+			  <title>Marine CV</title>
 			  
 			  <style type="text/css">
 				 /* Client-specific Styles */
@@ -107,7 +107,7 @@ class email_template {
 												  <tr>
 													 <td width="169" height="45" align="center">
 														<div class="imgpop">
-														   <a target="_blank" href="https://www.portme.co/resume/">
+														   <a target="_blank" href="http://marinecv.com">
 														   <img src="#" alt="Logo" border="0" width="100%" height="100%" style="display:block; border:none; outline:none; text-decoration:none;">
 														   <!--<h1>Logo</h1>-->
 														   </a>
@@ -296,7 +296,7 @@ class email_template {
 		   <head>
 			  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 			  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-			  <title>Gravity Adviser Quote</title>
+			  <title>Marine CV</title>
 			  
 			  <style type="text/css">
 				 /* Client-specific Styles */
@@ -386,7 +386,7 @@ class email_template {
 												  <tr>
 													 <td width="169" height="45" align="center">
 														<div class="imgpop">
-														   <a target="_blank" href="https://www.portme.co/resume/">
+														   <a target="_blank" href="http://marinecv.com">
 														   <img src="#" alt="Logo" border="0" width="100%" height="100%" style="display:block; border:none; outline:none; text-decoration:none;">
 														   <!--<h1>Logo</h1>-->
 														   </a>

@@ -250,6 +250,7 @@ $this->load->view("common/header");
 							<?php
 								$title = explode(",",$get_experience->title);
 								$company = explode(",",$get_experience->company);
+								$company_location = explode(",",$get_experience->company_location);
 								$vessel_name	 = explode(",",$get_experience->vessel_name	);
 								$vessel_length = explode(",",$get_experience->vessel_length);
 								$vessel_type = explode(",",$get_experience->vessel_type);
@@ -266,7 +267,20 @@ $this->load->view("common/header");
 								<b><?php echo ucfirst($vessel_name[$key]);?></b><br>
 								<p style="color:#479099;margin-bottom:5px;">
 									<i style="color:#479099;"><?php echo ucfirst($start[$key]);?> - <?php echo ucfirst($end[$key]);?></i><br>
-									<i><?php echo ucfirst($company[$key]);?></i><br>
+									<?php
+										if($company[$key] != '' && $company[$key] != ''){
+									?>
+									<i>Company Name: <?php echo ucfirst($company[$key]);?></i><br>
+									<?php
+										}	
+									?>
+									<?php
+										if($company_location[$key] != '' && $company_location[$key] != ''){
+									?>
+									<i>Trading Area: <?php echo ucfirst($company_location[$key]);?></i><br>
+									<?php
+										}	
+									?>
 									<div class="row" style="padding:0px;margin:0px;">
 										<div class="col-md-6" style="padding:0px;margin:0px;">
 											<i style="float:left;color:#479099;"><?php echo ucfirst($vessel_type[$key]);?></i><br>
@@ -279,7 +293,7 @@ $this->load->view("common/header");
 								<?php
 									if($task[$key] != ''){
 								?>
-								<li class="square"><i><?php echo ucfirst($task[$key]);?></i></li>
+								<li class="square" style="color:#479099;font-family:Roboto 11;"><i><?php echo ucfirst($task[$key]);?></i></li>
 								<?php
 									}
 								?>
@@ -287,7 +301,7 @@ $this->load->view("common/header");
 								<?php
 									if($contact_person[$key] != '' && $contact_info[$key] != ''){
 								?>
-								<p style="font-size:12px;"><i style="color:#479099;">Contact : <?php echo $contact_person[$key];?> - <?php echo $contact_info[$key];?></i> </p>	
+								<p><i  style="color:#479099;font-family:Roboto 11;">Contact for reference: <?php echo $contact_person[$key];?> - <?php echo $contact_info[$key];?></i> </p>	
 								<?php
 									}
 								?>				

@@ -23,8 +23,8 @@ class Cv_preview extends CI_Controller {
 		$data['last_name'] = (strpos($full_name, ' ') === false) ? '' : preg_replace('#.*\s([\w-]*)$#', '$1', $full_name);
 		$data['first_name'] = trim( preg_replace('#'.$data['last_name'].'#', '', $full_name ) );
 
-
-		//print_r($data["get_cv_preview"]);
+		/*print_r($data["get_cv_preview"]);
+		exit;*/
 		$this->load->view('cv_preview',$data);
 	}
 

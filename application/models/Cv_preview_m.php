@@ -24,6 +24,7 @@ class Cv_preview_m extends CI_Model {
 		$this->db->join('personal','personal.user_id = user.user_id');
 		$query = $this->db->get();
 		return $query->row();
+		//return $this->db->last_query();
 	}
 
 	public function fetch_payments($user_id){
