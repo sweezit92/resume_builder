@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="row align-items-center justify-content-between">
                <div id="logo">
-                    <a href="#"><img src="<?php echo base_url();?>img/logo2.png" alt="" title="" style="height:19px;"/></a>
+                    <a href="#"><img src="<?php echo base_url();?>img/logo2.png" alt="" title="" style="height:14px;"/></a>
                 </div>
                 <div class="nav-wrap d-flex flex-row align-items-center">
                     <nav id="nav-menu-container">
