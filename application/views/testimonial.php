@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <!-- Site Title -->
     <title>Resume Builder - Testimonials</title>
-
+	<link rel="shortcut icon" href="<?php echo base_url();?>img/favicon.png">
 <?php
 $this->load->view("common/metalinks");
 ?>

@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-lg-8 col-md-6">
                     <div class="single-footer-widget">
-                        <h4>LOGO</h4>
+                        <img src="<?php echo base_url();?>img/logo2.png" style="height:20px;">
 						<p>Building a professional resume is the first important step towards getting a good job. Resume Builder free resume builder enables you achieve this goal faster.Check out our professional resume examples, resume samples, and resume templates will help you build the perfect resume for your next interview - that too in 5 minutes.Furthermore, Resume Builder in-house team of resume writing experts with 15+ years of experience will craft a highly professional, relevant and recruiter friendly resume format.Our resume writing experts will hold telephonic discussion with you personally to grasp your career goals and past achievements.</p>
                     </div>
 					

@@ -8,7 +8,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700,900" rel="stylesheet">
-
+	<link rel="shortcut icon" href="<?php echo base_url();?>img/favicon.png">
 
 
     <!-- ===========================================

@@ -1,10 +1,10 @@
     <!-- start Header Area -->
     <header id="header" class="header-scrolled">
         <div class="container-fluid">
-            <div class="row align-items-center justify-content-between">LOGO
-               <!-- <div id="logo">
-                    <a href="#"><img src="<?php echo base_url();?>img/MARINE CV.png" alt="" title="" /></a>
-                </div>-->
+            <div class="row align-items-center justify-content-between">
+               <div id="logo">
+                    <a href="#"><img src="<?php echo base_url();?>img/logo2.png" alt="" title="" style="height:19px;"/></a>
+                </div>
                 <div class="nav-wrap d-flex flex-row align-items-center">
                     <nav id="nav-menu-container">
                         <ul class="nav-menu ">
